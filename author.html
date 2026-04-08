@@ -1,395 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Araina Narula – Author Journey</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Araina Narula – Author Journey</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --page-bg: #f8eef2;
-      --card-bg: #fdeff4;
-      --card-strip: #f6cdd9;
-      --heading-pink: #c85f83;
-      --section-pink: #cf6b8d;
-      --body-rose: #9c5a73;
-      --highlight-pink: #c94f6d;
-      --button-pink: #ea8cab;
-      --button-hover: #df7698;
-      --soft-shadow: 0 8px 24px rgba(201, 95, 131, 0.10);
-      --radius-xl: 22px;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  background: linear-gradient(to bottom, #fff8fb, #f8eef2);
+  color: #9c5a73;
+}
 
-    * {
-      box-sizing: border-box;
-    }
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
 
-    body {
-      margin: 0;
-      background: linear-gradient(to bottom, #fff8fb 0%, var(--page-bg) 30%, #f6e8ee 100%);
-      color: var(--body-rose);
-      font-family: 'Nunito', sans-serif;
-      line-height: 1.7;
-    }
+h1 {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  color: #c85f83;
+}
 
-    .container {
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 28px 20px 70px;
-    }
+.section-card {
+  background: #fdeff4;
+  border-radius: 20px;
+  margin: 40px 0;
+  padding: 20px;
+}
 
-    h1 {
-      margin: 6px 0 28px;
-      text-align: center;
-      font-family: 'Poppins', sans-serif;
-      font-size: clamp(1.8rem, 3vw, 2.6rem);
-      font-weight: 700;
-      color: var(--heading-pink);
-      letter-spacing: 0.2px;
-    }
+.section-strip {
+  font-family: 'Poppins';
+  color: #cf6b8d;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
 
-    .title-rule {
-      width: 200px;
-      height: 1px;
-      background: #e8bccb;
-      margin: -8px auto 26px;
-    }
+.book-top {
+  display: flex;
+  gap: 30px;
+}
 
-    .section-card {
-      background: linear-gradient(180deg, #fff8fb 0%, var(--card-bg) 100%);
-      border-radius: var(--radius-xl);
-      box-shadow: var(--soft-shadow);
-      overflow: hidden;
-      margin-bottom: 54px;
-    }
+.book-images img {
+  width: 140px;
+  border-radius: 10px;
+  cursor: pointer;
+}
 
-    .section-strip {
-      background: linear-gradient(90deg, var(--card-strip) 0%, #f7e3ea 100%);
-      padding: 18px 26px;
-      font-family: 'Poppins', sans-serif;
-      font-size: clamp(1.45rem, 2.1vw, 1.9rem);
-      font-weight: 600;
-      color: var(--section-pink);
-    }
+.book-content {
+  flex: 1;
+}
 
-    .section-inner {
-      padding: 28px 26px 30px;
-    }
+.book-tagline {
+  font-style: italic;
+  margin-bottom: 10px;
+}
 
-    .coming {
-      text-align: center;
-      padding: 34px 24px 36px;
-    }
+.book-desc {
+  margin-bottom: 10px;
+}
 
-    .coming img {
-      width: min(220px, 58vw);
-      display: block;
-      margin: 0 auto 20px;
-      border-radius: 16px;
-      box-shadow: 0 8px 18px rgba(200, 95, 131, 0.12);
-      object-fit: cover;
-    }
+.book-highlight {
+  font-weight: 600;
+  color: #c94f6d;
+  margin-top: 10px;
+}
 
-    .coming h2 {
-      margin: 0 0 8px;
-      font-family: 'Poppins', sans-serif;
-      font-size: clamp(1.6rem, 2.6vw, 2.2rem);
-      color: var(--section-pink);
-      font-weight: 600;
-    }
+.availability {
+  margin-top: 5px;
+}
 
-    .coming p {
-      margin: 6px 0;
-      font-size: 1.02rem;
-      color: var(--body-rose);
-    }
+.buttons {
+  margin-top: 10px;
+}
 
-    .coming .small {
-      font-size: 0.96rem;
-      opacity: 0.9;
-    }
+.button {
+  display: inline-block;
+  margin: 5px;
+  padding: 8px 14px;
+  background: #ea8cab;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 14px;
+}
 
-    .book-top {
-      display: grid;
-      grid-template-columns: 340px 1fr;
-      gap: 32px;
-      align-items: start;
-    }
+.button.secondary {
+  background: #efc7d4;
+  color: #8f5168;
+}
 
-    .book-images {
-      display: flex;
-      gap: 14px;
-      align-items: flex-start;
-      overflow-x: auto;
-      padding-bottom: 4px;
-      scrollbar-width: thin;
-    }
+.coming {
+  text-align: center;
+}
 
-    .book-images img {
-      width: 160px;
-      max-width: 42vw;
-      border-radius: 14px;
-      cursor: pointer;
-      box-shadow: 0 6px 16px rgba(181, 92, 125, 0.12);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      background: white;
-    }
+.coming img {
+  width: 180px;
+}
 
-    .book-images img:hover {
-      transform: translateY(-2px) scale(1.02);
-      box-shadow: 0 10px 22px rgba(181, 92, 125, 0.18);
-    }
+.lightbox {
+  display: none;
+  position: fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: rgba(0,0,0,0.8);
+  justify-content:center;
+  align-items:center;
+}
 
-    .book-content {
-      min-width: 0;
-    }
+.lightbox img {
+  max-width:90%;
+  max-height:90%;
+}
 
-    .book-tagline {
-      margin: 2px 0 16px;
-      font-size: 1.08rem;
-      font-style: italic;
-      color: #8f6171;
-    }
-
-    .book-desc {
-      margin: 0 0 16px;
-      font-size: 1.02rem;
-      color: var(--body-rose);
-    }
-
-    .book-bottom {
-      margin-top: 10px;
-      padding-top: 8px;
-    }
-
-    .book-highlight {
-      font-family: 'Poppins', sans-serif;
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: var(--highlight-pink);
-      margin-bottom: 8px;
-    }
-
-    .availability {
-      margin: 0 0 18px;
-      font-size: 1rem;
-      color: var(--body-rose);
-    }
-
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 6px;
-    }
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 11px 18px;
-      border-radius: 999px;
-      background: var(--button-pink);
-      color: white;
-      text-decoration: none;
-      font-family: 'Nunito', sans-serif;
-      font-size: 0.98rem;
-      font-weight: 700;
-      box-shadow: 0 5px 12px rgba(223, 118, 152, 0.18);
-      transition: background 0.2s ease, transform 0.15s ease;
-      min-width: 150px;
-    }
-
-    .button:hover {
-      background: var(--button-hover);
-      transform: translateY(-1px);
-    }
-
-    .button.secondary {
-      background: #efc7d4;
-      color: #8f5168;
-      box-shadow: 0 5px 12px rgba(201, 95, 131, 0.10);
-    }
-
-    .button.secondary:hover {
-      background: #eab8c9;
-    }
-
-    .lightbox {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(46, 20, 31, 0.82);
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-      padding: 20px;
-    }
-
-    .lightbox img {
-      max-width: 92vw;
-      max-height: 90vh;
-      border-radius: 14px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-      background: white;
-    }
-
-    @media (max-width: 860px) {
-      .book-top {
-        grid-template-columns: 1fr;
-        gap: 22px;
-      }
-
-      .book-images {
-        justify-content: flex-start;
-      }
-    }
-
-    @media (max-width: 560px) {
-      .container {
-        padding-left: 14px;
-        padding-right: 14px;
-      }
-
-      .section-strip {
-        padding: 16px 18px;
-        font-size: 1.35rem;
-      }
-
-      .section-inner {
-        padding: 22px 18px 24px;
-      }
-
-      .buttons {
-        gap: 10px;
-      }
-
-      .button {
-        min-width: 0;
-        width: 100%;
-      }
-    }
-  </style>
+@media (max-width:700px){
+  .book-top { flex-direction: column; }
+}
+</style>
 </head>
+
 <body>
 
-  <div class="container">
-    <h1>Araina Narula – Author Journey</h1>
-    <div class="title-rule"></div>
+<div class="container">
 
-    <!-- Coming Soon -->
-    <section class="section-card">
-      <div class="coming">
-        <img src="images/coming_soon_vertical.jpg" alt="Coming Soon">
-        <h2>✨ New Book Coming Soon</h2>
-        <p>A new adventure is on its way…</p>
-        <p class="small">Stay tuned for updates</p>
-      </div>
-    </section>
+<h1>Araina Narula – Author Journey</h1>
 
-    <!-- Grade 3 -->
-    <section class="section-card">
-      <div class="section-strip">Grade 3 — Royal Adventures Beyond the Ocean</div>
-
-      <div class="section-inner">
-        <div class="book-top">
-          <div class="book-images">
-            <img src="images/royal_ocean_cover.jpg" alt="Royal Adventures Beyond the Ocean front cover" onclick="openLightbox(this.src)">
-            <img src="images/royal_ocean_back.jpg" alt="Royal Adventures Beyond the Ocean back cover" onclick="openLightbox(this.src)">
-          </div>
-
-          <div class="book-content">
-            <div class="book-tagline">
-              A magical journey of courage, friendship, and helping others unfolds beyond the ocean.
-            </div>
-
-            <p class="book-desc">
-              The Royal Group—Princess Mia, Prince Ethan, the Witch, the Unicorn, the Fairy, and the Dog—returns for a new adventure in a mysterious land beyond the ocean.
-            </p>
-
-            <p class="book-desc">
-              As the Water Queen’s kingdom faces danger from her own sister, they step forward to help—discovering bravery, teamwork, and kindness along the way.
-            </p>
-          </div>
-        </div>
-
-        <div class="book-bottom">
-          <div class="book-highlight">Written and illustrated digitally by Araina</div>
-          <p class="availability">Available in paperback across India and internationally.</p>
-
-          <div class="buttons">
-            <a href="https://amzn.in/d/0c0MxyOd" class="button" target="_blank" rel="noopener noreferrer">Amazon India</a>
-            <a href="https://a.co/d/07NvhhZf" class="button" target="_blank" rel="noopener noreferrer">Amazon Global</a>
-            <a href="samples/royal_ocean_sample.pdf" class="button secondary" target="_blank" rel="noopener noreferrer">Read Sample</a>
-            <a href="https://youtu.be/PKE-OaMtlDE?si=Pd-p50djQx8Nezm_" class="button" target="_blank" rel="noopener noreferrer">Watch Video</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Grade 2 -->
-    <section class="section-card">
-      <div class="section-strip">Grade 2 — Royal Adventures Beyond the Galaxy</div>
-
-      <div class="section-inner">
-        <div class="book-top">
-          <div class="book-images">
-            <img src="images/royal_galaxy_cover.jpg" alt="Royal Adventures Beyond the Galaxy front cover" onclick="openLightbox(this.src)">
-            <img src="images/royal_galaxy_back.jpg" alt="Royal Adventures Beyond the Galaxy back cover" onclick="openLightbox(this.src)">
-          </div>
-
-          <div class="book-content">
-            <div class="book-tagline">
-              A magical adventure across uncharted realms beyond the galaxy, filled with kindness, courage, and wonder.
-            </div>
-
-            <p class="book-desc">
-              This enchanting story follows a prince and princess as they journey through the cosmos, meeting unicorns, fairies, and witches along the way.
-            </p>
-
-            <p class="book-desc">
-              As challenges unfold at every turn, the story beautifully shows how positive thinking, kindness, and faith in one another can help overcome even the most difficult obstacles.
-            </p>
-          </div>
-        </div>
-
-        <div class="book-bottom">
-          <div class="book-highlight">Illustrations handmade by Araina, with digital text</div>
-          <p class="availability">
-            Available internationally, with paperback and Kindle editions published. The Kindle edition remains available in India.
-          </p>
-
-          <div class="buttons">
-  <a href="https://amzn.in/d/02QKBXRC" class="button" target="_blank" rel="noopener noreferrer">Amazon India</a>
-  <a href="https://a.co/d/0aOe1BBE" class="button" target="_blank" rel="noopener noreferrer">Amazon Global</a>
-  <a href="samples/royal_galaxy_sample.pdf" class="button secondary" target="_blank" rel="noopener noreferrer">Read Sample</a>
-  <a href="https://youtu.be/Z2rnnne-HFA?si=t3v6jtMpG1C3wmfe" class="button" target="_blank" rel="noopener noreferrer">Watch Video</a>
+<!-- Coming Soon -->
+<div class="section-card coming">
+  <img src="images/coming_soon_vertical.jpg">
+  <h3>✨ New Book Coming Soon</h3>
+  <p>A new adventure is on its way…</p>
 </div>
-        </div>
+
+<!-- Grade 3 -->
+<div class="section-card">
+  <div class="section-strip">Grade 3 — Royal Adventures Beyond the Ocean</div>
+
+  <div class="book-top">
+    <div class="book-images">
+      <img src="images/royal_ocean_cover.jpg" onclick="openLightbox(this.src)">
+      <img src="images/royal_ocean_back.jpg" onclick="openLightbox(this.src)">
+    </div>
+
+    <div class="book-content">
+      <div class="book-tagline">
+        A magical journey of courage, friendship, and helping others unfolds beyond the ocean.
       </div>
-    </section>
 
+      <div class="book-desc">
+        The Royal Group—Princess Mia, Prince Ethan, the Witch, the Unicorn, the Fairy, and the Dog—returns for a new adventure in a mysterious land beyond the ocean.
+      </div>
+
+      <div class="book-desc">
+        As the Water Queen’s kingdom faces danger from her own sister, they step forward to help—discovering bravery, teamwork, and kindness along the way.
+      </div>
+    </div>
   </div>
 
-  <!-- Lightbox -->
-  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-    <img id="lightbox-img" alt="Expanded preview">
+  <div class="book-highlight">
+    Written and illustrated digitally by Araina
   </div>
 
-  <script>
-    function openLightbox(src) {
-      document.getElementById('lightbox').style.display = 'flex';
-      document.getElementById('lightbox-img').src = src;
-    }
+  <div class="availability">
+    Available in paperback across India and internationally.
+  </div>
 
-    function closeLightbox() {
-      document.getElementById('lightbox').style.display = 'none';
-    }
-  </script>
+  <div class="buttons">
+    <a href="https://amzn.in/d/0c0MxyOd" class="button" target="_blank">Amazon India</a>
+    <a href="https://a.co/d/07NvhhZf" class="button" target="_blank">Amazon Global</a>
+    <a href="samples/royal_ocean_sample.pdf" class="button secondary" target="_blank">Read Sample</a>
+    <a href="https://youtu.be/PKE-OaMtlDE?si=Pd-p50djQx8Nezm_" class="button" target="_blank">Watch Video</a>
+  </div>
+</div>
+
+<!-- Grade 2 -->
+<div class="section-card">
+  <div class="section-strip">Grade 2 — Royal Adventures Beyond the Galaxy</div>
+
+  <div class="book-top">
+    <div class="book-images">
+      <img src="images/royal_galaxy_cover.jpg" onclick="openLightbox(this.src)">
+      <img src="images/royal_galaxy_back.jpg" onclick="openLightbox(this.src)">
+    </div>
+
+    <div class="book-content">
+      <div class="book-tagline">
+        This imaginative story follows a curious princess and her brother, a prince, as they journey beyond the galaxy, meeting unicorns, fairies, and witches along the way.
+      </div>
+
+      <div class="book-desc">
+        As challenges arise, the journey shows how positive thinking, kindness, and faith in one another can help overcome even the most difficult obstacles.
+      </div>
+    </div>
+  </div>
+
+  <div class="book-highlight">
+    Written and illustrated by Araina, with hand-drawn artwork.
+  </div>
+
+  <div class="availability">
+    Available internationally in paperback and Kindle formats, and in India as a Kindle edition.
+  </div>
+
+  <div class="buttons">
+    <a href="https://amzn.in/d/02QKBXRC" class="button" target="_blank">Amazon India</a>
+    <a href="https://a.co/d/0aOe1BBE" class="button" target="_blank">Amazon Global</a>
+    <a href="samples/royal_galaxy_sample.pdf" class="button secondary" target="_blank">Read Sample</a>
+    <a href="https://youtu.be/Z2rnnne-HFA?si=t3v6jtMpG1C3wmfe" class="button" target="_blank">Watch Video</a>
+  </div>
+</div>
+
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img">
+</div>
+
+<script>
+function openLightbox(src){
+  document.getElementById('lightbox').style.display='flex';
+  document.getElementById('lightbox-img').src=src;
+}
+function closeLightbox(){
+  document.getElementById('lightbox').style.display='none';
+}
+</script>
 
 </body>
 </html>
