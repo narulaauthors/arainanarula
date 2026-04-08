@@ -14,6 +14,26 @@ body {
   background: linear-gradient(to bottom, #fff8fb, #f8eef2);
   color: #9c5a73;
 }
+  /* Fix image size mismatch */
+.book-images img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Book title styling */
+.book-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #c75c7c;
+  margin: 20px 0 15px;
+}
+
+/* Heart color */
+.heart {
+  filter: hue-rotate(300deg) saturate(1.5);
+}
 
 .container {
   max-width: 1000px;
@@ -258,13 +278,13 @@ h1 {
   </div>
 </div>
   <div class="section-card">
-  <div class="section-strip">Kindergarten — The Beginning ❤️❤️</div>
+  <div class="section-strip">Kindergarten — The Beginning <span class="heart">❤️❤️</span></div>
 
   <div class="book-desc">
     As soon as Araina began speaking clearly, her storytelling journey naturally began. She loved expressing her ideas and feelings, weaving beautiful little stories around everything she explored and narrating them with excitement.
   </div>
 
-  <div class="section-subtitle">The Bear and The Mouse</div>
+  <div class="book-title">The Bear and The Mouse</div>
 
   <div class="book-top">
     <div class="book-images">
@@ -286,6 +306,11 @@ h1 {
       </div>
     </div>
   </div>
+
+  <div class="book-highlight">
+    Created and illustrated by Araina.
+  </div>
+</div>
 
   <div class="book-highlight">
     Created and illustrated by Araina.
