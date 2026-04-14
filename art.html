@@ -1,208 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Araina’s Artwork</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Araina Narula – Art Journey</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Georgia', serif;
-      background-color: #fdf6f1;
-      color: #4a3f3f;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
 
-    /* NAVBAR */
-    nav {
-      background: #ffffff;
-      padding: 15px 0;
-      text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      position: sticky;
-      top: 0;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  background: linear-gradient(to bottom, #fff6fa, #f3e9ef);
+  color: #9c5a73;
+}
 
-    nav a {
-      margin: 0 18px;
-      text-decoration: none;
-      color: #6b5b5b;
-      font-size: 16px;
-    }
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
 
-    nav a.active {
-      color: #c97c8c;
-      font-weight: bold;
-    }
+h1 {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  color: #c85f83;
+}
 
-    /* HERO */
-    .hero {
-      text-align: center;
-      padding: 80px 20px 40px;
-    }
+/* Intro */
+.intro {
+  text-align: center;
+  max-width: 750px;
+  margin: 20px auto 40px;
+  line-height: 1.6;
+}
 
-    .hero h1 {
-      font-size: 48px;
-      margin-bottom: 15px;
-    }
+/* Section Heading */
+.section-heading {
+  text-align: center;
+  font-family: 'Poppins';
+  font-size: 1.5rem;
+  color: #cf6b8d;
+  margin: 40px 0 10px;
+}
 
-    .hero p {
-      max-width: 700px;
-      margin: auto;
-      font-size: 18px;
-      line-height: 1.6;
-    }
+/* Year Card */
+.section-card {
+  background: #fdeff4;
+  border-radius: 20px;
+  margin: 30px 0;
+  padding: 20px;
+}
 
-    .section-title {
-      text-align: center;
-      font-size: 26px;
-      margin: 40px 0 20px;
-      color: #c97c8c;
-    }
+.section-strip {
+  font-family: 'Poppins';
+  color: #cf6b8d;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
 
-    /* YEAR CARD */
-    .year-card {
-      background: #fff;
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-    }
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
 
-    .year-card h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      color: #a86474;
-    }
+.art-item {
+  position: relative;
+}
 
-    /* GALLERY GRID */
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
+.art-item img {
+  width: 100%;
+  border-radius: 15px;
+  cursor: pointer;
+}
 
-    .art-item {
-      position: relative;
-      overflow: hidden;
-      border-radius: 15px;
-    }
+/* Watermark */
+.watermark {
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.7);
+  pointer-events: none;
+}
 
-    .art-item img {
-      width: 100%;
-      display: block;
-      border-radius: 15px;
-    }
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: rgba(0,0,0,0.85);
+  justify-content:center;
+  align-items:center;
+}
 
-    /* WATERMARK */
-    .watermark {
-      position: absolute;
-      bottom: 8px;
-      right: 10px;
-      font-size: 12px;
-      color: rgba(255,255,255,0.7);
-      pointer-events: none;
-    }
+.lightbox img {
+  max-width:90%;
+  max-height:90%;
+}
 
-    /* FOOTER */
-    footer {
-      text-align: center;
-      padding: 30px;
-      font-size: 14px;
-      color: #8a7a7a;
-    }
-
-  </style>
+@media (max-width:700px){
+  h1 { font-size: 1.6rem; }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- NAV -->
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="#">About</a>
-    <a href="author.html">Author</a>
-    <a href="art.html" class="active">Art</a>
-    <a href="#">Performing Arts</a>
-    <a href="#">Achievements</a>
-    <a href="#">Journey</a>
-  </nav>
+<div class="container">
 
-  <!-- HERO -->
-  <section class="hero">
-    <h1>Araina’s Artwork</h1>
-    <p>
-      Araina expresses her imagination through colors, creativity, and detail.
-      From her earliest sketches to her latest creations, her art reflects passion,
-      growth, and a love for storytelling.
-    </p>
-  </section>
+<h1>Araina Narula – Art Journey</h1>
 
-  <div class="section-title">Art Journey</div>
+<div class="intro">
+  Araina has a deep love for art and enjoys exploring her creativity through drawing and painting.
+  She expresses her emotions, imagination, and thoughts in every piece she creates.
+  She is always eager to explore different art forms, new styles, and techniques, and works carefully on each artwork to add detail and depth.
+  From her earliest sketches to her latest creations, her art reflects her passion, growth, and commitment.
+</div>
 
-  <!-- 2024 -->
-  <div class="year-card">
-    <h2>Grade 5 (2024) — Latest Masterpieces</h2>
-    <div class="gallery">
+<div class="section-heading">Artwork</div>
 
-      <div class="art-item">
-        <img src="images/art2024-1.jpg">
-        <div class="watermark">Araina</div>
-      </div>
+<!-- Grade 4 -->
+<div class="section-card">
+  <div class="section-strip">Grade 4 (2025)</div>
 
-      <div class="art-item">
-        <img src="images/art2024-2.jpg">
-        <div class="watermark">Araina</div>
-      </div>
+  <div class="gallery">
+    <div class="art-item">
+      <img src="artimages/art_2025_1.jpg" onclick="openLightbox(this.src)">
+      <div class="watermark">Araina</div>
+    </div>
 
-      <div class="art-item">
-        <img src="images/art2024-3.jpg">
-        <div class="watermark">Araina</div>
-      </div>
+    <div class="art-item">
+      <img src="artimages/art_2025_2.jpg" onclick="openLightbox(this.src)">
+      <div class="watermark">Araina</div>
+    </div>
 
+    <div class="art-item">
+      <img src="artimages/art_2025_3.jpg" onclick="openLightbox(this.src)">
+      <div class="watermark">Araina</div>
     </div>
   </div>
+</div>
 
-  <!-- 2023 -->
-  <div class="year-card">
-    <h2>Grade 4 (2023) — Drawings from Last Year</h2>
-    <div class="gallery">
+<!-- Grade 3 -->
+<div class="section-card">
+  <div class="section-strip">Grade 3 (2024)</div>
 
-      <div class="art-item">
-        <img src="images/art2023-1.jpg">
-        <div class="watermark">Araina</div>
-      </div>
+  <div class="gallery">
+    <div class="art-item">
+      <img src="artimages/art_2024_1.jpg" onclick="openLightbox(this.src)">
+      <div class="watermark">Araina</div>
+    </div>
 
-      <div class="art-item">
-        <img src="images/art2023-2.jpg">
-        <div class="watermark">Araina</div>
-      </div>
-
+    <div class="art-item">
+      <img src="artimages/art_2024_2.jpg" onclick="openLightbox(this.src)">
+      <div class="watermark">Araina</div>
     </div>
   </div>
+</div>
 
-  <!-- 2022 -->
-  <div class="year-card">
-    <h2>Grade 3 (2022) — Early Creations</h2>
-    <div class="gallery">
+<!-- Grade 2 -->
+<div class="section-card">
+  <div class="section-strip">Grade 2 (2023)</div>
 
-      <div class="art-item">
-        <img src="images/art2022-1.jpg">
-        <div class="watermark">Araina</div>
-      </div>
+  <div class="gallery">
+    <div class="art-item">
+      <img src="artimages/art_2023_1.jpg" onclick="openLightbox(this.src)">
+      <div class="watermark">Araina</div>
+    </div>
 
-      <div class="art-item">
-        <img src="images/art2022-2.jpg">
-        <div class="watermark">Araina</div>
-      </div>
-
+    <div class="art-item">
+      <img src="artimages/art_2023_2.jpg" onclick="openLightbox(this.src)">
+      <div class="watermark">Araina</div>
     </div>
   </div>
+</div>
 
-  <!-- FOOTER -->
-  <footer>
-    © 2025 Araina Narula • Creating, Dreaming, Growing
-  </footer>
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img">
+</div>
+
+<script>
+function openLightbox(src){
+  document.getElementById('lightbox').style.display='flex';
+  document.getElementById('lightbox-img').src=src;
+}
+function closeLightbox(){
+  document.getElementById('lightbox').style.display='none';
+}
+</script>
 
 </body>
 </html>
