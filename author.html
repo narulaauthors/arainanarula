@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Araina Narula – Author Journey</title>
+<title>Araina Narula – Art Journey</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
 
@@ -11,7 +11,7 @@
 body {
   margin: 0;
   font-family: 'Nunito', sans-serif;
-  background: linear-gradient(to bottom, #fff8fb, #f8eef2);
+  background: linear-gradient(to bottom, #fff6fa, #f3e9ef);
   color: #9c5a73;
 }
 
@@ -28,87 +28,72 @@ h1 {
   color: #c85f83;
 }
 
+/* Intro */
+.intro {
+  text-align: center;
+  max-width: 750px;
+  margin: 20px auto 40px;
+  line-height: 1.6;
+}
+
+/* Section Heading */
+.section-heading {
+  text-align: center;
+  font-family: 'Poppins';
+  font-size: 1.5rem;
+  color: #cf6b8d;
+  margin: 40px 0 10px;
+}
+
+/* Year Card */
 .section-card {
   background: #fdeff4;
   border-radius: 20px;
-  margin: 40px 0;
+  margin: 30px 0;
   padding: 20px;
 }
 
 .section-strip {
   font-family: 'Poppins';
   color: #cf6b8d;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   margin-bottom: 15px;
 }
 
-.book-top {
-  display: flex;
-  gap: 30px;
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
 }
 
-.book-images img {
-  width: 140px;
+.art-item {
+  position: relative;
+}
+
+.art-item img {
+  width: 100%;
+  border-radius: 15px;
   cursor: pointer;
 }
 
-.book-content {
-  flex: 1;
+/* Watermark */
+.watermark {
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.7);
+  pointer-events: none;
 }
 
-.book-tagline {
-  font-style: italic;
-  margin-bottom: 10px;
-}
-
-.book-desc {
-  margin-bottom: 10px;
-}
-
-.book-highlight {
-  font-weight: 600;
-  color: #c94f6d;
-  margin-top: 10px;
-}
-
-.availability {
-  margin-top: 5px;
-}
-
-.buttons {
-  margin-top: 10px;
-}
-
-.button {
-  display: inline-block;
-  margin: 5px;
-  padding: 8px 14px;
-  background: #ea8cab;
-  color: white;
-  text-decoration: none;
-  border-radius: 20px;
-  font-size: 14px;
-}
-
-.button.secondary {
-  background: #efc7d4;
-  color: #8f5168;
-}
-
-.coming {
-  text-align: center;
-}
-
-.coming img {
-  width: 180px;
-}
-
+/* Lightbox */
 .lightbox {
   display: none;
   position: fixed;
   top:0; left:0;
   width:100%; height:100%;
-  background: rgba(0,0,0,0.8);
+  background: rgba(0,0,0,0.85);
   justify-content:center;
   align-items:center;
 }
@@ -119,7 +104,7 @@ h1 {
 }
 
 @media (max-width:700px){
-  .book-top { flex-direction: column; }
+  h1 { font-size: 1.6rem; }
 }
 </style>
 </head>
@@ -128,94 +113,90 @@ h1 {
 
 <div class="container">
 
-<h1>Araina Narula – Author Journey</h1>
+<h1>Araina Narula – Art Journey</h1>
 
-<!-- Coming Soon -->
-<div class="section-card coming">
-  <img src="images/coming_soon_vertical.jpg">
-  <h3>✨ New Book Coming Soon</h3>
-  <p>A new adventure is on its way…</p>
+<div class="intro">
+  Araina has a deep love for art and enjoys exploring her creativity through drawing and painting.
+  She expresses her emotions, imagination, and thoughts in every piece she creates.
+  She is always eager to explore different art forms, new styles, and techniques, and works carefully on each artwork to add detail and depth.
+  From her earliest sketches to her latest creations, her art reflects her passion, growth, and commitment.
+</div>
+
+<div class="section-heading">Artwork</div>
+
+<!-- Grade 4 -->
+<div class="section-card">
+  <div class="section-strip">Grade 4 (2025)</div>
+
+  <div class="gallery">
+    <div class="art-item">
+      <img src="artimages/art_2025_1.jpg" onclick="openLightbox(this.src)">
+      <div class="watermark">Araina</div>
+    </div>
+
+    <div class="art-item">
+      <img src="artimages/art_2025_2.jpg" onclick="openLightbox(this.src)">
+      <div class="watermark">Araina</div>
+    </div>
+
+    <div class="art-item">
+      <img src="artimages/art_2025_3.jpg" onclick="openLightbox(this.src)">
+      <div class="watermark">Araina</div>
+    </div>
+  </div>
 </div>
 
 <!-- Grade 3 -->
 <div class="section-card">
-  <div class="section-strip">Grade 3 (2024) — Royal Adventures Beyond the Ocean</div>
+  <div class="section-strip">Grade 3 (2024)</div>
 
-  <div class="book-top">
-    <div class="book-images">
-      <img src="images/royal_ocean_cover.jpg" onclick="openLightbox(this.src)">
-      <img src="images/royal_ocean_back.jpg" onclick="openLightbox(this.src)">
+  <div class="gallery">
+    <div class="art-item">
+      <img src="artimages/art_2024_1.jpg" onclick="openLightbox(this.src)">
+      <div class="watermark">Araina</div>
     </div>
 
-    <div class="book-content">
-      <div class="book-tagline">
-        A magical journey of courage, friendship, and helping others unfolds beyond the ocean.
-      </div>
-
-      <div class="book-desc">
-        The Royal Group—Princess Mia, Prince Ethan, the Witch, the Unicorn, the Fairy, and the Dog—returns for a new adventure in a mysterious land beyond the ocean.
-      </div>
-
-      <div class="book-desc">
-        As the Water Queen’s kingdom faces danger from her own sister, they step forward to help—discovering bravery, teamwork, and kindness along the way.
-      </div>
+    <div class="art-item">
+      <img src="artimages/art_2024_2.jpg" onclick="openLightbox(this.src)">
+      <div class="watermark">Araina</div>
     </div>
-  </div>
-
-  <div class="book-highlight">
-    Written and illustrated digitally by Araina
-  </div>
-
-  <div class="availability">
-    Available in paperback across India and internationally.
-  </div>
-
-  <div class="buttons">
-    <a href="https://amzn.in/d/0c0MxyOd" class="button" target="_blank">Amazon India</a>
-    <a href="https://a.co/d/07NvhhZf" class="button" target="_blank">Amazon Global</a>
-    <a href="samples/royal_ocean_sample.pdf" class="button secondary" target="_blank">Read Sample</a>
-    <a href="https://youtu.be/PKE-OaMtlDE?si=Pd-p50djQx8Nezm_" class="button" target="_blank">Watch Video</a>
   </div>
 </div>
 
 <!-- Grade 2 -->
 <div class="section-card">
-  <div class="section-strip">Grade 2 (2023) — Royal Adventures Beyond the Galaxy</div>
+  <div class="section-strip">Grade 2 (2023)</div>
 
-  <div class="book-top">
-    <div class="book-images">
-      <img src="images/royal_galaxy_cover.jpg" onclick="openLightbox(this.src)">
-      <img src="images/royal_galaxy_back.jpg" onclick="openLightbox(this.src)">
+  <div class="gallery">
+    <div class="art-item">
+      <img src="artimages/art_2023_1.jpg" onclick="openLightbox(this.src)">
+      <div class="watermark">Araina</div>
     </div>
 
-    <div class="book-content">
-      <div class="book-tagline">
-        A magical adventure across uncharted realms beyond the galaxy, filled with kindness, courage, and wonder.
-      </div>
-
-      <div class="book-desc">
-        This imaginative story follows a curious princess and her brother, a prince, as they journey beyond the galaxy, meeting unicorns, fairies, and witches along the way.
-      </div>
-
-      <div class="book-desc">
-        As challenges arise, the journey shows how positive thinking, kindness, and faith in one another can help overcome even the most difficult obstacles.
-      </div>
+    <div class="art-item">
+      <img src="artimages/art_2023_2.jpg" onclick="openLightbox(this.src)">
+      <div class="watermark">Araina</div>
     </div>
-  </div>
-
-  <div class="book-highlight">
-    Written and illustrated by Araina, with hand-drawn artwork.
-  </div>
-
-  <div class="availability">
-    Available internationally in paperback and Kindle formats, and in India as a Kindle edition.
-  </div>
-
-  <div class="buttons">
-    <a href="https://amzn.in/d/02QKBXRC" class="button" target="_blank">Amazon India</a>
-    <a href="https://a.co/d/0aOe1BBE" class="button" target="_blank">Amazon Global</a>
-    <a href="samples/royal_galaxy_sample.pdf" class="button secondary" target="_blank">Read Sample</a>
-    <a href="https://youtu.be/Z2rnnne-HFA?si=t3v6jtMpG1C3wmfe" class="button" target="_blank">Watch Video</a>
   </div>
 </div>
+
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img">
+</div>
+
+<script>
+function openLightbox(src){
+  document.getElementById('lightbox').style.display='flex';
+  document.getElementById('lightbox-img').src=src;
+}
+function closeLightbox(){
+  document.getElementById('lightbox').style.display='none';
+}
+</script>
+
+</body>
+</html>
 
