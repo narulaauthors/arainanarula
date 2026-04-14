@@ -26,21 +26,18 @@ h1 {
   font-family: 'Poppins', sans-serif;
   font-size: 2rem;
   color: #c85f83;
-  margin-top: 10px;
-  margin-bottom: 10px;
 }
 
 .intro {
   text-align: center;
-  max-width: 820px;
-  margin: 15px auto 40px;
+  max-width: 800px;
+  margin: 20px auto 40px;
   line-height: 1.7;
-  font-size: 16.5px;
 }
 
 .section-heading {
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins';
   font-size: 1.5rem;
   color: #cf6b8d;
   margin: 40px 0 10px;
@@ -50,81 +47,63 @@ h1 {
   background: #fdeff4;
   border-radius: 20px;
   margin: 30px 0;
-  padding: 20px 20px 30px;
-}
-
-.section-strip {
-  font-family: 'Poppins', sans-serif;
-  color: #cf6b8d;
-  font-size: 1.3rem;
-  margin-bottom: 20px;
-}
-
-.gallery {
+  padding: 30px;
   text-align: center;
 }
 
+.section-strip {
+  font-family: 'Poppins';
+  color: #cf6b8d;
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+}
+
+/* 🎯 FINAL ART SIZE */
 .art-item {
   position: relative;
   display: inline-block;
 }
 
 .art-item img.main-art {
-  width: 300px; /* reduced properly */
-  max-width: 90vw;
+  width: 240px;   /* 🔥 FINAL PERFECT SIZE */
   height: auto;
-  border-radius: 15px;
+  border-radius: 14px;
   display: block;
   cursor: pointer;
 }
 
+/* 🎯 SIGNATURE FIX */
 .signature {
   position: absolute;
-  bottom: 10px;
-  right: 10px;
-  width: 42px;
-  opacity: 0.9;
+  bottom: 8px;
+  right: 8px;
+  width: 55px;     /* bigger so visible */
+  opacity: 0.95;
   pointer-events: none;
 }
 
+/* Lightbox */
 .lightbox {
   display: none;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top:0; left:0;
+  width:100%; height:100%;
   background: rgba(0,0,0,0.85);
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
+  justify-content:center;
+  align-items:center;
 }
 
 .lightbox img {
-  max-width: 90%;
-  max-height: 90%;
+  max-width:90%;
+  max-height:90%;
 }
 
-@media (max-width: 700px) {
-  h1 {
-    font-size: 1.6rem;
-  }
-
-  .intro {
-    font-size: 15.5px;
-    line-height: 1.65;
-  }
-
-  .section-strip {
-    font-size: 1.15rem;
-  }
-
+@media (max-width:700px){
   .art-item img.main-art {
-    width: 260px;
+    width: 200px;
   }
-
   .signature {
-    width: 36px;
+    width: 45px;
   }
 }
 </style>
@@ -134,52 +113,40 @@ h1 {
 
 <div class="container">
 
-  <h1>Araina Narula – Art Journey</h1>
+<h1>Araina Narula – Art Journey</h1>
 
-  <div class="intro">
-    Araina has a deep love for art and enjoys exploring her creativity through drawing and painting.
-    She expresses her emotions, imagination, and thoughts in every piece she creates.
-    She is always eager to explore different art forms, new styles, and techniques, and works carefully on each artwork to add detail and depth.
-    From her earliest sketches to her latest creations, her art reflects her passion, growth, and commitment.
+<div class="intro">
+  Araina has a deep love for art and enjoys exploring her creativity through drawing and painting.
+  She expresses her emotions, imagination, and thoughts in every piece she creates.
+  She is always eager to explore different art forms, new styles, and techniques, and works carefully on each artwork to add detail and depth.
+  From her earliest sketches to her latest creations, her art reflects her passion, growth, and commitment.
+</div>
+
+<div class="section-heading">Artwork</div>
+
+<div class="section-card">
+  <div class="section-strip">Grade 4 (2025)</div>
+
+  <div class="art-item">
+    <img class="main-art" src="artimages/art_2025_1.jpg" onclick="openLightbox(this.src)">
+    <img class="signature" src="artimages/signature.png">
   </div>
 
-  <div class="section-heading">Artwork</div>
-
-  <div class="section-card">
-    <div class="section-strip">Grade 4 (2025)</div>
-
-    <div class="gallery">
-      <div class="art-item">
-        <img class="main-art" src="artimages/art_2025_1.jpg" alt="Artwork 2025" onclick="openLightbox(this.src)">
-        <img class="signature" src="artimages/signature.png" alt="Signature">
-      </div>
-    </div>
-  </div>
-
-  <div class="section-card">
-    <div class="section-strip">Grade 3 (2024)</div>
-    <div class="gallery"></div>
-  </div>
-
-  <div class="section-card">
-    <div class="section-strip">Grade 2 (2023)</div>
-    <div class="gallery"></div>
-  </div>
+</div>
 
 </div>
 
 <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-  <img id="lightbox-img" alt="Expanded artwork">
+  <img id="lightbox-img">
 </div>
 
 <script>
-function openLightbox(src) {
-  document.getElementById('lightbox').style.display = 'flex';
-  document.getElementById('lightbox-img').src = src;
+function openLightbox(src){
+  document.getElementById('lightbox').style.display='flex';
+  document.getElementById('lightbox-img').src=src;
 }
-
-function closeLightbox() {
-  document.getElementById('lightbox').style.display = 'none';
+function closeLightbox(){
+  document.getElementById('lightbox').style.display='none';
 }
 </script>
 
