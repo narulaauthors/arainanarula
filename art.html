@@ -11,7 +11,7 @@
 body {
   margin: 0;
   font-family: 'Nunito', sans-serif;
-  background: linear-gradient(to bottom, #fff3f8, #f0e4ec);
+  background: linear-gradient(to bottom, #fff5fa, #f2e6ee);
   color: #9c5a73;
 }
 
@@ -34,7 +34,7 @@ h1 {
 .intro {
   text-align: center;
   max-width: 820px;
-  margin: 20px auto 40px;
+  margin: 15px auto 40px;
   line-height: 1.7;
   font-size: 16.5px;
 }
@@ -48,7 +48,7 @@ h1 {
   margin: 40px 0 10px;
 }
 
-/* Year Card */
+/* Cards */
 .section-card {
   background: #fdeff4;
   border-radius: 20px;
@@ -70,23 +70,27 @@ h1 {
   gap: 20px;
 }
 
+/* Art Item */
 .art-item {
   position: relative;
 }
 
-.art-item img {
+/* Artwork */
+.art-item img.main-art {
   width: 100%;
+  height: auto;
   border-radius: 15px;
+  display: block;
   cursor: pointer;
 }
 
-/* Watermark */
-.watermark {
+/* Signature */
+.signature {
   position: absolute;
-  bottom: 8px;
-  right: 10px;
-  font-size: 12px;
-  color: rgba(255,255,255,0.7);
+  bottom: 10px;
+  right: 12px;
+  width: 50px;
+  opacity: 0.85;
   pointer-events: none;
 }
 
@@ -132,55 +136,25 @@ h1 {
   <div class="section-strip">Grade 4 (2025)</div>
 
   <div class="gallery">
-    <div class="art-item">
-      <img src="artimages/art_2025_1.jpg" onclick="openLightbox(this.src)">
-      <div class="watermark">Araina</div>
-    </div>
 
     <div class="art-item">
-      <img src="artimages/art_2025_2.jpg" onclick="openLightbox(this.src)">
-      <div class="watermark">Araina</div>
+      <img class="main-art" src="artimages/art_2025_1.jpg" onclick="openLightbox(this.src)">
+      <img class="signature" src="artimages/signature.png">
     </div>
 
-    <div class="art-item">
-      <img src="artimages/art_2025_3.jpg" onclick="openLightbox(this.src)">
-      <div class="watermark">Araina</div>
-    </div>
   </div>
 </div>
 
 <!-- Grade 3 -->
 <div class="section-card">
   <div class="section-strip">Grade 3 (2024)</div>
-
-  <div class="gallery">
-    <div class="art-item">
-      <img src="artimages/art_2024_1.jpg" onclick="openLightbox(this.src)">
-      <div class="watermark">Araina</div>
-    </div>
-
-    <div class="art-item">
-      <img src="artimages/art_2024_2.jpg" onclick="openLightbox(this.src)">
-      <div class="watermark">Araina</div>
-    </div>
-  </div>
+  <div class="gallery"></div>
 </div>
 
 <!-- Grade 2 -->
 <div class="section-card">
   <div class="section-strip">Grade 2 (2023)</div>
-
-  <div class="gallery">
-    <div class="art-item">
-      <img src="artimages/art_2023_1.jpg" onclick="openLightbox(this.src)">
-      <div class="watermark">Araina</div>
-    </div>
-
-    <div class="art-item">
-      <img src="artimages/art_2023_2.jpg" onclick="openLightbox(this.src)">
-      <div class="watermark">Araina</div>
-    </div>
-  </div>
+  <div class="gallery"></div>
 </div>
 
 </div>
