@@ -64,32 +64,28 @@
 
     .gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);  /* 🔥 Always 3 per row */
-  gap: 28px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
   justify-items: center;
 }
 
     .art-item {
   position: relative;
-  width: 100%;
-  max-width: 260px;   /* 🔥 controls size of each artwork */
+  width: 260px;   /* 🔥 uniform width for all */
 }
 
     .art-item img.main-art {
   width: 100%;
-  height: 220px;
-  object-fit: contain;   /* 🔥 THIS FIXES EVERYTHING */
+  height: auto;        /* 🔥 no forcing */
   border-radius: 12px;
-  background: #fff;
   display: block;
 }
 
     .signature {
   position: absolute;
-  bottom: 6px;
-  right: 6px;   /* ✅ stays inside image now */
-  width: 45px;
-  opacity: 0.9;
+  bottom: 8px;
+  right: 8px;
+  width: 50px;
   pointer-events: none;
 }
 
