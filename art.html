@@ -73,15 +73,16 @@
   position: relative;
   width: 260px;   /* 🔥 uniform width for all */
 }
-
     .art-item img.main-art {
   width: 100%;
-  height: auto;        /* 🔥 no forcing */
+  height: auto;
+  max-height: 220px;   /* 🔥 NEW LINE (KEY FIX) */
+  object-fit: contain;
   border-radius: 12px;
   display: block;
 }
 
-    .signature {
+.signature {
   position: absolute;
   bottom: 8px;
   right: 8px;
