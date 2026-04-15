@@ -52,7 +52,7 @@
       margin: 30px auto;
       padding: 30px;
       text-align: center;
-      max-width: 1050px;
+      max-width: 1100px;
     }
 
     .section-strip {
@@ -64,47 +64,37 @@
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-      justify-items: center;
+      grid-template-columns: repeat(3, max-content);
+      justify-content: center;
+      column-gap: 42px;
+      row-gap: 36px;
       align-items: start;
     }
 
     .art-item {
       position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-    }
-
-    .art-item.horizontal {
-      width: 300px;
-    }
-
-    .art-item.vertical {
-      width: 340px;
+      display: inline-block;
+      line-height: 0;
     }
 
     .art-item img.main-art {
-      border-radius: 12px;
       display: block;
+      border-radius: 12px;
       box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
       cursor: pointer;
+      background: transparent;
     }
 
+    /* horizontal artworks */
     .art-item.horizontal img.main-art {
-      width: 100%;
+      width: 300px;
       height: auto;
-      max-height: 200px;
-      object-fit: contain;
     }
 
+    /* vertical artworks */
     .art-item.vertical img.main-art {
-      width: auto;
-      max-width: 100%;
-      max-height: 320px;
+      width: 260px;
       height: auto;
-      object-fit: contain;
     }
 
     .signature {
@@ -114,14 +104,15 @@
       opacity: 1;
     }
 
+    /* keep signatures fully INSIDE image edges */
     .art-item.horizontal .signature {
-      bottom: 6px;
+      bottom: 8px;
       right: 8px;
     }
 
     .art-item.vertical .signature {
       bottom: 8px;
-      right: 22px;
+      right: 8px;
     }
 
     .lightbox {
@@ -145,9 +136,9 @@
       border-radius: 10px;
     }
 
-    @media (max-width: 980px) {
+    @media (max-width: 1050px) {
       .gallery {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, max-content);
       }
     }
 
@@ -171,34 +162,28 @@
 
       .gallery {
         grid-template-columns: 1fr;
-        gap: 22px;
-      }
-
-      .art-item.horizontal,
-      .art-item.vertical {
-        width: 100%;
+        justify-items: center;
+        row-gap: 24px;
       }
 
       .art-item.horizontal img.main-art {
-        width: 100%;
-        max-width: 300px;
-        max-height: none;
+        width: 290px;
+        max-width: 90vw;
       }
 
       .art-item.vertical img.main-art {
-        width: auto;
-        max-width: 260px;
-        max-height: 300px;
+        width: 240px;
+        max-width: 75vw;
       }
 
-      .art-item.horizontal .signature {
-        right: calc(50% - 150px + 8px);
-        width: 38px;
+      .signature {
+        width: 36px;
       }
 
+      .art-item.horizontal .signature,
       .art-item.vertical .signature {
-        right: calc(50% - 130px + 18px);
-        width: 38px;
+        right: 8px;
+        bottom: 8px;
       }
     }
   </style>
@@ -219,7 +204,6 @@
 
     <div class="section-heading">Artwork</div>
 
-    <!-- Grade 4 -->
     <div class="section-card">
       <div class="section-strip">Grade 4 (2025)</div>
 
@@ -258,13 +242,11 @@
       </div>
     </div>
 
-    <!-- Grade 3 -->
     <div class="section-card">
       <div class="section-strip">Grade 3 (2024)</div>
       <div class="gallery"></div>
     </div>
 
-    <!-- Grade 2 -->
     <div class="section-card">
       <div class="section-strip">Grade 2 (2023)</div>
       <div class="gallery"></div>
@@ -272,7 +254,6 @@
 
   </div>
 
-  <!-- Lightbox -->
   <div id="lightbox" class="lightbox" onclick="closeLightbox()">
     <img id="lightbox-img" alt="Expanded artwork">
   </div>
