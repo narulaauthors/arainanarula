@@ -69,14 +69,16 @@
   justify-items: center;
 }
 
-    .art-item {
+   .art-item {
   position: relative;
-  width: 260px;   /* 🔥 uniform width for all */
+  width: 300px;
+  display: flex;
+  justify-content: center;
 }
     .art-item img.main-art {
   width: 100%;
   height: auto;
-  max-height: 220px;   /* 🔥 NEW LINE (KEY FIX) */
+  max-height: 200px;   /* 🔥 reduced from 220 */
   object-fit: contain;
   border-radius: 12px;
   display: block;
@@ -84,9 +86,9 @@
 
 .signature {
   position: absolute;
-  bottom: 8px;
-  right: 8px;
-  width: 50px;
+  bottom: 10px;
+  right: 10px;
+  width: 42px;
   pointer-events: none;
 }
 
