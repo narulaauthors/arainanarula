@@ -43,40 +43,48 @@ h1 {
   margin-bottom: 25px;
 }
 
-/* ⭐ FIXED GRID */
+/* ⭐ GRID — NO FLEXIBLE COLUMNS */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  gap: 30px 40px;
 }
 
-/* ⭐ UNIFORM CARD */
+/* ⭐ EACH ITEM */
 .art-item {
   position: relative;
-  width: 100%;
-  height: 260px;   /* MASTER CONTROL */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
 }
 
-/* ⭐ IMAGE FITS INSIDE CARD */
+/* ⭐ IMAGE BASE */
 .art-item img.main-art {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  border-radius: 12px;
   display: block;
-  cursor: pointer;
+  border-radius: 12px;
 }
 
-/* ⭐ SIGNATURE ALWAYS CORRECT */
+/* ⭐ HORIZONTAL (fixed size) */
+.art-item.horizontal img.main-art {
+  width: 300px;
+  height: 200px;
+  object-fit: contain;
+background: #ffffff;
+}
+
+/* ⭐ VERTICAL (fixed size) */
+.art-item.vertical img.main-art {
+  width: 240px;
+  height: 320px;
+  object-fit: contain;
+background: #ffffff;
+}
+
+/* ⭐ SIGNATURE — ALWAYS INSIDE */
 .signature {
   position: absolute;
-  bottom: 8px;
-  right: 10px;
-  width: 40px;
-  pointer-events: none;
+  bottom: 6px;
+  right: 6px;
+  width: 36px;
 }
 
 /* LIGHTBOX */
