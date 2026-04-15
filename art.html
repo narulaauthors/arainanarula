@@ -63,35 +63,35 @@
     }
 
     .gallery {
-      display: flex;
-      justify-content: center;
-      gap: 35px;
-      flex-wrap: wrap;
-    }
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* 🔥 Always 3 per row */
+  gap: 28px;
+  justify-items: center;
+}
 
     .art-item {
-      position: relative;
-      display: inline-block;
-    }
+  position: relative;
+  width: 100%;
+  max-width: 260px;   /* 🔥 controls size of each artwork */
+}
 
     .art-item img.main-art {
-      height: 220px;
-      width: auto;
-      max-width: 100%;
-      border-radius: 12px;
-      display: block;
-      cursor: pointer;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
-    }
+  width: 100%;
+  height: 220px;
+  object-fit: contain;   /* 🔥 THIS FIXES EVERYTHING */
+  border-radius: 12px;
+  background: #fff;
+  display: block;
+}
 
     .signature {
-      position: absolute;
-      bottom: 6px;
-      right: -6px;
-      width: 55px;
-      opacity: 1;
-      pointer-events: none;
-    }
+  position: absolute;
+  bottom: 6px;
+  right: 6px;   /* ✅ stays inside image now */
+  width: 45px;
+  opacity: 0.9;
+  pointer-events: none;
+}
 
     .lightbox {
       display: none;
