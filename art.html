@@ -1,273 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Araina Narula – Art Journey</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Araina Narula – Art Journey</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Nunito', sans-serif;
-      background: linear-gradient(to bottom, #fff5fa, #f2e6ee);
-      color: #9c5a73;
-    }
+<style>
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 20px;
-    }
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  background: linear-gradient(to bottom, #fff5fa, #f2e6ee);
+  color: #9c5a73;
+}
 
-    h1 {
-      text-align: center;
-      font-family: 'Poppins', sans-serif;
-      font-size: 2rem;
-      color: #c85f83;
-      margin-top: 10px;
-      margin-bottom: 10px;
-    }
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
 
-    .intro {
-      text-align: center;
-      max-width: 820px;
-      margin: 15px auto 40px;
-      line-height: 1.7;
-      font-size: 16.5px;
-    }
+h1 {
+  text-align: center;
+  font-family: 'Poppins';
+  color: #c85f83;
+}
 
-    .section-heading {
-      text-align: center;
-      font-family: 'Poppins', sans-serif;
-      font-size: 1.5rem;
-      color: #cf6b8d;
-      margin: 40px 0 10px;
-    }
+.section-card {
+  background: #fdeff4;
+  border-radius: 20px;
+  padding: 30px;
+  margin-top: 30px;
+}
 
-    .section-card {
-      background: #fdeff4;
-      border-radius: 20px;
-      margin: 30px auto;
-      padding: 30px;
-      text-align: center;
-      max-width: 1100px;
-    }
+.section-strip {
+  text-align: center;
+  font-family: 'Poppins';
+  color: #cf6b8d;
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+}
 
-    .section-strip {
-      font-family: 'Poppins', sans-serif;
-      color: #cf6b8d;
-      font-size: 1.3rem;
-      margin-bottom: 28px;
-    }
+/* ⭐ FIXED GRID */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(3, max-content);
-      justify-content: center;
-      column-gap: 42px;
-      row-gap: 36px;
-      align-items: start;
-    }
+/* ⭐ UNIFORM CARD */
+.art-item {
+  position: relative;
+  width: 100%;
+  height: 260px;   /* MASTER CONTROL */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    .art-item {
-      position: relative;
-      display: inline-block;
-      line-height: 0;
-    }
+/* ⭐ IMAGE FITS INSIDE CARD */
+.art-item img.main-art {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+  display: block;
+  cursor: pointer;
+}
 
-    .art-item img.main-art {
-      display: block;
-      border-radius: 12px;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
-      cursor: pointer;
-      background: transparent;
-    }
+/* ⭐ SIGNATURE ALWAYS CORRECT */
+.signature {
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+  width: 40px;
+  pointer-events: none;
+}
 
-    /* horizontal artworks */
-    .art-item.horizontal img.main-art {
-      width: 300px;
-      height: auto;
-    }
+/* LIGHTBOX */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
 
-    /* vertical artworks */
-    .art-item.vertical img.main-art {
-      width: 260px;
-      height: auto;
-    }
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
 
-    .signature {
-      position: absolute;
-      width: 42px;
-      pointer-events: none;
-      opacity: 1;
-    }
-
-    /* keep signatures fully INSIDE image edges */
-    .art-item.horizontal .signature {
-      bottom: 8px;
-      right: 8px;
-    }
-
-    .art-item.vertical .signature {
-      bottom: 8px;
-      right: 8px;
-    }
-
-    .lightbox {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.85);
-      justify-content: center;
-      align-items: center;
-      z-index: 999;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-
-    .lightbox img {
-      max-width: 90%;
-      max-height: 90%;
-      border-radius: 10px;
-    }
-
-    @media (max-width: 1050px) {
-      .gallery {
-        grid-template-columns: repeat(2, max-content);
-      }
-    }
-
-    @media (max-width: 700px) {
-      h1 {
-        font-size: 1.65rem;
-      }
-
-      .intro {
-        font-size: 15.5px;
-        line-height: 1.65;
-      }
-
-      .section-strip {
-        font-size: 1.15rem;
-      }
-
-      .section-card {
-        padding: 22px;
-      }
-
-      .gallery {
-        grid-template-columns: 1fr;
-        justify-items: center;
-        row-gap: 24px;
-      }
-
-      .art-item.horizontal img.main-art {
-        width: 290px;
-        max-width: 90vw;
-      }
-
-      .art-item.vertical img.main-art {
-        width: 240px;
-        max-width: 75vw;
-      }
-
-      .signature {
-        width: 36px;
-      }
-
-      .art-item.horizontal .signature,
-      .art-item.vertical .signature {
-        right: 8px;
-        bottom: 8px;
-      }
-    }
-  </style>
+</style>
 </head>
 
 <body>
 
-  <div class="container">
+<div class="container">
 
-    <h1>Araina Narula – Art Journey</h1>
+<h1>Araina Narula – Art Journey</h1>
 
-    <div class="intro">
-      Araina has a deep love for art and enjoys exploring her creativity through drawing and painting.
-      She expresses her emotions, imagination, and thoughts in every piece she creates.
-      She is always eager to explore different art forms, new styles, and techniques, and works carefully on each artwork to add detail and depth.
-      From her earliest sketches to her latest creations, her art reflects her passion, growth, and commitment.
-    </div>
+<div class="section-card">
+<div class="section-strip">Grade 4 (2025)</div>
 
-    <div class="section-heading">Artwork</div>
+<div class="gallery">
 
-    <div class="section-card">
-      <div class="section-strip">Grade 4 (2025)</div>
+<div class="art-item">
+<img class="main-art" src="artimages/art_2025_1.jpg" onclick="openLightbox(this.src)">
+<img class="signature" src="artimages/signature.png">
+</div>
 
-      <div class="gallery">
+<div class="art-item">
+<img class="main-art" src="artimages/art_2025_2.jpg" onclick="openLightbox(this.src)">
+<img class="signature" src="artimages/signature.png">
+</div>
 
-        <div class="art-item horizontal">
-          <img class="main-art" src="artimages/art_2025_1.jpg" alt="Artwork 1" onclick="openLightbox(this.src)">
-          <img class="signature" src="artimages/signature.png" alt="Signature">
-        </div>
+<div class="art-item">
+<img class="main-art" src="artimages/art_2025_3.jpg" onclick="openLightbox(this.src)">
+<img class="signature" src="artimages/signature.png">
+</div>
 
-        <div class="art-item horizontal">
-          <img class="main-art" src="artimages/art_2025_2.jpg" alt="Artwork 2" onclick="openLightbox(this.src)">
-          <img class="signature" src="artimages/signature.png" alt="Signature">
-        </div>
+<div class="art-item">
+<img class="main-art" src="artimages/art_2025_4.jpg" onclick="openLightbox(this.src)">
+<img class="signature" src="artimages/signature.png">
+</div>
 
-        <div class="art-item horizontal">
-          <img class="main-art" src="artimages/art_2025_3.jpg" alt="Artwork 3" onclick="openLightbox(this.src)">
-          <img class="signature" src="artimages/signature.png" alt="Signature">
-        </div>
+<div class="art-item">
+<img class="main-art" src="artimages/art_2025_5.jpg" onclick="openLightbox(this.src)">
+<img class="signature" src="artimages/signature.png">
+</div>
 
-        <div class="art-item vertical">
-          <img class="main-art" src="artimages/art_2025_4.jpg" alt="Artwork 4" onclick="openLightbox(this.src)">
-          <img class="signature" src="artimages/signature.png" alt="Signature">
-        </div>
+<div class="art-item">
+<img class="main-art" src="artimages/art_2025_6.jpg" onclick="openLightbox(this.src)">
+<img class="signature" src="artimages/signature.png">
+</div>
 
-        <div class="art-item vertical">
-          <img class="main-art" src="artimages/art_2025_5.jpg" alt="Artwork 5" onclick="openLightbox(this.src)">
-          <img class="signature" src="artimages/signature.png" alt="Signature">
-        </div>
+</div>
+</div>
 
-        <div class="art-item vertical">
-          <img class="main-art" src="artimages/art_2025_6.jpg" alt="Artwork 6" onclick="openLightbox(this.src)">
-          <img class="signature" src="artimages/signature.png" alt="Signature">
-        </div>
+</div>
 
-      </div>
-    </div>
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+<img id="lightbox-img">
+</div>
 
-    <div class="section-card">
-      <div class="section-strip">Grade 3 (2024)</div>
-      <div class="gallery"></div>
-    </div>
-
-    <div class="section-card">
-      <div class="section-strip">Grade 2 (2023)</div>
-      <div class="gallery"></div>
-    </div>
-
-  </div>
-
-  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-    <img id="lightbox-img" alt="Expanded artwork">
-  </div>
-
-  <script>
-    function openLightbox(src) {
-      document.getElementById('lightbox').style.display = 'flex';
-      document.getElementById('lightbox-img').src = src;
-    }
-
-    function closeLightbox() {
-      document.getElementById('lightbox').style.display = 'none';
-    }
-  </script>
+<script>
+function openLightbox(src){
+  document.getElementById("lightbox").style.display="flex";
+  document.getElementById("lightbox-img").src=src;
+}
+function closeLightbox(){
+  document.getElementById("lightbox").style.display="none";
+}
+</script>
 
 </body>
 </html>
