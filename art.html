@@ -109,10 +109,12 @@ body {
   font-style: italic;
   letter-spacing: 0.3px;
 }
-  .special-art {
+.special-art {
+  width: 100%;
+  height: 100%;
   object-fit: contain !important;
   background: #f3e7ec;
-  padding: 8px;
+  padding: 0px; /* ❌ remove padding */
 }
 
 /* ===== LIGHTBOX ===== */
@@ -260,7 +262,10 @@ body {
 
     <!-- 16 -->
     <div class="art-item"><a href="#img16"><div class="art-box-horizontal"><img src="artimages/art_2025_updated_16..jpg"><img src="artimages/signature.png" class="signature"></div></a><div class="art-title">XXX</div></div>
-
+<div class="art-box-horizontal">
+  <img src="artimages/art_2025_new_16.jpg" class="special-art">
+  <img src="artimages/signature.png" class="signature">
+</div>
    <div class="art-item">
   <div class="art-box-horizontal">
     <img src="artimages/art_2025_16.jpg" class="special-art">
