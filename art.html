@@ -116,6 +116,10 @@ body {
   background: #f3e7ec;
   padding: 0px; /* ❌ remove padding */
 }
+  .special-art + .signature {
+  right: 10px;   /* move slightly inside */
+  bottom: 10px;
+}
 
 /* ===== LIGHTBOX ===== */
 .lightbox {
@@ -263,12 +267,17 @@ body {
     <div class="art-item"><a href="#img15"><div class="art-box-vertical"><img src="artimages/art_2025_15.jpg"><img src="artimages/signature.png" class="signature"></div></a><div class="art-title">XXX</div></div>
 
    
-   <div class="art-item">
-  <div class="art-box-horizontal">
+ <div class="art-box-horizontal">
+  <a href="#img16">
     <img src="artimages/art_2025_16.jpg" class="special-art">
-    <img src="artimages/signature.png" class="signature">
-  </div>
-  <div class="art-title">XXX</div>
+  </a>
+  <img src="artimages/signature.png" class="signature">
+</div>
+
+<div id="img16" class="lightbox">
+  <a href="#">
+    <img src="artimages/art_2025_16.jpg">
+  </a>
 </div>
 
   </div>
@@ -290,7 +299,7 @@ body {
 <div id="img13" class="lightbox"><a href="#"><img src="artimages/art_2025_updated_13.jpg"></a></div>
 <div id="img14" class="lightbox"><a href="#"><img src="artimages/art_2025_14.jpg"></a></div>
     <div id="img15" class="lightbox"><a href="#"><img src="artimages/art_2025_15.jpg"></a></div>
-      <div id="img16" class="lightbox"><a href="#"><img src="artimages/art_2025_16.jpg"></a></div>
+      
 
 
 
