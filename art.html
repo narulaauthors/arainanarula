@@ -25,10 +25,11 @@ body {
 }
 
 .header p {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   color: #7a5a6a;
-  line-height: 1.6;
+  line-height: 1.8;
+  text-align: center;
 }
 
 /* ===== SECTION ===== */
@@ -109,16 +110,29 @@ body {
   font-style: italic;
   letter-spacing: 0.3px;
 }
+
+/* ===== ONLY FOR IMAGE 16 ===== */
+.art-link {
+  display: block;
+  text-decoration: none;
+}
+
+.special-box {
+  background: #f3e7ec;
+}
+
 .special-art {
   width: 100%;
   height: 100%;
   object-fit: contain !important;
-  background: #f3e7ec;
-  padding: 0px; /* ❌ remove padding */
+  display: block;
+  border-radius: 12px;
 }
-  .special-art + .signature {
-  right: 10px;   /* move slightly inside */
+
+.special-signature {
+  right: 20px;
   bottom: 10px;
+  width: 45px;
 }
 
 /* ===== LIGHTBOX ===== */
@@ -233,52 +247,115 @@ body {
       <div class="art-title">Winterland Beyond</div>
     </div>
 
-    <!-- 7–16 -->
-    <!-- SAME STRUCTURE, NO FORCED LAYOUT -->
-
-    <!-- Just repeating -->
-    <!-- You can reorder later freely -->
-
     <!-- 7 -->
-    <div class="art-item"><a href="#img7"><div class="art-box-horizontal"><img src="artimages/art_2025_7.jpg"><img src="artimages/signature.png" class="signature"></div></a><div class="art-title">XXX</div></div>
+    <div class="art-item">
+      <a href="#img7">
+        <div class="art-box-horizontal">
+          <img src="artimages/art_2025_7.jpg">
+          <img src="artimages/signature.png" class="signature">
+        </div>
+      </a>
+      <div class="art-title">XXX</div>
+    </div>
 
-   
     <!-- 8 -->
-    <div class="art-item"><a href="#img8"><div class="art-box-vertical"><img src="artimages/art_2025_8.jpg"><img src="artimages/signature.png" class="signature"></div></a><div class="art-title">XXX</div></div>
+    <div class="art-item">
+      <a href="#img8">
+        <div class="art-box-vertical">
+          <img src="artimages/art_2025_8.jpg">
+          <img src="artimages/signature.png" class="signature">
+        </div>
+      </a>
+      <div class="art-title">XXX</div>
+    </div>
 
     <!-- 9 -->
-    <div class="art-item"><a href="#img9"><div class="art-box-vertical"><img src="artimages/art_2025_nine.jpg"><img src="artimages/signature.png" class="signature"></div></a><div class="art-title">XXX</div></div>
+    <div class="art-item">
+      <a href="#img9">
+        <div class="art-box-vertical">
+          <img src="artimages/art_2025_nine.jpg">
+          <img src="artimages/signature.png" class="signature">
+        </div>
+      </a>
+      <div class="art-title">XXX</div>
+    </div>
 
     <!-- 10 -->
-    <div class="art-item"><a href="#img10"><div class="art-box-vertical"><img src="artimages/art_2025_10.jpg"><img src="artimages/signature.png" class="signature"></div></a><div class="art-title">XXX</div></div>
+    <div class="art-item">
+      <a href="#img10">
+        <div class="art-box-vertical">
+          <img src="artimages/art_2025_10.jpg">
+          <img src="artimages/signature.png" class="signature">
+        </div>
+      </a>
+      <div class="art-title">XXX</div>
+    </div>
 
     <!-- 11 -->
-    <div class="art-item"><a href="#img11"><div class="art-box-vertical"><img src="artimages/art_2025_11.jpg"><img src="artimages/signature.png" class="signature"></div></a><div class="art-title">XXX</div></div>
+    <div class="art-item">
+      <a href="#img11">
+        <div class="art-box-vertical">
+          <img src="artimages/art_2025_11.jpg">
+          <img src="artimages/signature.png" class="signature">
+        </div>
+      </a>
+      <div class="art-title">XXX</div>
+    </div>
 
     <!-- 12 -->
-    <div class="art-item"><a href="#img12"><div class="art-box-vertical"><img src="artimages/art_2025_new_12.jpg"><img src="artimages/signature.png" class="signature"></div></a><div class="art-title">XXX</div></div>
+    <div class="art-item">
+      <a href="#img12">
+        <div class="art-box-vertical">
+          <img src="artimages/art_2025_new_12.jpg">
+          <img src="artimages/signature.png" class="signature">
+        </div>
+      </a>
+      <div class="art-title">XXX</div>
+    </div>
 
     <!-- 13 -->
-    <div class="art-item"><a href="#img13"><div class="art-box-vertical"><img src="artimages/art_2025_updated_13.jpg"><img src="artimages/signature.png" class="signature"></div></a><div class="art-title">XXX</div></div>
+    <div class="art-item">
+      <a href="#img13">
+        <div class="art-box-vertical">
+          <img src="artimages/art_2025_updated_13.jpg">
+          <img src="artimages/signature.png" class="signature">
+        </div>
+      </a>
+      <div class="art-title">XXX</div>
+    </div>
 
     <!-- 14 -->
-    <div class="art-item"><a href="#img14"><div class="art-box-vertical"><img src="artimages/art_2025_14.jpg"><img src="artimages/signature.png" class="signature"></div></a><div class="art-title">XXX</div></div>
-      <!-- 15 -->
-    <div class="art-item"><a href="#img15"><div class="art-box-vertical"><img src="artimages/art_2025_15.jpg"><img src="artimages/signature.png" class="signature"></div></a><div class="art-title">XXX</div></div>
+    <div class="art-item">
+      <a href="#img14">
+        <div class="art-box-vertical">
+          <img src="artimages/art_2025_14.jpg">
+          <img src="artimages/signature.png" class="signature">
+        </div>
+      </a>
+      <div class="art-title">XXX</div>
+    </div>
 
-   
- <div class="art-box-horizontal">
-  <a href="#img16">
-    <img src="artimages/art_2025_16.jpg" class="special-art">
-  </a>
-  <img src="artimages/signature.png" class="signature">
-</div>
+    <!-- 15 -->
+    <div class="art-item">
+      <a href="#img15">
+        <div class="art-box-vertical">
+          <img src="artimages/art_2025_15.jpg">
+          <img src="artimages/signature.png" class="signature">
+        </div>
+      </a>
+      <div class="art-title">XXX</div>
+    </div>
 
-<div id="img16" class="lightbox">
-  <a href="#">
-    <img src="artimages/art_2025_16.jpg">
-  </a>
-</div>
+    <!-- 16 -->
+    <div class="art-item">
+      <a href="#img16" class="art-link">
+        <div class="art-box-horizontal special-box">
+          <img src="artimages/art_2025_16.jpg" class="special-art">
+          <img src="artimages/signature.png" class="signature special-signature">
+        </div>
+      </a>
+      <div class="art-title">XXX</div>
+    </div>
 
   </div>
 </div>
@@ -298,10 +375,8 @@ body {
 <div id="img12" class="lightbox"><a href="#"><img src="artimages/art_2025_new_12.jpg"></a></div>
 <div id="img13" class="lightbox"><a href="#"><img src="artimages/art_2025_updated_13.jpg"></a></div>
 <div id="img14" class="lightbox"><a href="#"><img src="artimages/art_2025_14.jpg"></a></div>
-    <div id="img15" class="lightbox"><a href="#"><img src="artimages/art_2025_15.jpg"></a></div>
-      
-
-
+<div id="img15" class="lightbox"><a href="#"><img src="artimages/art_2025_15.jpg"></a></div>
+<div id="img16" class="lightbox"><a href="#"><img src="artimages/art_2025_16.jpg"></a></div>
 
 </body>
 </html>
