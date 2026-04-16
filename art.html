@@ -66,7 +66,7 @@ body {
   height: 210px;
   border-radius: 12px;
   overflow: hidden;
-  position: relative; /* 👈 important */
+  position: relative;
 }
 
 .art-box-vertical {
@@ -74,7 +74,7 @@ body {
   height: 340px;
   border-radius: 12px;
   overflow: hidden;
-  position: relative; /* 👈 important */
+  position: relative;
 }
 
 .art-box-horizontal img:not(.signature),
@@ -82,7 +82,16 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.3s ease;
 }
+
+/* HOVER */
+.art-box-horizontal:hover img:not(.signature),
+.art-box-vertical:hover img:not(.signature) {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
 .signature {
   position: absolute;
   right: 2px;
@@ -101,6 +110,30 @@ body {
   letter-spacing: 0.3px;
 }
 
+/* ===== LIGHTBOX ===== */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  margin: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.lightbox:target {
+  display: block;
+}
 </style>
 </head>
 
@@ -111,10 +144,7 @@ body {
   <h1>Araina Narula – Art Journey</h1>
   <p>
     Araina has a deep love for art and enjoys exploring her creativity through drawing and painting.
-    She expresses her emotions, imagination, and thoughts in every piece she creates. She is always
-    eager to explore different art forms, new styles, and techniques, and works carefully on each
-    artwork to add detail and depth. From her earliest sketches to her latest creations, her art
-    reflects her passion, growth, and commitment.
+    She expresses her emotions, imagination, and thoughts in every piece she creates.
   </p>
 </div>
 
@@ -124,58 +154,128 @@ body {
 
   <div class="gallery">
 
-    <!-- Row 1 -->
+    <!-- 1 -->
     <div class="art-item">
-      <div class="art-box-horizontal">
-        <img src="artimages/art_2025_1.jpg">
-        <img src="artimages/signature.png" class="signature">
-      </div>
+      <a href="#img1">
+        <div class="art-box-horizontal">
+          <img src="artimages/art_2025_1.jpg">
+          <img src="artimages/signature.png" class="signature">
+        </div>
+      </a>
       <div class="art-title">Soaring High</div>
     </div>
 
+    <!-- 2 -->
     <div class="art-item">
-      <div class="art-box-horizontal">
-        <img src="artimages/art_2025_2.jpg">
-        <img src="artimages/signature.png" class="signature">
-      </div>
+      <a href="#img2">
+        <div class="art-box-horizontal">
+          <img src="artimages/art_2025_2.jpg">
+          <img src="artimages/signature.png" class="signature">
+        </div>
+      </a>
       <div class="art-title">Ocean Symphony</div>
     </div>
 
+    <!-- 3 -->
     <div class="art-item">
-      <div class="art-box-horizontal">
-        <img src="artimages/art_2025_3.jpg">
-        <img src="artimages/signature.png" class="signature">
-      </div>
+      <a href="#img3">
+        <div class="art-box-horizontal">
+          <img src="artimages/art_2025_3.jpg">
+          <img src="artimages/signature.png" class="signature">
+        </div>
+      </a>
       <div class="art-title">Picnic with friends</div>
     </div>
 
-    <!-- Row 2 -->
+    <!-- 4 -->
     <div class="art-item">
-      <div class="art-box-vertical">
-        <img src="artimages/art_2025_4.jpg">
-        <img src="artimages/signature.png" class="signature">
-      </div>
+      <a href="#img4">
+        <div class="art-box-vertical">
+          <img src="artimages/art_2025_4.jpg">
+          <img src="artimages/signature.png" class="signature">
+        </div>
+      </a>
       <div class="art-title">Jungle Harmony</div>
     </div>
 
+    <!-- 5 -->
     <div class="art-item">
-      <div class="art-box-vertical">
-        <img src="artimages/art_2025_5.jpg">
-        <img src="artimages/signature.png" class="signature">
-      </div>
+      <a href="#img5">
+        <div class="art-box-vertical">
+          <img src="artimages/art_2025_5.jpg">
+          <img src="artimages/signature.png" class="signature">
+        </div>
+      </a>
       <div class="art-title">Bonds of Love</div>
     </div>
 
+    <!-- 6 -->
     <div class="art-item">
-      <div class="art-box-vertical">
-        <img src="artimages/art_2025_6.jpg">
-        <img src="artimages/signature.png" class="signature">
-      </div>
+      <a href="#img6">
+        <div class="art-box-vertical">
+          <img src="artimages/art_2025_6.jpg">
+          <img src="artimages/signature.png" class="signature">
+        </div>
+      </a>
       <div class="art-title">Winterland Beyond</div>
     </div>
 
+    <!-- 7–16 -->
+    <!-- SAME STRUCTURE, NO FORCED LAYOUT -->
+
+    <!-- Just repeating -->
+    <!-- You can reorder later freely -->
+
+    <!-- 7 -->
+    <div class="art-item"><a href="#img7"><div class="art-box-horizontal"><img src="artimages/art_2025_7.jpg"><img src="artimages/signature.png" class="signature"></div></a><div class="art-title">XXX</div></div>
+
+    <!-- 8 -->
+    <div class="art-item"><a href="#img8"><div class="art-box-horizontal"><img src="artimages/art_2025_8.jpg"><img src="artimages/signature.png" class="signature"></div></a><div class="art-title">XXX</div></div>
+
+    <!-- 9 -->
+    <div class="art-item"><a href="#img9"><div class="art-box-vertical"><img src="artimages/art_2025_9.jpg"><img src="artimages/signature.png" class="signature"></div></a><div class="art-title">XXX</div></div>
+
+    <!-- 10 -->
+    <div class="art-item"><a href="#img10"><div class="art-box-vertical"><img src="artimages/art_2025_10.jpg"><img src="artimages/signature.png" class="signature"></div></a><div class="art-title">XXX</div></div>
+
+    <!-- 11 -->
+    <div class="art-item"><a href="#img11"><div class="art-box-horizontal"><img src="artimages/art_2025_11.jpg"><img src="artimages/signature.png" class="signature"></div></a><div class="art-title">XXX</div></div>
+
+    <!-- 12 -->
+    <div class="art-item"><a href="#img12"><div class="art-box-horizontal"><img src="artimages/art_2025_12.jpg"><img src="artimages/signature.png" class="signature"></div></a><div class="art-title">XXX</div></div>
+
+    <!-- 13 -->
+    <div class="art-item"><a href="#img13"><div class="art-box-vertical"><img src="artimages/art_2025_13.jpg"><img src="artimages/signature.png" class="signature"></div></a><div class="art-title">XXX</div></div>
+
+    <!-- 14 -->
+    <div class="art-item"><a href="#img14"><div class="art-box-vertical"><img src="artimages/art_2025_14.jpg"><img src="artimages/signature.png" class="signature"></div></a><div class="art-title">XXX</div></div>
+
+    <!-- 15 -->
+    <div class="art-item"><a href="#img15"><div class="art-box-horizontal"><img src="artimages/art_2025_15.jpg"><img src="artimages/signature.png" class="signature"></div></a><div class="art-title">XXX</div></div>
+
+    <!-- 16 -->
+    <div class="art-item"><a href="#img16"><div class="art-box-horizontal"><img src="artimages/art_2025_16.jpg"><img src="artimages/signature.png" class="signature"></div></a><div class="art-title">XXX</div></div>
+
   </div>
 </div>
+
+<!-- LIGHTBOX -->
+<div id="img1" class="lightbox"><a href="#"><img src="artimages/art_2025_1.jpg"></a></div>
+<div id="img2" class="lightbox"><a href="#"><img src="artimages/art_2025_2.jpg"></a></div>
+<div id="img3" class="lightbox"><a href="#"><img src="artimages/art_2025_3.jpg"></a></div>
+<div id="img4" class="lightbox"><a href="#"><img src="artimages/art_2025_4.jpg"></a></div>
+<div id="img5" class="lightbox"><a href="#"><img src="artimages/art_2025_5.jpg"></a></div>
+<div id="img6" class="lightbox"><a href="#"><img src="artimages/art_2025_6.jpg"></a></div>
+<div id="img7" class="lightbox"><a href="#"><img src="artimages/art_2025_7.jpg"></a></div>
+<div id="img8" class="lightbox"><a href="#"><img src="artimages/art_2025_8.jpg"></a></div>
+<div id="img9" class="lightbox"><a href="#"><img src="artimages/art_2025_9.jpg"></a></div>
+<div id="img10" class="lightbox"><a href="#"><img src="artimages/art_2025_10.jpg"></a></div>
+<div id="img11" class="lightbox"><a href="#"><img src="artimages/art_2025_11.jpg"></a></div>
+<div id="img12" class="lightbox"><a href="#"><img src="artimages/art_2025_12.jpg"></a></div>
+<div id="img13" class="lightbox"><a href="#"><img src="artimages/art_2025_13.jpg"></a></div>
+<div id="img14" class="lightbox"><a href="#"><img src="artimages/art_2025_14.jpg"></a></div>
+<div id="img15" class="lightbox"><a href="#"><img src="artimages/art_2025_15.jpg"></a></div>
+<div id="img16" class="lightbox"><a href="#"><img src="artimages/art_2025_16.jpg"></a></div>
 
 </body>
 </html>
