@@ -135,6 +135,34 @@ body {
   bottom: 10px;
   width: 45px;
 }
+  .art-link {
+  display: block;
+  text-decoration: none;
+}
+
+.special-box {
+  width: 320px;
+  height: auto !important;   /* this is the key fix */
+  min-height: 0 !important;
+  background: transparent;
+  overflow: visible !important;
+  border-radius: 0;
+  padding: 0;
+}
+
+.special-art {
+  width: 100%;
+  height: auto !important;   /* full image, no crop */
+  display: block;
+  object-fit: unset !important;
+  border-radius: 12px;
+}
+
+.special-signature {
+  right: 12px;
+  bottom: 10px;
+  width: 45px;
+}
 
 /* ===== LIGHTBOX ===== */
 .lightbox {
@@ -348,15 +376,15 @@ body {
     </div>
 
     <!-- 16 -->
-    <div class="art-item">
-      <a href="#img16" class="art-link">
-        <div class="art-box-horizontal special-box">
-          <img src="artimages/art_2025_16.jpg" class="special-art">
-          <img src="artimages/signature.png" class="signature special-signature">
-        </div>
-      </a>
-      <div class="art-title">Shell Stories</div>
+   <div class="art-item">
+  <a href="#img16" class="art-link">
+    <div class="art-box-horizontal special-box">
+      <img src="artimages/art_2025_16.jpg" class="special-art">
+      <img src="artimages/signature.png" class="signature special-signature">
     </div>
+  </a>
+  <div class="art-title">Shell Stories</div>
+</div>
 
   </div>
 </div>
