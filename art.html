@@ -77,22 +77,19 @@ body {
   position: relative; /* 👈 important */
 }
 
-/* ===== IMAGES ===== */
-.art-box-horizontal img,
-.art-box-vertical img {
+.art-box-horizontal img:not(.signature),
+.art-box-vertical img:not(.signature) {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 12px;
 }
-
-/* ===== SIGNATURE (same logic as yesterday, just correctly anchored) ===== */
 .signature {
   position: absolute;
-  right: 2px;   /* 👈 same zone you liked earlier */
-  bottom: 6px;  /* 👈 slightly lowered as discussed */
-  width: 40px;
-  opacity: 0.9;
+  right: 2px;
+  bottom: 6px;
+  width: 36px;
+  height: auto;
+  opacity: 0.95;
 }
 
 /* ===== TITLE ===== */
