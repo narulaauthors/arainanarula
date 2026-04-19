@@ -201,15 +201,7 @@ body {
   display: block;
   border-radius: 10px;
 
-.lightbox-signature {
-  position: absolute;
-  right: 12px;
-  bottom: 12px;
-  width: 40px;
-  height: auto;
-  opacity: 0.9;
-  z-index: 1003;
-}
+
  .lightbox img {
   max-width: 90%;
   max-height: 90vh;
@@ -218,7 +210,14 @@ body {
   object-fit: contain;
   border-radius: 12px;
 }
-  
+  .lightbox img.signature {
+  width: 40px;
+  height: auto;
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  opacity: 0.85;
+}
 /* ===== LIGHTBOX ARROWS ===== */
 .lightbox .prev,
 .lightbox .next {
