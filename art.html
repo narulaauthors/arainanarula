@@ -165,7 +165,6 @@ body {
   width: 45px;
 }
 
-/* ===== LIGHTBOX ===== */
 .lightbox {
   display: none;
   position: fixed;
@@ -178,16 +177,30 @@ body {
   background: rgba(0,0,0,0.85);
 }
 
-.lightbox img {
-  max-width: 90%;
-  max-height: 80%;
+.lightbox:target {
+  display: block;
+}
+
+.lightbox-content {
+  position: relative;
+  width: fit-content;
   margin: auto;
+}
+
+.lightbox-content > a > img {
+  max-width: 90vw;
+  max-height: 80vh;
   display: block;
   border-radius: 10px;
 }
 
-.lightbox:target {
-  display: block;
+.lightbox-signature {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  width: 70px;
+  height: auto;
+  opacity: 0.9;
 }
 
 /* ===== LIGHTBOX ARROWS ===== */
@@ -215,18 +228,6 @@ body {
 
 .lightbox .next {
   right: 20px;
-}
-  .lightbox-content {
-  position: relative;
-  display: inline-block;
-}
-
-.lightbox-signature {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-  width: 60px;
-  opacity: 0.9;
 }
 </style>
 </head>
@@ -614,9 +615,6 @@ body {
   </div>
 </div>
 
-<!-- ===== LIGHTBOX WITH SIGNATURE ===== -->
-
-<!-- 1 -->
 <div id="img1" class="lightbox">
   <div class="lightbox-content">
     <a href="#"><img src="artimages/art_2025_1.jpg"></a>
@@ -626,7 +624,6 @@ body {
   <a href="#img2" class="next">›</a>
 </div>
 
-<!-- 2 -->
 <div id="img2" class="lightbox">
   <div class="lightbox-content">
     <a href="#"><img src="artimages/art_2025_2.jpg"></a>
@@ -636,7 +633,6 @@ body {
   <a href="#img3" class="next">›</a>
 </div>
 
-<!-- 3 -->
 <div id="img3" class="lightbox">
   <div class="lightbox-content">
     <a href="#"><img src="artimages/art_2025_3.jpg"></a>
@@ -646,9 +642,114 @@ body {
   <a href="#img4" class="next">›</a>
 </div>
 
-<!-- ... SAME PATTERN CONTINUES ... -->
+<div id="img4" class="lightbox">
+  <div class="lightbox-content">
+    <a href="#"><img src="artimages/art_2025_4.jpg"></a>
+    <img src="artimages/signature.png" class="lightbox-signature">
+  </div>
+  <a href="#img3" class="prev">‹</a>
+  <a href="#img5" class="next">›</a>
+</div>
 
-<!-- 16 -->
+<div id="img5" class="lightbox">
+  <div class="lightbox-content">
+    <a href="#"><img src="artimages/art_2025_5.jpg"></a>
+    <img src="artimages/signature.png" class="lightbox-signature">
+  </div>
+  <a href="#img4" class="prev">‹</a>
+  <a href="#img6" class="next">›</a>
+</div>
+
+<div id="img6" class="lightbox">
+  <div class="lightbox-content">
+    <a href="#"><img src="artimages/art_2025_6.jpg"></a>
+    <img src="artimages/signature.png" class="lightbox-signature">
+  </div>
+  <a href="#img5" class="prev">‹</a>
+  <a href="#img7" class="next">›</a>
+</div>
+
+<div id="img7" class="lightbox">
+  <div class="lightbox-content">
+    <a href="#"><img src="artimages/art_2025_7.jpg"></a>
+    <img src="artimages/signature.png" class="lightbox-signature">
+  </div>
+  <a href="#img6" class="prev">‹</a>
+  <a href="#img8" class="next">›</a>
+</div>
+
+<div id="img8" class="lightbox">
+  <div class="lightbox-content">
+    <a href="#"><img src="artimages/art_2025_8.jpg"></a>
+    <img src="artimages/signature.png" class="lightbox-signature">
+  </div>
+  <a href="#img7" class="prev">‹</a>
+  <a href="#img9" class="next">›</a>
+</div>
+
+<div id="img9" class="lightbox">
+  <div class="lightbox-content">
+    <a href="#"><img src="artimages/art_2025_recent_9.jpg"></a>
+    <img src="artimages/signature.png" class="lightbox-signature">
+  </div>
+  <a href="#img8" class="prev">‹</a>
+  <a href="#img10" class="next">›</a>
+</div>
+
+<div id="img10" class="lightbox">
+  <div class="lightbox-content">
+    <a href="#"><img src="artimages/art_2025_10.jpg"></a>
+    <img src="artimages/signature.png" class="lightbox-signature">
+  </div>
+  <a href="#img9" class="prev">‹</a>
+  <a href="#img11" class="next">›</a>
+</div>
+
+<div id="img11" class="lightbox">
+  <div class="lightbox-content">
+    <a href="#"><img src="artimages/art_2025_11.jpg"></a>
+    <img src="artimages/signature.png" class="lightbox-signature">
+  </div>
+  <a href="#img10" class="prev">‹</a>
+  <a href="#img12" class="next">›</a>
+</div>
+
+<div id="img12" class="lightbox">
+  <div class="lightbox-content">
+    <a href="#"><img src="artimages/art_2025_recent_12.jpg"></a>
+    <img src="artimages/signature.png" class="lightbox-signature">
+  </div>
+  <a href="#img11" class="prev">‹</a>
+  <a href="#img13" class="next">›</a>
+</div>
+
+<div id="img13" class="lightbox">
+  <div class="lightbox-content">
+    <a href="#"><img src="artimages/art_2025_updated_13.jpg"></a>
+    <img src="artimages/signature.png" class="lightbox-signature">
+  </div>
+  <a href="#img12" class="prev">‹</a>
+  <a href="#img14" class="next">›</a>
+</div>
+
+<div id="img14" class="lightbox">
+  <div class="lightbox-content">
+    <a href="#"><img src="artimages/art_2025_14.jpg"></a>
+    <img src="artimages/signature.png" class="lightbox-signature">
+  </div>
+  <a href="#img13" class="prev">‹</a>
+  <a href="#img15" class="next">›</a>
+</div>
+
+<div id="img15" class="lightbox">
+  <div class="lightbox-content">
+    <a href="#"><img src="artimages/art_2025_15.jpg"></a>
+    <img src="artimages/signature.png" class="lightbox-signature">
+  </div>
+  <a href="#img14" class="prev">‹</a>
+  <a href="#img16" class="next">›</a>
+</div>
+
 <div id="img16" class="lightbox">
   <div class="lightbox-content">
     <a href="#"><img src="artimages/art_2025_16.jpg"></a>
@@ -658,9 +759,6 @@ body {
   <a href="#img17" class="next">›</a>
 </div>
 
-<!-- ===== 2024 ===== -->
-
-<!-- 17 -->
 <div id="img17" class="lightbox">
   <div class="lightbox-content">
     <a href="#"><img src="artimages/art_2024_1.jpg"></a>
@@ -670,9 +768,132 @@ body {
   <a href="#img18" class="next">›</a>
 </div>
 
-<!-- ... CONTINUE SAME ... -->
+<div id="img18" class="lightbox">
+  <div class="lightbox-content">
+    <a href="#"><img src="artimages/art_2024_2.jpg"></a>
+    <img src="artimages/signature.png" class="lightbox-signature">
+  </div>
+  <a href="#img17" class="prev">‹</a>
+  <a href="#img19" class="next">›</a>
+</div>
 
-<!-- 32 -->
+<div id="img19" class="lightbox">
+  <div class="lightbox-content">
+    <a href="#"><img src="artimages/art_2024_3.jpg"></a>
+    <img src="artimages/signature.png" class="lightbox-signature">
+  </div>
+  <a href="#img18" class="prev">‹</a>
+  <a href="#img20" class="next">›</a>
+</div>
+
+<div id="img20" class="lightbox">
+  <div class="lightbox-content">
+    <a href="#"><img src="artimages/art_2024_4.jpg"></a>
+    <img src="artimages/signature.png" class="lightbox-signature">
+  </div>
+  <a href="#img19" class="prev">‹</a>
+  <a href="#img21" class="next">›</a>
+</div>
+
+<div id="img21" class="lightbox">
+  <div class="lightbox-content">
+    <a href="#"><img src="artimages/art_2024_5.jpg"></a>
+    <img src="artimages/signature.png" class="lightbox-signature">
+  </div>
+  <a href="#img20" class="prev">‹</a>
+  <a href="#img22" class="next">›</a>
+</div>
+
+<div id="img22" class="lightbox">
+  <div class="lightbox-content">
+    <a href="#"><img src="artimages/art_2024_6.jpg"></a>
+    <img src="artimages/signature.png" class="lightbox-signature">
+  </div>
+  <a href="#img21" class="prev">‹</a>
+  <a href="#img23" class="next">›</a>
+</div>
+
+<div id="img23" class="lightbox">
+  <div class="lightbox-content">
+    <a href="#"><img src="artimages/art_2024_7.jpg"></a>
+    <img src="artimages/signature.png" class="lightbox-signature">
+  </div>
+  <a href="#img22" class="prev">‹</a>
+  <a href="#img24" class="next">›</a>
+</div>
+
+<div id="img24" class="lightbox">
+  <div class="lightbox-content">
+    <a href="#"><img src="artimages/art_2024_8.jpg"></a>
+    <img src="artimages/signature.png" class="lightbox-signature">
+  </div>
+  <a href="#img23" class="prev">‹</a>
+  <a href="#img25" class="next">›</a>
+</div>
+
+<div id="img25" class="lightbox">
+  <div class="lightbox-content">
+    <a href="#"><img src="artimages/art_2024_9.jpg"></a>
+    <img src="artimages/signature.png" class="lightbox-signature">
+  </div>
+  <a href="#img24" class="prev">‹</a>
+  <a href="#img26" class="next">›</a>
+</div>
+
+<div id="img26" class="lightbox">
+  <div class="lightbox-content">
+    <a href="#"><img src="artimages/art_2024_10.jpg"></a>
+    <img src="artimages/signature.png" class="lightbox-signature">
+  </div>
+  <a href="#img25" class="prev">‹</a>
+  <a href="#img27" class="next">›</a>
+</div>
+
+<div id="img27" class="lightbox">
+  <div class="lightbox-content">
+    <a href="#"><img src="artimages/art_2024_11.jpg"></a>
+    <img src="artimages/signature.png" class="lightbox-signature">
+  </div>
+  <a href="#img26" class="prev">‹</a>
+  <a href="#img28" class="next">›</a>
+</div>
+
+<div id="img28" class="lightbox">
+  <div class="lightbox-content">
+    <a href="#"><img src="artimages/art_2024_12.jpg"></a>
+    <img src="artimages/signature.png" class="lightbox-signature">
+  </div>
+  <a href="#img27" class="prev">‹</a>
+  <a href="#img29" class="next">›</a>
+</div>
+
+<div id="img29" class="lightbox">
+  <div class="lightbox-content">
+    <a href="#"><img src="artimages/art_2024_13.jpg"></a>
+    <img src="artimages/signature.png" class="lightbox-signature">
+  </div>
+  <a href="#img28" class="prev">‹</a>
+  <a href="#img30" class="next">›</a>
+</div>
+
+<div id="img30" class="lightbox">
+  <div class="lightbox-content">
+    <a href="#"><img src="artimages/art_2024_14.jpg"></a>
+    <img src="artimages/signature.png" class="lightbox-signature">
+  </div>
+  <a href="#img29" class="prev">‹</a>
+  <a href="#img31" class="next">›</a>
+</div>
+
+<div id="img31" class="lightbox">
+  <div class="lightbox-content">
+    <a href="#"><img src="artimages/art_2024_15.jpg"></a>
+    <img src="artimages/signature.png" class="lightbox-signature">
+  </div>
+  <a href="#img30" class="prev">‹</a>
+  <a href="#img32" class="next">›</a>
+</div>
+
 <div id="img32" class="lightbox">
   <div class="lightbox-content">
     <a href="#"><img src="artimages/art_2024_16.jpg"></a>
