@@ -76,24 +76,31 @@ header a {
 }
 
 /* CARDS */
-.cards {
-  display: flex;
-  gap: 25px;
-  justify-content: center;
-  flex-wrap: wrap;
+.card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 22px;
+  width: 240px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
 }
 
-.card {
-  background: white;
-  padding: 25px;
-  width: 260px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.08);
 }
 
 .icon {
-  font-size: 30px;
-  margin-bottom: 10px;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  background: #ffe6ea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
 }
 
 /* SPLIT */
@@ -111,14 +118,20 @@ header a {
 }
 
 /* BUTTONS */
-.link-btn {
+.button, .link-btn {
   display: inline-block;
-  margin-top: 15px;
-  padding: 10px 18px;
-  background: #f4a6b0;
+  margin-top: 18px;
+  padding: 12px 22px;
+  background: linear-gradient(135deg, #f6a5ad, #f48ca1);
   color: white;
-  border-radius: 6px;
+  border-radius: 8px;
   text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+  .button:hover, .link-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(244,140,161,0.4);
 }
 
 /* FOOTER */
