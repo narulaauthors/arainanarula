@@ -124,8 +124,8 @@ body {
 }
 
 /* COMMON SECTION */
-.section {
-  padding: 60px 24px;
+section {
+  padding: 50px 20px;
 }
 
 .section-inner {
@@ -172,7 +172,30 @@ border: 1px solid #ecd3c7;
   line-height: 1.5;
 color: #d07a7a;
   }
+<div class="section-divider">
+  <span>★</span>
+</div>
 
+      .section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0 40px;
+}
+
+.section-divider::before,
+.section-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #e5cfc3;
+  margin: 0 10px;
+}
+
+.section-divider span {
+  color: #d07a7a;
+  font-size: 14px;
+}
 .icon-circle {
   width: 70px;
   height: 70px;
