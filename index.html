@@ -5,272 +5,428 @@
 <title>Araina Narula</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Playfair+Display:wght@600&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+
 <style>
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #fdf6f2;
-  color: #333;
+* {
+  box-sizing: border-box;
 }
 
-/* CONTAINER */
-.container {
-  max-width: 1150px;
-  margin: auto;
-  padding: 0 20px;
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  color: #333;
+  background:
+    radial-gradient(circle at 8% 22%, rgba(245, 170, 185, 0.18), transparent 28%),
+    radial-gradient(circle at 92% 15%, rgba(235, 190, 150, 0.18), transparent 26%),
+    linear-gradient(to bottom, #fffaf7, #fdf1ec);
 }
 
 /* HEADER */
-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 0;
+.header {
+  background: rgba(255,255,255,0.88);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
 }
 
-header a {
-  margin: 0 12px;
+.nav {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: 'Dancing Script', cursive;
+  font-size: 30px;
+  color: #c76f79;
+}
+
+.nav-links a {
+  margin-left: 28px;
   text-decoration: none;
   color: #333;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  color: #c76f79;
+}
+
+/* COMMON */
+.section {
+  padding: 54px 24px;
+}
+
+.section-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  text-align: center;
+  margin: 0 0 30px;
+  color: #2d2d2d;
 }
 
 /* HERO */
 .hero {
-  padding: 60px 0;
+  padding: 72px 24px 64px;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero-inner {
-  display: flex;
+  max-width: 1100px;
+  margin: 0 auto;
+  min-height: 430px;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
   align-items: center;
-  justify-content: space-between;
-  gap: 60px;
+  gap: 50px;
 }
 
-.hero-text {
-  max-width: 520px;
+.kicker {
+  color: #c76f79;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 14px;
+  margin-bottom: 14px;
 }
 
 .hero h1 {
-  font-size: 54px;
-  margin: 10px 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 58px;
+  line-height: 1.08;
+  margin: 0 0 18px;
+  color: #2d2d2d;
 }
 
 .hero p {
-  font-size: 18px;
-  line-height: 1.6;
+  font-size: 19px;
+  line-height: 1.7;
+  max-width: 500px;
+  margin: 0 0 26px;
+  color: #555;
 }
 
-.button {
+.primary-btn,
+.card-btn {
   display: inline-block;
-  margin-top: 20px;
-  padding: 12px 22px;
-  background: #f4a6b0;
-  color: white;
-  border-radius: 6px;
   text-decoration: none;
+  color: #fff;
+  background: linear-gradient(135deg, #c96f7a, #f09aaa);
+  padding: 13px 28px;
+  border-radius: 12px;
+  font-weight: 700;
+  box-shadow: 0 8px 18px rgba(201,111,122,0.28);
 }
 
-/* SECTION */
-.section {
-  padding: 60px 0;
-  text-align: center;
+.primary-btn:hover,
+.card-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(201,111,122,0.36);
 }
 
-/* CARDS */
-.card {
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(10px);
-  padding: 22px;
-  width: 240px;
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-  transition: all 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.08);
-}
-
-.icon {
-  width: 60px;
-  height: 60px;
-  margin: 0 auto 12px;
-  border-radius: 50%;
-  background: #ffe6ea;
+.hero-visual {
+  min-height: 340px;
+  border-radius: 28px;
+  background:
+    linear-gradient(135deg, rgba(255,232,237,0.8), rgba(255,248,242,0.7));
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 26px;
+  color: #c76f79;
+  font-weight: 700;
+  border: 1px dashed rgba(199,111,121,0.35);
 }
 
-/* SPLIT */
-.split {
+/* HIGHLIGHTS */
+.highlights {
+  background: rgba(255,255,255,0.58);
+}
+
+.highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.highlight-card {
+  background: rgba(255,255,255,0.86);
+  border: 1px solid rgba(220,170,180,0.28);
+  border-radius: 18px;
+  padding: 24px 20px;
+  text-align: center;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.05);
+}
+
+.icon-circle {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  background: #fde4e9;
   display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  font-size: 27px;
 }
 
-.split-box {
-  flex: 1;
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
+.highlight-card h3 {
+  margin: 0 0 8px;
+  font-size: 20px;
 }
 
-/* BUTTONS */
-.button, .link-btn {
-  display: inline-block;
-  margin-top: 18px;
-  padding: 12px 22px;
-  background: linear-gradient(135deg, #f6a5ad, #f48ca1);
-  color: white;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
+.highlight-card p {
+  margin: 0;
+  color: #555;
+  font-size: 15px;
+  line-height: 1.5;
 }
-  .button:hover, .link-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(244,140,161,0.4);
+
+/* ABOUT */
+.about-wrap {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 45px;
+  align-items: center;
+}
+
+.about-art {
+  min-height: 240px;
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 42% 45%, rgba(245,170,185,0.32), transparent 42%),
+    linear-gradient(135deg, #fff, #fff6f2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c76f79;
+  font-weight: 700;
+}
+
+.about-text {
+  font-size: 17px;
+  line-height: 1.75;
+  color: #444;
+}
+
+/* MY WORK */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.work-card {
+  background: rgba(255,255,255,0.88);
+  border-radius: 18px;
+  padding: 28px 24px;
+  text-align: center;
+  border: 1px solid rgba(220,170,180,0.26);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.05);
+}
+
+.work-card h3 {
+  font-size: 22px;
+  margin: 0 0 12px;
+  color: #b96370;
+}
+
+.work-card p {
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: #555;
+  min-height: 78px;
+}
+
+/* ACHIEVEMENTS + JOURNEY */
+.bottom-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+}
+
+.bottom-card {
+  background: rgba(255,255,255,0.88);
+  border-radius: 22px;
+  padding: 34px 30px;
+  text-align: center;
+  border: 1px solid rgba(220,170,180,0.22);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.05);
+}
+
+.bottom-card h3 {
+  font-size: 24px;
+  margin: 0 0 12px;
+}
+
+.bottom-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
 }
 
 /* FOOTER */
 footer {
   text-align: center;
-  padding: 20px;
-  margin-top: 40px;
+  padding: 28px 20px;
+  color: #777;
+}
+
+/* RESPONSIVE */
+@media (max-width: 850px) {
+  .hero-inner,
+  .about-wrap,
+  .highlight-grid,
+  .work-grid,
+  .bottom-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .nav-links a {
+    margin: 0 9px;
+  }
 }
 </style>
-
 </head>
 
 <body>
 
-<div class="container">
-
-<!-- HEADER -->
-<header>
-  <div><strong>Araina Narula</strong></div>
-  <div>
-    <a href="#">Home</a>
-    <a href="about.html">About</a>
-    <a href="author.html">Author</a>
-    <a href="art.html">Art</a>
-    <a href="performing.html">Performing</a>
-    <a href="achievements.html">Achievements</a>
-    <a href="journey.html">Journey</a>
+<header class="header">
+  <div class="nav">
+    <div class="logo">Araina Narula</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="author.html">Author</a>
+      <a href="art.html">Art</a>
+      <a href="performing.html">Performing Arts</a>
+      <a href="achievements.html">Achievements</a>
+      <a href="journey.html">Journey</a>
+    </nav>
   </div>
 </header>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
-
-    <div class="hero-text">
-      <p>AUTHOR • ARTIST • PERFORMER</p>
+    <div>
+      <div class="kicker">AUTHOR • ARTIST • PERFORMER</div>
       <h1>Araina Narula</h1>
       <p>Araina’s world is filled with stories, colors, and a love for creativity.</p>
-      <a href="#work" class="button">Explore Her World</a>
+      <a href="#work" class="primary-btn">Explore Her World</a>
+    </div>
+
+    <div class="hero-visual">
+      Araina Hero Image Placeholder
+    </div>
+  </div>
+</section>
+
+<section class="section highlights">
+  <div class="section-inner">
+    <h2 class="section-title">Highlights</h2>
+
+    <div class="highlight-grid">
+      <div class="highlight-card">
+        <div class="icon-circle">📚</div>
+        <h3>Young Author & Storyteller</h3>
+        <p>Creating a magical world of stories</p>
+      </div>
+
+      <div class="highlight-card">
+        <div class="icon-circle">🎨</div>
+        <h3>Visual Artist</h3>
+        <p>The world is her canvas for art</p>
+      </div>
+
+      <div class="highlight-card">
+        <div class="icon-circle">🎭</div>
+        <h3>Emerging Performer</h3>
+        <p>Bringing energy and rhythm to every stage</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-inner about-wrap">
+    <div class="about-art">
+      Soft Illustration Placeholder
     </div>
 
     <div>
-      <img src="images/hero.jpg" alt="Araina" width="300">
+      <h2 class="section-title" style="text-align:left;">About Araina</h2>
+      <div class="about-text">
+        Araina is a free-spirited young girl on her self-discovery journey, learning about the world and life with each passing day. She is passionate about many beautiful and wondrous things, starting with her human connections — her family, her friends, and the people around her.
+        <br><br>
+        She loves to explore, observe, and experiment, creating meaningful memories along the way. She expresses her feelings and thoughts through stories, art, crafts, music, and acting.
+        <br><br>
+        With a constant urge to learn and engage in something new, she is gradually growing into a more confident and thoughtful person with time.
+      </div>
     </div>
-
   </div>
 </section>
 
-<!-- HIGHLIGHTS -->
-<section class="section">
-  <div class="cards">
-
-    <div class="card">
-      <div class="icon">📚</div>
-      <h3>Young Author & Storyteller</h3>
-      <p>Creating a magical world of stories</p>
-    </div>
-
-    <div class="card">
-      <div class="icon">🎨</div>
-      <h3>Visual Artist</h3>
-      <p>The world is her canvas for art</p>
-    </div>
-
-    <div class="card">
-      <div class="icon">🎭</div>
-      <h3>Emerging Performer</h3>
-      <p>Bringing energy and rhythm to every stage</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section class="section">
-  <h2>About Araina</h2>
-  <p style="max-width:700px;margin:auto;">
-    Araina is a free-spirited young girl on her self-discovery journey, learning about the world and life with each passing day. She is passionate about many beautiful and wondrous things, starting with her human connections — her family, her friends, and the people around her.
-    <br><br>
-    She loves to explore, observe, and experiment, creating meaningful memories along the way. She expresses her feelings and thoughts through stories, art, crafts, music, and acting.
-    <br><br>
-    With a constant urge to learn and engage in something new, she is gradually growing into a more confident and thoughtful person with time.
-  </p>
-</section>
-
-<!-- MY WORK -->
 <section class="section" id="work">
-  <h2>Explore My Work</h2>
+  <div class="section-inner">
+    <h2 class="section-title">Explore My Work</h2>
 
-  <div class="cards">
+    <div class="work-grid">
+      <div class="work-card">
+        <h3>Author</h3>
+        <p>A bookshelf of dreams, characters, and adventures created by Araina.</p>
+        <a href="author.html" class="card-btn">Explore Books</a>
+      </div>
 
-    <div class="card">
-      <h3>Author</h3>
-      <p>A bookshelf of dreams, characters, and adventures created by Araina.</p>
-      <a href="author.html" class="link-btn">Explore Books</a>
+      <div class="work-card">
+        <h3>Art</h3>
+        <p>From simple sketches to detailed scenes, each artwork tells its own story.</p>
+        <a href="art.html" class="card-btn">Explore Art</a>
+      </div>
+
+      <div class="work-card">
+        <h3>Performing Arts</h3>
+        <p>Music and theatre speak to her heart, where emotions find their expression.</p>
+        <a href="performing.html" class="card-btn">Explore Performances</a>
+      </div>
     </div>
-
-    <div class="card">
-      <h3>Art</h3>
-      <p>From simple sketches to detailed scenes, each artwork tells its own story.</p>
-      <a href="art.html" class="link-btn">Explore Art</a>
-    </div>
-
-    <div class="card">
-      <h3>Performing Arts</h3>
-      <p>Music and theatre speak to her heart, where emotions find their expression.</p>
-      <a href="performing.html" class="link-btn">Explore Performances</a>
-    </div>
-
   </div>
 </section>
 
-<!-- ACHIEVEMENTS + JOURNEY -->
 <section class="section">
-
-  <div class="split">
-
-    <div class="split-box">
+  <div class="section-inner bottom-grid">
+    <div class="bottom-card">
       <h3>Achievements</h3>
       <p>Moments of recognition celebrating her efforts and creativity</p>
-      <a href="achievements.html" class="link-btn">View Achievements</a>
+      <a href="achievements.html" class="card-btn">View Achievements</a>
     </div>
 
-    <div class="split-box">
+    <div class="bottom-card">
       <h3>Journey</h3>
       <p>Capturing her moments of learning, exploring, and creating everlasting memories</p>
-      <a href="journey.html" class="link-btn">Explore Journey</a>
+      <a href="journey.html" class="card-btn">Explore Journey</a>
     </div>
-
   </div>
-
 </section>
 
-<!-- FOOTER -->
 <footer>
-  © Araina Narula
+  © 2026 Araina Narula
 </footer>
-
-</div>
 
 </body>
 </html>
