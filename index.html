@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <title>Araina Narula</title>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=DM+Serif+Display&family=Dancing+Script:wght@600&display=swap" rel="stylesheet"><style>
-* {
-  box-sizing: border-box;
-}
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=DM+Serif+Display&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+
+<style>
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
@@ -51,14 +51,10 @@ body {
   font-size: 16px;
 }
 
-.nav-links a:hover {
-  color: #c76f79;
-}
+.nav-links a:hover { color: #c76f79; }
 
 /* HERO */
-.hero {
-  padding: 80px 24px;
-}
+.hero { padding: 80px 24px; }
 
 .hero-container {
   max-width: 1100px;
@@ -69,10 +65,7 @@ body {
   gap: 40px;
 }
 
-.hero-text {
-  flex: 1;
-  transform: translateY(-10px);
-}
+.hero-text { flex: 1; transform: translateY(-10px); }
 
 .hero-subtitle {
   color: #c76f79;
@@ -84,10 +77,8 @@ body {
 .hero-text h1 {
   font-family: 'DM Serif Display', serif;
   font-size: 44px;
-  line-height: 1.1;
   margin: 0 0 18px;
   font-weight: normal;
-  letter-spacing: 0.3px;
 }
 
 .hero-description {
@@ -107,29 +98,18 @@ body {
   font-weight: 600;
 }
 
-.disabled-btn {
-  pointer-events: none;
-  opacity: 0.85;
-}
-
 /* HERO IMAGE */
-.hero-image {
-  flex: 1;
-  text-align: right;
-}
+.hero-image { flex: 1; text-align: right; }
 
 .hero-image img {
   max-width: 100%;
   border-radius: 18px;
 }
 
-/* COMMON SECTION */
-section {
-  padding: 50px 20px;
-}
-section:nth-of-type(2) {
-  padding-top: 10px;
-}
+/* SECTION */
+section { padding: 50px 20px; }
+section:nth-of-type(2) { padding-top: 10px; }
+
 .section-inner {
   max-width: 1100px;
   margin: auto;
@@ -139,23 +119,8 @@ section:nth-of-type(2) {
   text-align: center;
   font-family: 'DM Serif Display', serif;
   font-size: 32px;
-  font-weight: 500;
   color: #3a3a3a;
-
-  letter-spacing: 0.5px;
   margin-bottom: 12px;
-
-  position: relative;
-}
-
-.about-text h2::after {
-  content: "";
-  display: block;
-  width: 50px;
-  height: 3px;
-  background: #e2b6a3;
-  margin: 10px 0 0;
-  border-radius: 2px;
 }
 
 /* HIGHLIGHTS */
@@ -166,33 +131,22 @@ section:nth-of-type(2) {
 }
 
 .highlight-card {
-background: linear-gradient(145deg, #fef6f2, #f9e7dc);
+  background: linear-gradient(145deg, #fef6f2, #f9e7dc);
   border-radius: 20px;
-padding: 26px 18px;
+  padding: 26px 18px;
   text-align: center;
-  flex: 1;
-  margin: 10px;
-border: 1px solid #ecd3c7;
+  border: 1px solid #ecd3c7;
   box-shadow: 0 6px 18px rgba(0,0,0,0.04);
-  transition: all 0.3s ease;
 }
-  .highlight-card:hover {
+
+.highlight-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 28px rgba(0,0,0,0.08);
 }
-  .highlight-card h3 {
-  margin: 10px 0 8px;
-  font-size: 18px;
-}
-  .highlight-card p {
-  margin: 0;
-  font-size: 14.5px;
-  line-height: 1.5;
-color: #d07a7a;
-  }
 
+.highlight-card p { color: #d07a7a; }
 
-      .section-divider {
+.section-divider {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -208,30 +162,6 @@ color: #d07a7a;
   margin: 0 10px;
 }
 
-.section-divider span {
-  color: #d07a7a;
-  font-size: 14px;
-}
-.icon-circle {
-  width: 70px;
-  height: 70px;
-  margin: 0 auto 18px;
-  border-radius: 50%;
-
-  background: linear-gradient(145deg, #fff7f2, #f3ddd2);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  box-shadow: 
-    0 8px 18px rgba(0,0,0,0.06);
-}
-  .icon-circle i {
-  font-size: 26px;
-  color: #d07a7a;
-}
-
 /* ABOUT */
 .about-wrap {
   display: grid;
@@ -240,112 +170,62 @@ color: #d07a7a;
   align-items: center;
 }
 
+/* FIXED IMAGE BLOCK */
 .about-art {
   height: 260px;
   border-radius: 20px;
-  overflow: hidden; /* VERY IMPORTANT */
-
-  background-color: #fdf6f2; /* fallback soft background */
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
+  background-color: #fdf6f2;
 }
-      .about-art img {
+
+.about-art img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-.about-text {
-  font-size: 16px;
-  line-height: 1.7;
-  margin-bottom: 10px;  /* reduce this */
-}
-      .about-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 34px;
-  opacity: 0.7;
-}
-      
-      .about-content {
+/* TEXT */
+.about-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-      
-     .about-content .btn-primary {
-  display: inline-block;
-  width: auto;
+
+.about-text {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* FIXED BUTTON WIDTH */
+.about-content .btn-primary {
+  width: fit-content;
+  margin-top: 24px;
   padding: 12px 26px;
-  margin-top: 20px;
-}
-      
-
-/* WORK */
-.work-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
 }
 
-.work-card {
-  background: white;
-  border-radius: 18px;
-  padding: 26px;
-  text-align: center;
-}
-
-.card-btn {
-  display: inline-block;
-  margin-top: 12px;
-  padding: 10px 20px;
-  background: #e88b94;
-  color: white;
-  text-decoration: none;
-  border-radius: 20px;
-}
-
-/* BOTTOM */
-.bottom-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-}
-
-.bottom-card {
-  background: white;
-  padding: 30px;
-  border-radius: 20px;
-  text-align: center;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  color: #777;
+/* FIXED UNDERLINE ONLY FOR ABOUT */
+.about-content .section-title::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #e2b6a3;
+  margin-top: 10px;
+  border-radius: 2px;
 }
 
 /* MOBILE */
 @media (max-width: 850px) {
   .hero-container,
   .about-wrap,
-  .highlight-grid,
-  .work-grid,
-  .bottom-grid {
+  .highlight-grid {
     grid-template-columns: 1fr;
     flex-direction: column;
     text-align: center;
   }
 
-  .hero-image {
-    text-align: center;
-  }
+  .hero-image { text-align: center; }
 }
 </style>
 </head>
@@ -356,34 +236,32 @@ footer {
   <div class="nav">
     <div class="logo">Araina Narula</div>
     <nav class="nav-links">
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="author.html">Author</a>
-  <a href="art.html">Art</a>
-  <a href="performing.html">Performing Arts</a>
-  <a href="achievements.html">Achievements</a>
-  <a href="journey.html">Journey</a>
-</nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="author.html">Author</a>
+      <a href="art.html">Art</a>
+      <a href="performing.html">Performing Arts</a>
+      <a href="achievements.html">Achievements</a>
+      <a href="journey.html">Journey</a>
+    </nav>
   </div>
 </header>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-container">
-
     <div class="hero-text">
       <p class="hero-subtitle">AUTHOR • ARTIST • PERFORMER</p>
       <h1>Araina Narula</h1>
       <p class="hero-description">
         Araina’s world is filled with stories, colors, and a love for creativity.
       </p>
-      <a href="#" class="btn-primary disabled-btn">Explore Her World</a>
+      <a href="#" class="btn-primary">Explore Her World</a>
     </div>
 
     <div class="hero-image">
-      <img src="images/araina_hero.png" alt="Araina">
+      <img src="images/araina_hero.png">
     </div>
-
   </div>
 </section>
 
@@ -391,31 +269,23 @@ footer {
 <section class="section">
   <div class="section-inner">
     <h2 class="section-title">Highlights</h2>
-        <div class="section-divider">
-  <span>★</span>
-</div>
+    <div class="section-divider"><span>★</span></div>
 
     <div class="highlight-grid">
       <div class="highlight-card">
-<div class="icon-circle">
-  <i class="fas fa-book-open"></i>
-</div>
+        <div class="icon-circle"><i class="fas fa-book-open"></i></div>
         <h3>Young Author</h3>
         <p>Creating a magical world of stories</p>
       </div>
 
       <div class="highlight-card">
-<div class="icon-circle">
-  <i class="fas fa-palette"></i>
-</div>
+        <div class="icon-circle"><i class="fas fa-palette"></i></div>
         <h3>Visual Artist</h3>
         <p>The world is her canvas for art</p>
       </div>
 
       <div class="highlight-card">
-<div class="icon-circle">
-  <i class="fas fa-masks-theater"></i>
-</div>
+        <div class="icon-circle"><i class="fas fa-masks-theater"></i></div>
         <h3>Performer</h3>
         <p>Bringing energy and rhythm to every stage</p>
       </div>
@@ -427,65 +297,22 @@ footer {
 <section class="section">
   <div class="section-inner about-wrap">
 
-    <!-- LEFT VISUAL -->
-<div class="about-art">
-<img src="images/araina-creative.png" alt="Araina creative illustration"></div>
-        
-    <!-- RIGHT CONTENT -->
+    <div class="about-art">
+      <img src="images/araina-creative.png" alt="Araina creative illustration">
+    </div>
+
     <div class="about-content">
       <h2 class="section-title">About Araina</h2>
 
       <p class="about-text">
-  A curious mind, a creative heart, and a growing perspective drive Araina to follow her passions and learn each day. Her love for different creative forms and her dedication to perfecting them make her the artist she is.
-</p>
+        A curious mind, a creative heart, and a growing perspective drive Araina to follow her passions and learn each day. Her love for different creative forms and her dedication to perfecting them make her the artist she is.
+      </p>
 
       <a href="about.html" class="btn-primary">Know More About Her</a>
     </div>
 
   </div>
 </section>
-
-<!-- WORK -->
-<section class="section">
-  <div class="section-inner">
-    <h2 class="section-title">Explore My Work</h2>
-
-    <div class="work-grid">
-      <div class="work-card">
-        <h3>Author</h3>
-        <a href="author.html" class="card-btn">Explore Books</a>
-      </div>
-
-      <div class="work-card">
-        <h3>Art</h3>
-<a href="art.html" class="card-btn">Explore Art</a>
-      </div>
-
-      <div class="work-card">
-        <h3>Performing Arts</h3>
-<a href="performing.html" class="card-btn">Explore Performances</a>      </div>
-    </div>
-  </div>
-</section>
-
-<!-- BOTTOM -->
-<section class="section">
-  <div class="section-inner bottom-grid">
-    <div class="bottom-card">
-      <h3>Achievements</h3>
-      <a href="#" class="card-btn">View</a>
-    </div>
-
-    <div class="bottom-card">
-      <h3>Journey</h3>
-      <a href="#" class="card-btn">Explore</a>
-    </div>
-  </div>
-</section>
-
-<footer>
-  © 2026 Araina Narula
-</footer>
 
 </body>
 </html>
