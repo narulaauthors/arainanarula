@@ -241,14 +241,21 @@ color: #d07a7a;
 }
 
 .about-art {
-  height: 220px;
+  height: 260px;
   border-radius: 20px;
+  overflow: hidden; /* VERY IMPORTANT */
 
-  background:
-    radial-gradient(circle at 30% 30%, #f7e3d7, transparent 60%),
-    radial-gradient(circle at 70% 70%, #f2d8cc, transparent 60%);
+  background-color: #fdf6f2; /* fallback soft background */
 
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+      .about-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .about-text {
@@ -430,7 +437,7 @@ footer {
 
     <!-- LEFT VISUAL -->
 <div class="about-art">
-  <div class="about-icon">✍️</div>
+  <img src="araina-creative.png" alt="Araina creative illustration">
 </div>
         
     <!-- RIGHT CONTENT -->
