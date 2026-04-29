@@ -137,9 +137,25 @@ section:nth-of-type(2) {
 
 .section-title {
   text-align: center;
-  font-family: 'Playfair Display', serif;
-  font-size: 30px;
-  margin-bottom: 30px;
+  font-family: 'DM Serif Display', serif;
+  font-size: 32px;
+  font-weight: 500;
+  color: #3a3a3a;
+
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: #e6b8a2;
+  margin: 8px auto 0;
+  border-radius: 2px;
 }
 
 /* HIGHLIGHTS */
