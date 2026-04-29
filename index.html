@@ -257,12 +257,31 @@ color: #d07a7a;
 }
 
 .about-text {
+  font-size: 16px;
   line-height: 1.7;
+  margin-bottom: 10px;  /* reduce this */
 }
       .about-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+      
+      .about-content .btn-primary {
+              margin-top: 16px;
+
+  display: inline-block;
+  width: auto;
+  padding: 12px 24px;
+}
+      .about-art {
+  height: 260px;
+  border-radius: 20px;
+
+  background:
+    radial-gradient(circle at 30% 30%, #f9e7dc, transparent 60%),
+    radial-gradient(circle at 70% 70%, #f3ddd2, transparent 60%);
+
 }
 
 /* WORK */
@@ -407,9 +426,7 @@ footer {
   <div class="section-inner about-wrap">
 
     <!-- LEFT VISUAL -->
-    <div class="about-art">
-      ✨
-    </div>
+    <div class="about-art"></div>
 
     <!-- RIGHT CONTENT -->
     <div class="about-content">
