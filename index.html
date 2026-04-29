@@ -241,19 +241,14 @@ color: #d07a7a;
 }
 
 .about-art {
-  height: 260px;
+  height: 220px;
   border-radius: 20px;
 
   background:
-    radial-gradient(circle at 30% 30%, #f9e7dc, transparent 60%),
-    radial-gradient(circle at 70% 70%, #f3ddd2, transparent 60%);
+    radial-gradient(circle at 30% 30%, #f7e3d7, transparent 60%),
+    radial-gradient(circle at 70% 70%, #f2d8cc, transparent 60%);
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-size: 28px;
-  color: #d07a7a;
+  position: relative;
 }
 
 .about-text {
@@ -261,18 +256,26 @@ color: #d07a7a;
   line-height: 1.7;
   margin-bottom: 10px;  /* reduce this */
 }
+      .about-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 34px;
+  opacity: 0.7;
+}
+      
       .about-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
       
-      .about-content .btn-primary {
-              margin-top: 16px;
-
+     .about-content .btn-primary {
   display: inline-block;
   width: auto;
-  padding: 12px 24px;
+  padding: 12px 26px;
+  margin-top: 20px;
 }
       .about-art {
   height: 260px;
@@ -426,19 +429,17 @@ footer {
   <div class="section-inner about-wrap">
 
     <!-- LEFT VISUAL -->
-    <div class="about-art"></div>
-
+<div class="about-art">
+  <div class="about-icon">✍️</div>
+</div>
+        
     <!-- RIGHT CONTENT -->
     <div class="about-content">
       <h2 class="section-title">About Araina</h2>
 
       <p class="about-text">
-        A curious mind, a creative heart, and a growing perspective drive Araina to follow her passions and learn each day.
-      </p>
-
-      <p class="about-text">
-        Her love for different creative forms and her dedication to perfecting them make her the artist she is.
-      </p>
+  A curious mind, a creative heart, and a growing perspective drive Araina to follow her passions and learn each day. Her love for different creative forms and her dedication to perfecting them make her the artist she is.
+</p>
 
       <a href="about.html" class="btn-primary">Know More About Her</a>
     </div>
