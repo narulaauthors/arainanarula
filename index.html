@@ -241,17 +241,28 @@ color: #d07a7a;
 }
 
 .about-art {
-  height: 250px;
-  background: #fff5f2;
+  height: 260px;
   border-radius: 20px;
+
+  background:
+    radial-gradient(circle at 30% 30%, #f9e7dc, transparent 60%),
+    radial-gradient(circle at 70% 70%, #f3ddd2, transparent 60%);
+
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #c76f79;
+
+  font-size: 28px;
+  color: #d07a7a;
 }
 
 .about-text {
   line-height: 1.7;
+}
+      .about-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* WORK */
@@ -394,14 +405,27 @@ footer {
 <!-- ABOUT -->
 <section class="section">
   <div class="section-inner about-wrap">
-    <div class="about-art">Illustration</div>
 
-    <div>
-      <h2>About Araina</h2>
-      <p class="about-text">
-        Araina is a free-spirited young girl on her self-discovery journey, learning about the world and life with each passing day.
-      </p>
+    <!-- LEFT VISUAL -->
+    <div class="about-art">
+      ✨
     </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="about-content">
+      <h2 class="section-title">About Araina</h2>
+
+      <p class="about-text">
+        A curious mind, a creative heart, and a growing perspective drive Araina to follow her passions and learn each day.
+      </p>
+
+      <p class="about-text">
+        Her love for different creative forms and her dedication to perfecting them make her the artist she is.
+      </p>
+
+      <a href="about.html" class="btn-primary">Know More About Her</a>
+    </div>
+
   </div>
 </section>
 
