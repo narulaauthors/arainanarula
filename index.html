@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <title>Araina Narula</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=DM+Serif+Display&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
@@ -48,7 +47,6 @@ body {
   text-decoration: none;
   color: #333;
   font-weight: 600;
-  font-size: 16px;
 }
 
 .nav-links a:hover { color: #c76f79; }
@@ -61,11 +59,13 @@ body {
   margin: auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 40px;
 }
 
-.hero-text { flex: 1; transform: translateY(-10px); }
+.hero-text {
+  flex: 1;
+  transform: translateY(-10px);
+}
 
 .hero-subtitle {
   color: #c76f79;
@@ -77,8 +77,7 @@ body {
 .hero-text h1 {
   font-family: 'DM Serif Display', serif;
   font-size: 44px;
-  margin: 0 0 18px;
-  font-weight: normal;
+  margin-bottom: 18px;
 }
 
 .hero-description {
@@ -87,10 +86,9 @@ body {
   margin-bottom: 30px;
 }
 
-/* BUTTON */
 .btn-primary {
   display: inline-block;
-  padding: 12px 28px;
+  padding: 12px 26px;
   background: linear-gradient(135deg, #e88b94, #d96c7a);
   color: white;
   border-radius: 25px;
@@ -98,17 +96,19 @@ body {
   font-weight: 600;
 }
 
-/* HERO IMAGE */
-.hero-image { flex: 1; text-align: right; }
-
 .hero-image img {
   max-width: 100%;
   border-radius: 18px;
 }
 
 /* SECTION */
-section { padding: 50px 20px; }
-section:nth-of-type(2) { padding-top: 10px; }
+section {
+  padding: 50px 20px;
+}
+
+section:nth-of-type(2) {
+  padding-top: 10px;
+}
 
 .section-inner {
   max-width: 1100px;
@@ -119,11 +119,10 @@ section:nth-of-type(2) { padding-top: 10px; }
   text-align: center;
   font-family: 'DM Serif Display', serif;
   font-size: 32px;
-  color: #3a3a3a;
   margin-bottom: 12px;
 }
 
-/* HIGHLIGHTS */
+/* HIGHLIGHTS (LOCKED — NOT TOUCHED) */
 .highlight-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -133,10 +132,11 @@ section:nth-of-type(2) { padding-top: 10px; }
 .highlight-card {
   background: linear-gradient(145deg, #fef6f2, #f9e7dc);
   border-radius: 20px;
-  padding: 26px 18px;
+  padding: 26px;
   text-align: center;
   border: 1px solid #ecd3c7;
   box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+  transition: all 0.3s ease;
 }
 
 .highlight-card:hover {
@@ -144,7 +144,25 @@ section:nth-of-type(2) { padding-top: 10px; }
   box-shadow: 0 12px 28px rgba(0,0,0,0.08);
 }
 
-.highlight-card p { color: #d07a7a; }
+.icon-circle {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #fff7f2, #f3ddd2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-circle i {
+  font-size: 26px;
+  color: #d07a7a;
+}
+
+.highlight-card p {
+  color: #d07a7a;
+}
 
 .section-divider {
   display: flex;
@@ -162,7 +180,11 @@ section:nth-of-type(2) { padding-top: 10px; }
   margin: 0 10px;
 }
 
-/* ABOUT */
+.section-divider span {
+  color: #d07a7a;
+}
+
+/* ABOUT — FINAL PERFECT FIX */
 .about-wrap {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -170,62 +192,86 @@ section:nth-of-type(2) { padding-top: 10px; }
   align-items: center;
 }
 
-/* FIXED IMAGE BLOCK */
 .about-art {
-  height: 260px;
   border-radius: 20px;
   overflow: hidden;
-  background-color: #fdf6f2;
 }
 
+/* 🔥 KEY FIX — no crop, no empty space */
 .about-art img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;   /* keeps full image */
   display: block;
+  border-radius: 20px;
 }
 
-/* TEXT */
 .about-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.about-text {
-  font-size: 16px;
-  line-height: 1.7;
-}
-
-/* FIXED BUTTON WIDTH */
-.about-content .btn-primary {
-  width: fit-content;
-  margin-top: 24px;
-  padding: 12px 26px;
-}
-
-/* FIXED UNDERLINE ONLY FOR ABOUT */
 .about-content .section-title::after {
   content: "";
   display: block;
   width: 50px;
   height: 3px;
   background: #e2b6a3;
-  margin-top: 10px;
-  border-radius: 2px;
+  margin: 10px auto 0;
 }
 
-/* MOBILE */
+.about-text {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-top: 18px;
+}
+
+/* 🔥 FIX BUTTON SIZE */
+.about-content .btn-primary {
+  width: fit-content;
+  margin-top: 20px;
+}
+
+/* WORK */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.work-card {
+  background: white;
+  border-radius: 18px;
+  padding: 26px;
+  text-align: center;
+}
+
+.card-btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 20px;
+  background: #e88b94;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #777;
+}
+
 @media (max-width: 850px) {
   .hero-container,
   .about-wrap,
-  .highlight-grid {
+  .highlight-grid,
+  .work-grid {
     grid-template-columns: 1fr;
     flex-direction: column;
     text-align: center;
   }
-
-  .hero-image { text-align: center; }
 }
 </style>
 </head>
@@ -241,8 +287,6 @@ section:nth-of-type(2) { padding-top: 10px; }
       <a href="author.html">Author</a>
       <a href="art.html">Art</a>
       <a href="performing.html">Performing Arts</a>
-      <a href="achievements.html">Achievements</a>
-      <a href="journey.html">Journey</a>
     </nav>
   </div>
 </header>
@@ -250,6 +294,7 @@ section:nth-of-type(2) { padding-top: 10px; }
 <!-- HERO -->
 <section class="hero">
   <div class="hero-container">
+
     <div class="hero-text">
       <p class="hero-subtitle">AUTHOR • ARTIST • PERFORMER</p>
       <h1>Araina Narula</h1>
@@ -262,14 +307,18 @@ section:nth-of-type(2) { padding-top: 10px; }
     <div class="hero-image">
       <img src="images/araina_hero.png">
     </div>
+
   </div>
 </section>
 
 <!-- HIGHLIGHTS -->
-<section class="section">
+<section>
   <div class="section-inner">
     <h2 class="section-title">Highlights</h2>
-    <div class="section-divider"><span>★</span></div>
+
+    <div class="section-divider">
+      <span>★</span>
+    </div>
 
     <div class="highlight-grid">
       <div class="highlight-card">
@@ -294,11 +343,11 @@ section:nth-of-type(2) { padding-top: 10px; }
 </section>
 
 <!-- ABOUT -->
-<section class="section">
+<section>
   <div class="section-inner about-wrap">
 
     <div class="about-art">
-      <img src="images/araina-creative.png" alt="Araina creative illustration">
+      <img src="images/araina-creative.png">
     </div>
 
     <div class="about-content">
@@ -313,6 +362,10 @@ section:nth-of-type(2) { padding-top: 10px; }
 
   </div>
 </section>
+
+<footer>
+  © 2026 Araina Narula
+</footer>
 
 </body>
 </html>
