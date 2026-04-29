@@ -249,7 +249,7 @@ section:nth-of-type(2) {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: -30px; /* moves text slightly upward */
+  margin-top: -20px;
 }
 
 .about-title::after {
@@ -276,42 +276,163 @@ section:nth-of-type(2) {
   margin-top: 20px;
 }
 
-/* WORK */
-.work-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+/* EXPLORE MY WORK - NEW SAFE BLOCK */
+.explore-new {
+  padding: 50px 20px;
+}
+
+.explore-row {
+  max-width: 1100px;
+  margin: 34px auto 0;
+  display: flex;
+  justify-content: center;
   gap: 24px;
+  flex-wrap: wrap;
 }
 
-.work-card {
-  background: white;
-  border-radius: 18px;
-  padding: 26px;
+.explore-row.bottom-row {
+  margin-top: 26px;
+}
+
+.explore-card-new {
+  width: 310px;
+  min-height: 245px;
+  border-radius: 20px;
+  padding: 26px 22px;
   text-align: center;
+  background: #fff;
+  border: 1px solid rgba(220, 185, 175, 0.7);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.04);
+  transition: all 0.3s ease;
 }
 
-.card-btn {
+.explore-card-new:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.08);
+}
+
+.explore-card-new h3 {
+  font-size: 20px;
+  margin: 10px 0 10px;
+}
+
+.explore-card-new p {
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: #555;
+  margin: 0 0 20px;
+}
+
+.explore-icon-new {
+  width: 68px;
+  height: 68px;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+}
+
+.explore-btn-new {
   display: inline-block;
-  margin-top: 12px;
-  padding: 10px 20px;
-  background: #e88b94;
-  color: white;
+  padding: 10px 22px;
+  border-radius: 22px;
+  color: #fff;
   text-decoration: none;
-  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  width: auto;
 }
 
-/* BOTTOM */
-.bottom-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
+/* individual soft colors */
+.author-soft {
+  background: linear-gradient(145deg, #fff7f6, #fde7e6);
 }
 
-.bottom-card {
-  background: white;
-  padding: 30px;
-  border-radius: 20px;
-  text-align: center;
+.author-soft .explore-icon-new {
+  background: #f8dede;
+  color: #c76f79;
+}
+
+.author-soft h3 {
+  color: #c76f79;
+}
+
+.author-btn-new {
+  background: linear-gradient(135deg, #cf7a7a, #b95f5f);
+}
+
+.art-soft {
+  background: linear-gradient(145deg, #f7fbff, #eaf4fb);
+  border-color: #d5e7f2;
+}
+
+.art-soft .explore-icon-new {
+  background: #dceef9;
+  color: #5f95bf;
+}
+
+.art-soft h3 {
+  color: #5f95bf;
+}
+
+.art-btn-new {
+  background: linear-gradient(135deg, #6fa8dc, #4f86b8);
+}
+
+.perform-soft {
+  background: linear-gradient(145deg, #fbf8ff, #f1e9fb);
+  border-color: #e3d5ef;
+}
+
+.perform-soft .explore-icon-new {
+  background: #eadff5;
+  color: #8d6caf;
+}
+
+.perform-soft h3 {
+  color: #8d6caf;
+}
+
+.perform-btn-new {
+  background: linear-gradient(135deg, #a58bdc, #8668b6);
+}
+
+.achievement-soft {
+  background: linear-gradient(145deg, #fffaf0, #f8ecd0);
+  border-color: #ead6a7;
+}
+
+.achievement-soft .explore-icon-new {
+  background: #f5e4b9;
+  color: #c7982f;
+}
+
+.achievement-soft h3 {
+  color: #8f6a18;
+}
+
+.achievement-btn-new {
+  background: linear-gradient(135deg, #e0b04a, #c99220);
+}
+
+.journey-soft {
+  background: linear-gradient(145deg, #faf8ff, #eee8fb);
+  border-color: #ded2ef;
+}
+
+.journey-soft .explore-icon-new {
+  background: #e6dcf5;
+  color: #8b73b5;
+}
+
+.journey-soft h3 {
+  color: #7b62a5;
+}
+
+.journey-btn-new {
+  background: linear-gradient(135deg, #9a82c8, #7e64aa);
 }
 
 /* FOOTER */
@@ -325,9 +446,7 @@ footer {
 @media (max-width: 850px) {
   .hero-container,
   .about-wrap,
-  .highlight-grid,
-  .work-grid,
-  .bottom-grid {
+  .highlight-grid {
     grid-template-columns: 1fr;
     flex-direction: column;
     text-align: center;
@@ -340,73 +459,11 @@ footer {
   .about-content .btn-primary {
     align-self: center;
   }
-  .explore-new {
-  text-align: center;
-  padding: 60px 20px;
-}
 
-.explore-row {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  margin-top: 40px;
-}
-
-/* Force same width for ALL cards */
-.explore-card-new {
-  width: 300px;
-  background: #fff;
-  border-radius: 20px;
-  padding: 30px 25px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-  transition: transform 0.2s ease;
-}
-
-.explore-card-new:hover {
-  transform: translateY(-5px);
-}
-
-.explore-icon {
-  font-size: 38px;
-  margin-bottom: 15px;
-}
-
-.explore-card-new h3 {
-  margin-bottom: 10px;
-  font-size: 20px;
-}
-
-.explore-card-new p {
-  font-size: 14.5px;
-  color: #666;
-  margin-bottom: 20px;
-}
-
-/* BUTTON — FIXED WIDTH (NO MORE STRETCHING) */
-.explore-btn-new {
-  display: inline-block;
-  padding: 10px 18px;
-  border-radius: 22px;
-  color: #fff;
-  text-decoration: none;
-  font-size: 14px;
-  width: auto;
-}
-
-/* COLORS */
-.explore-btn-new.pink { background: #e07a7a; }
-.explore-btn-new.blue { background: #6fa8dc; }
-.explore-btn-new.purple { background: #a58bdc; }
-.explore-btn-new.gold { background: #e0b04a; }
-.explore-btn-new.violet { background: #8c7ae6; }
-
-/* CENTER bottom row perfectly */
-.bottom-row {
-  max-width: 650px;
-  margin-left: auto;
-  margin-right: auto;
-}
+  .explore-card-new {
+    width: 100%;
+    max-width: 340px;
+  }
 }
 </style>
 </head>
@@ -506,53 +563,57 @@ footer {
   </div>
 </section>
 
-<!-- WORK -->
+<!-- EXPLORE MY WORK -->
 <section class="explore-new">
   <h2 class="section-title">Explore My Work</h2>
 
-  <!-- TOP ROW (3 cards) -->
   <div class="explore-row">
-    
-    <div class="explore-card-new">
-      <div class="explore-icon">📖</div>
+    <div class="explore-card-new author-soft">
+      <div class="explore-icon-new">
+        <i class="fas fa-book-open"></i>
+      </div>
       <h3>Author</h3>
       <p>A bookshelf of dreams, characters, and adventures created by Araina.</p>
-      <a href="books.html" class="explore-btn-new pink">Explore Books</a>
+      <a href="author.html" class="explore-btn-new author-btn-new">Explore Books</a>
     </div>
 
-    <div class="explore-card-new">
-      <div class="explore-icon">🎨</div>
+    <div class="explore-card-new art-soft">
+      <div class="explore-icon-new">
+        <i class="fas fa-palette"></i>
+      </div>
       <h3>Art</h3>
       <p>From simple sketches to detailed scenes, each artwork tells its own story.</p>
-      <a href="art.html" class="explore-btn-new blue">Explore Art</a>
+      <a href="art.html" class="explore-btn-new art-btn-new">Explore Art</a>
     </div>
 
-    <div class="explore-card-new">
-      <div class="explore-icon">🎭</div>
+    <div class="explore-card-new perform-soft">
+      <div class="explore-icon-new">
+        <i class="fas fa-masks-theater"></i>
+      </div>
       <h3>Performing Arts</h3>
       <p>Music and theatre speak to her heart, where emotions find their expression.</p>
-      <a href="performances.html" class="explore-btn-new purple">Explore Performances</a>
+      <a href="performing.html" class="explore-btn-new perform-btn-new">Explore Performances</a>
     </div>
-
   </div>
 
-  <!-- BOTTOM ROW (2 cards, SAME SIZE) -->
   <div class="explore-row bottom-row">
-
-    <div class="explore-card-new">
-      <div class="explore-icon">🏆</div>
+    <div class="explore-card-new achievement-soft">
+      <div class="explore-icon-new">
+        <i class="fas fa-trophy"></i>
+      </div>
       <h3>Achievements</h3>
       <p>Moments of recognition celebrating her efforts and creativity</p>
-      <a href="achievements.html" class="explore-btn-new gold">View Achievements</a>
+      <a href="achievements.html" class="explore-btn-new achievement-btn-new">View Achievements</a>
     </div>
 
-    <div class="explore-card-new">
-      <div class="explore-icon">🌄</div>
-      <h3>My Journey</h3>
+    <div class="explore-card-new journey-soft">
+      <div class="explore-icon-new">
+        <i class="fas fa-mountain-sun"></i>
+      </div>
+      <h3>Journey</h3>
       <p>Capturing her moments of learning, exploring, and creating everlasting memories</p>
-      <a href="journey.html" class="explore-btn-new violet">View Journey</a>
+      <a href="journey.html" class="explore-btn-new journey-btn-new">Explore Journey</a>
     </div>
-
   </div>
 </section>
 
