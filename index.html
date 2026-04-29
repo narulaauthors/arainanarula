@@ -249,7 +249,7 @@ section:nth-of-type(2) {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: -20px; /* moves text slightly upward */
+  margin-top: -30px; /* moves text slightly upward */
 }
 
 .about-title::after {
@@ -340,6 +340,73 @@ footer {
   .about-content .btn-primary {
     align-self: center;
   }
+  .explore-new {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.explore-row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+/* Force same width for ALL cards */
+.explore-card-new {
+  width: 300px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px 25px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.explore-card-new:hover {
+  transform: translateY(-5px);
+}
+
+.explore-icon {
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+.explore-card-new h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.explore-card-new p {
+  font-size: 14.5px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* BUTTON — FIXED WIDTH (NO MORE STRETCHING) */
+.explore-btn-new {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 22px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  width: auto;
+}
+
+/* COLORS */
+.explore-btn-new.pink { background: #e07a7a; }
+.explore-btn-new.blue { background: #6fa8dc; }
+.explore-btn-new.purple { background: #a58bdc; }
+.explore-btn-new.gold { background: #e0b04a; }
+.explore-btn-new.violet { background: #8c7ae6; }
+
+/* CENTER bottom row perfectly */
+.bottom-row {
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
 }
 </style>
 </head>
@@ -440,41 +507,52 @@ footer {
 </section>
 
 <!-- WORK -->
-<section class="section">
-  <div class="section-inner">
-    <h2 class="section-title">Explore My Work</h2>
+<section class="explore-new">
+  <h2 class="section-title">Explore My Work</h2>
 
-    <div class="work-grid">
-      <div class="work-card">
-        <h3>Author</h3>
-        <a href="author.html" class="card-btn">Explore Books</a>
-      </div>
-
-      <div class="work-card">
-        <h3>Art</h3>
-        <a href="art.html" class="card-btn">Explore Art</a>
-      </div>
-
-      <div class="work-card">
-        <h3>Performing Arts</h3>
-        <a href="performing.html" class="card-btn">Explore Performances</a>
-      </div>
+  <!-- TOP ROW (3 cards) -->
+  <div class="explore-row">
+    
+    <div class="explore-card-new">
+      <div class="explore-icon">📖</div>
+      <h3>Author</h3>
+      <p>A bookshelf of dreams, characters, and adventures created by Araina.</p>
+      <a href="books.html" class="explore-btn-new pink">Explore Books</a>
     </div>
+
+    <div class="explore-card-new">
+      <div class="explore-icon">🎨</div>
+      <h3>Art</h3>
+      <p>From simple sketches to detailed scenes, each artwork tells its own story.</p>
+      <a href="art.html" class="explore-btn-new blue">Explore Art</a>
+    </div>
+
+    <div class="explore-card-new">
+      <div class="explore-icon">🎭</div>
+      <h3>Performing Arts</h3>
+      <p>Music and theatre speak to her heart, where emotions find their expression.</p>
+      <a href="performances.html" class="explore-btn-new purple">Explore Performances</a>
+    </div>
+
   </div>
-</section>
 
-<!-- BOTTOM -->
-<section class="section">
-  <div class="section-inner bottom-grid">
-    <div class="bottom-card">
+  <!-- BOTTOM ROW (2 cards, SAME SIZE) -->
+  <div class="explore-row bottom-row">
+
+    <div class="explore-card-new">
+      <div class="explore-icon">🏆</div>
       <h3>Achievements</h3>
-      <a href="#" class="card-btn">View</a>
+      <p>Moments of recognition celebrating her efforts and creativity</p>
+      <a href="achievements.html" class="explore-btn-new gold">View Achievements</a>
     </div>
 
-    <div class="bottom-card">
-      <h3>Journey</h3>
-      <a href="#" class="card-btn">Explore</a>
+    <div class="explore-card-new">
+      <div class="explore-icon">🌄</div>
+      <h3>My Journey</h3>
+      <p>Capturing her moments of learning, exploring, and creating everlasting memories</p>
+      <a href="journey.html" class="explore-btn-new violet">View Journey</a>
     </div>
+
   </div>
 </section>
 
