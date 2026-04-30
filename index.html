@@ -486,7 +486,7 @@ footer {
 
 .footer-copy {
   font-size: 13px;
-  color: #aaa;
+  color: #888;
 }
 
 /* MOBILE */
@@ -677,15 +677,17 @@ footer {
     <h3 class="footer-name">Araina Narula</h3>
 
     <p class="footer-tagline">
-      Creating stories, colors, and moments of joy
+      Creating joyful moments with heart
     </p>
 
     <p class="footer-copy">
-      © 2026 Araina Narula
-    </p>
-
+  © <span id="year"></span> Araina Narula
+</p>
+    
   </div>
 </footer>
-
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
