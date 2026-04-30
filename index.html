@@ -344,6 +344,12 @@ section:nth-of-type(2) {
   font-weight: 700;
   width: auto;
 }
+  .explore-card-new {
+  width: 300px;   /* slightly reduce */
+}
+  .explore-row {
+  justify-content: center;
+}
 
 /* individual soft colors */
 .author-soft {
@@ -437,6 +443,50 @@ footer {
   text-align: center;
   padding: 20px;
   color: #777;
+}
+  .footer-new {
+  text-align: center;
+  padding: 40px 20px 30px;
+  background: transparent;
+}
+
+.footer-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.footer-divider::before,
+.footer-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #e5cfc3;
+  margin: 0 10px;
+}
+
+.footer-divider span {
+  color: #d07a7a;
+  font-size: 14px;
+}
+
+.footer-name {
+  font-family: 'Dancing Script', cursive;
+  font-size: 26px;
+  color: #c76f79;
+  margin: 6px 0;
+}
+
+.footer-tagline {
+  font-size: 14px;
+  color: #888;
+  margin: 6px 0 10px;
+}
+
+.footer-copy {
+  font-size: 13px;
+  color: #aaa;
 }
 
 /* MOBILE */
@@ -617,8 +667,24 @@ footer {
   </div>
 </section>
 
-<footer>
-  © 2026 Araina Narula
+<footer class="footer-new">
+  <div class="footer-inner">
+    
+    <div class="footer-divider">
+      <span>✦</span>
+    </div>
+
+    <h3 class="footer-name">Araina Narula</h3>
+
+    <p class="footer-tagline">
+      Creating stories, colors, and moments of joy
+    </p>
+
+    <p class="footer-copy">
+      © 2026 Araina Narula
+    </p>
+
+  </div>
 </footer>
 
 </body>
