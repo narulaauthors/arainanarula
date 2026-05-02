@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Araina Art Journey</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
 
 <style>
 body {
@@ -257,10 +258,88 @@ body {
   height: 100%;
   z-index: 1000;
 }
+  .top-header {
+  background: rgba(255,255,255,0.95);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.top-nav {
+  max-width: 1180px;
+  margin: auto;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;   /* important fix */
+}
+
+.top-logo {
+  font-family: 'Dancing Script', cursive;
+  font-size: 28px;
+  color: #c76f79;
+}
+
+.top-links a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.top-links a:hover {
+  color: #c76f79;
+}
+
+.top-links a.active {
+  color: #c76f79;
+}
+  /* ===== FOOTER CSS ===== */
+
+.footer-art {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.footer-art h3 {
+  font-family: 'Dancing Script', cursive;
+  color: #c76f79;
+  margin: 10px 0;
+}
+
+.footer-art p {
+  color: #777;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.footer-line {
+  width: 60%;
+  height: 1px;
+  background: #e5cfc3;
+  margin: 0 auto 15px;
+}
 </style>
 </head>
 
 <body>
+
+  <!-- ===== NAVBAR START ===== -->
+<div class="top-header">
+  <div class="top-nav">
+    <div class="top-logo">Araina Narula</div>
+    <div class="top-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="author.html">Author</a>
+      <a href="art.html" class="active">Art</a>
+      <a href="performing.html">Performing Arts</a>
+      <a href="achievements.html">Achievements</a>
+      <a href="journey.html">Journey</a>
+    </div>
+  </div>
+</div>
+<!-- ===== NAVBAR END ===== -->
 
 <!-- HEADER -->
 <div class="header">
@@ -1402,5 +1481,24 @@ window.addEventListener('hashchange', function() {
   });
 });
 </script>
+  <!-- ===== FOOTER START ===== -->
+<div class="footer-art">
+  <div class="footer-inner">
+
+    <div class="footer-line"></div>
+
+    <h3>Araina Narula</h3>
+
+    <p>Creating joyful moments with heart</p>
+
+    <p>© <span id="year"></span> Araina Narula</p>
+
+  </div>
+</div>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+<!-- ===== FOOTER END ===== -->
 </body>
 </html>
