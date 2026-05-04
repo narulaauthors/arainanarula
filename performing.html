@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Performing Arts - Araina</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+
+  <style>
+
+    body {
+      margin: 0;
+      font-family: 'Nunito', sans-serif;
+
+      /* Same soft peach gradient */
+      background: linear-gradient(to bottom, #fdf6ef, #f9ece3);
+    }
+
+    /* ===== NAVBAR ===== */
+    .top-header {
+      background: rgba(255,255,255,0.95);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .top-nav {
+      max-width: 1180px;
+      margin: auto;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .top-logo {
+      font-family: 'Dancing Script', cursive;
+      font-size: 28px;
+      color: #c76f79;
+    }
+
+    .top-links a {
+      margin-left: 28px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .top-links a.active {
+      color: #c76f79;
+    }
+
+    .top-links a:hover {
+      color: #c76f79;
+    }
+
+    /* ===== CONTENT ===== */
+    .container {
+      max-width: 900px;
+      margin: 60px auto;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .container h1 {
+      font-weight: 700;
+      font-size: 42px;
+      color: #c76f79;
+      margin-bottom: 30px;
+      letter-spacing: 0.5px;
+    }
+
+    .content-text {
+      font-size: 18px;
+      color: #6f5b5b;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer-art {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .footer-line {
+      width: 60%;
+      height: 1px;
+      background: #e5cfc3;
+      margin: 0 auto 15px;
+    }
+
+    .footer-art h3 {
+      font-family: 'Dancing Script', cursive;
+      color: #c76f79;
+      margin: 10px 0;
+    }
+
+    .footer-art p {
+      color: #777;
+      font-size: 14px;
+      margin: 5px 0;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <div class="top-header">
+    <div class="top-nav">
+      <div class="top-logo">Araina Narula</div>
+      <div class="top-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="author.html">Author</a>
+        <a href="art.html">Art</a>
+        <a href="performing.html" class="active">Performing Arts</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="journey.html">Journey</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CONTENT ===== -->
+  <div class="container">
+
+    <h1>Performing Arts</h1>
+
+    <p class="content-text">
+      Araina loves to sing and express herself through music, finding joy in every melody she learns and performs.
+    </p>
+
+    <p class="content-text">
+      She also enjoys acting, bringing characters to life with confidence, creativity, and a natural flair for expression.
+    </p>
+
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <div class="footer-art">
+    <div class="footer-line"></div>
+    <h3>Araina Narula</h3>
+    <p>Creating joyful moments with heart</p>
+    <p>© <span id="year"></span> Araina Narula</p>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
