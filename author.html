@@ -6,6 +6,7 @@
   <title>Araina Author's Journey</title>
   
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">  
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
 <style>
 body {
   margin: 0;
@@ -135,7 +136,72 @@ background: #fffefa;
   max-width:90%;
   max-height:90%;
 }
+.top-header {
+  background: rgba(255,255,255,0.95);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
 
+.top-nav {
+  max-width: 1180px;
+  margin: auto;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;   /* important fix */
+}
+
+.top-logo {
+  font-family: 'Dancing Script', cursive;
+  font-size: 28px;
+  color: #c76f79;
+}
+
+.top-links a {
+  margin-left: 28px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 16px;
+  font-family: 'Nunito', sans-serif;   /* 🔥 THIS LINE */
+}
+
+.top-links a:hover {
+  color: #c76f79;
+}
+
+.top-links a.active {
+  color: #c76f79;
+}
+  .top-links a {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+}
+  /* ===== FOOTER CSS ===== */
+
+.footer-art {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.footer-art h3 {
+  font-family: 'Dancing Script', cursive;
+  color: #c76f79;
+  margin: 10px 0;
+}
+
+.footer-art p {
+  color: #777;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.footer-line {
+  width: 60%;
+  height: 1px;
+  background: #e5cfc3;
+  margin: 0 auto 15px;
+}
 @media (max-width:700px){
   .book-top { flex-direction: column; }
 }
