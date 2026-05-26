@@ -1,155 +1,454 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Achievements - Araina</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+<title>Araina Narula – Achievements</title>
 
-  <style>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Poppins:wght@500;600&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    body {
-      margin: 0;
-      font-family: 'Nunito', sans-serif;
+<style>
+*{ box-sizing:border-box; }
 
-      /* Same soft peach gradient */
-      background: linear-gradient(to bottom, #fdf6ef, #f9ece3);
-    }
+body{
+  margin:0;
+  font-family:'Nunito', sans-serif;
+  color:#7a5a6a;
+  background:linear-gradient(to bottom, #fdf6ef, #f9ece3);
+}
 
-    /* ===== NAVBAR ===== */
-    .top-header {
-      background: rgba(255,255,255,0.95);
-      border-bottom: 1px solid rgba(0,0,0,0.05);
-    }
+/* HEADER */
+.top-header{
+  background:rgba(255,255,255,0.95);
+  border-bottom:1px solid rgba(0,0,0,0.05);
+}
 
-    .top-nav {
-      max-width: 1180px;
-      margin: auto;
-      padding: 16px 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+.top-nav{
+  max-width:1180px;
+  margin:auto;
+  padding:16px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
 
-    .top-logo {
-      font-family: 'Dancing Script', cursive;
-      font-size: 28px;
-      color: #c76f79;
-    }
+.top-logo{
+  font-family:'Dancing Script', cursive;
+  font-size:28px;
+  color:#c76f79;
+}
 
-    .top-links a {
-      margin-left: 28px;
-      text-decoration: none;
-      color: #333;
-      font-weight: 600;
-      font-size: 16px;
-    }
+.top-links a{
+  margin-left:28px;
+  text-decoration:none;
+  color:#333;
+  font-weight:600;
+  font-size:16px;
+}
 
-    .top-links a.active {
-      color: #c76f79;
-    }
+.top-links a:hover,
+.top-links a.active{
+  color:#c76f79;
+}
 
-    .top-links a:hover {
-      color: #c76f79;
-    }
+/* MAIN */
+.container{
+  max-width:1000px;
+  margin:auto;
+  padding:90px 20px 20px;
+}
 
-    /* ===== CONTENT ===== */
-    .container {
-      max-width: 900px;
-      margin: 60px auto;
-      text-align: center;
-      padding: 0 20px;
-    }
+.page-intro{
+  text-align:center;
+  max-width:860px;
+  margin:0 auto 58px;
+}
 
-    .container h1 {
-      font-weight: 700;
-      font-size: 42px;
-      color: #c76f79;
-      margin-bottom: 30px;
-      letter-spacing: 0.5px;
-    }
+.page-intro h1{
+  font-family:'Poppins', sans-serif;
+  font-size:36px;
+  color:#c76f79;
+  margin:0 0 16px;
+}
 
-    .content-text {
-      font-size: 18px;
-      color: #6f5b5b;
-      line-height: 1.8;
-      margin-bottom: 20px;
-    }
+.page-intro p{
+  font-size:16px;
+  line-height:1.8;
+  color:#7a5a6a;
+  margin:0;
+}
 
-    /* ===== FOOTER ===== */
-    .footer-art {
-      text-align: center;
-      padding: 40px 20px;
-    }
+/* GRID */
+.achievement-grid{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:24px;
+}
 
-    .footer-line {
-      width: 60%;
-      height: 1px;
-      background: #e5cfc3;
-      margin: 0 auto 15px;
-    }
+.achievement-card{
+  min-height:260px;
+  padding:30px 30px 28px;
+  text-align:left;
+  background:linear-gradient(180deg, #fffdfa 0%, #fdf3ed 100%);
+  border:1px solid rgba(230,204,194,0.75);
+  border-radius:22px;
+  box-shadow:0 10px 28px rgba(160,120,130,0.08);
+  transition:transform 0.25s ease, box-shadow 0.25s ease;
+}
 
-    .footer-art h3 {
-      font-family: 'Dancing Script', cursive;
-      color: #c76f79;
-      margin: 10px 0;
-    }
+.achievement-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 16px 36px rgba(160,120,130,0.14);
+}
 
-    .footer-art p {
-      color: #777;
-      font-size: 14px;
-      margin: 5px 0;
-    }
+.achievement-card.pink-soft{
+  background:linear-gradient(180deg, #fffafd 0%, #fdf0f4 100%);
+  border-color:rgba(232,196,207,0.78);
+}
 
-  </style>
+.achievement-card.cream-soft{
+  background:linear-gradient(180deg, #fffdfa 0%, #fdf6ef 100%);
+  border-color:rgba(230,207,195,0.75);
+}
+
+.achievement-card.visual-soft{
+  background:#fffaf7;
+  border:1px solid #ead6cd;
+}
+
+.achievement-card.sports-soft{
+  background:linear-gradient(180deg, #fffafd 0%, #f9edf3 100%);
+  border-color:rgba(232,196,207,0.72);
+}
+
+/* CARD CONTENT */
+.achievement-top{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  margin-bottom:16px;
+}
+
+.achievement-icon{
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  background:#f9e6ee;
+  color:#8f5168;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+  flex-shrink:0;
+}
+
+.achievement-card.cream-soft .achievement-icon{
+  background:linear-gradient(180deg, #fff3e8 0%, #f8ded2 100%);
+}
+
+.achievement-card.visual-soft .achievement-icon{
+  background:linear-gradient(180deg, #fff0e6 0%, #f8d9cc 100%);
+}
+
+.achievement-card.sports-soft .achievement-icon{
+  background:linear-gradient(180deg, #f9e6ee 0%, #f3d7e3 100%);
+}
+
+.achievement-content h2{
+  font-family:'Poppins', sans-serif;
+  color:#c76f79;
+  margin:0;
+  font-size:23px;
+}
+
+.achievement-content p{
+  color:#7a5a6a;
+  font-size:15.8px;
+  line-height:1.8;
+  margin:0 0 4px;
+  max-width:620px;
+}
+
+.achievement-content > p:first-child{
+  min-height:145px;
+}
+
+.achievement-card.visual-soft .achievement-content > p:first-child{
+  min-height:0;
+  margin-bottom:16px;
+}
+
+.certified-label{
+  display:block;
+  font-size:13px;
+  line-height:1.2;
+  font-weight:700;
+  letter-spacing:0.4px;
+  text-transform:uppercase;
+  color:#b56b7d;
+  margin:4px 0 10px;
+}
+
+.badge{
+  display:inline-block;
+  padding:8px 16px;
+  border-radius:20px;
+  background:#f9e6ee;
+  color:#b85c7a;
+  font-weight:700;
+  font-size:14px;
+  margin:4px 8px 10px 0;
+}
+
+.achievement-card.cream-soft .badge,
+.achievement-card.visual-soft .badge{
+  background:#fff0df;
+  color:#b86b2b;
+}
+
+.achievement-card.sports-soft .badge{
+  background:#f9e6ee;
+  color:#b85c7a;
+}
+
+.spotlight-icon{
+  width:30px;
+  height:30px;
+  fill:#8f5168;
+}
+
+/* FOOTER */
+.footer-art{
+  text-align:center;
+  padding:42px 20px 34px;
+}
+
+.footer-line{
+  width:60%;
+  height:1px;
+  background:#e5cfc3;
+  margin:0 auto 15px;
+}
+
+.footer-art h3{
+  font-family:'Dancing Script', cursive;
+  color:#c76f79;
+  margin:10px 0;
+  font-size:26px;
+}
+
+.footer-art p{
+  color:#777;
+  font-size:14px;
+  margin:5px 0;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .top-nav{
+    flex-direction:column;
+    gap:16px;
+  }
+
+  .top-links{
+    text-align:center;
+  }
+
+  .top-links a{
+    margin:0 10px;
+  }
+
+  .container{
+    padding:55px 18px 40px;
+  }
+
+  .page-intro h1{
+    font-size:34px;
+  }
+
+  .achievement-grid{
+    grid-template-columns:1fr;
+  }
+
+  .achievement-card{
+    text-align:center;
+  }
+
+  .achievement-top{
+    flex-direction:column;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- ===== NAVBAR ===== -->
-  <div class="top-header">
-    <div class="top-nav">
-      <div class="top-logo">Araina Narula</div>
-      <div class="top-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="author.html">Author</a>
-        <a href="art.html">Art</a>
-        <a href="performing.html">Performing Arts</a>
-        <a href="achievements.html" class="active">Achievements</a>
-        <a href="journey.html">Journey</a>
-      </div>
+<div class="top-header">
+  <div class="top-nav">
+    <div class="top-logo">Araina Narula</div>
+
+    <div class="top-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="author.html">Author</a>
+      <a href="art.html">Art</a>
+      <a href="performing.html">Performing Arts</a>
+      <a href="achievements.html" class="active">Achievements</a>
+      <a href="journey.html">Journey</a>
     </div>
   </div>
+</div>
 
-  <!-- ===== CONTENT ===== -->
-  <div class="container">
+<div class="container">
 
+  <div class="page-intro">
     <h1>Achievements</h1>
 
-    <p class="content-text">
-      Araina has received several awards and recognitions for her creativity, dedication, and enthusiasm across different fields.
+    <p>
+      Araina approaches every new opportunity with creativity, preparation, and enthusiasm.
+      From certifications to participation in different competitions and activities,
+      these experiences help her discover new strengths, build confidence,
+      and keep learning and growing.
     </p>
+  </div>
 
-    <p class="content-text">
-      Each achievement reflects her hard work and growing confidence, encouraging her to keep exploring, learning, and expressing herself.
-    </p>
+  <div class="achievement-grid">
+
+    <div class="achievement-card pink-soft">
+      <div class="achievement-top">
+        <div class="achievement-icon">
+          <i class="fa-solid fa-microphone-lines"></i>
+        </div>
+
+        <div class="achievement-content">
+          <h2>Music</h2>
+        </div>
+      </div>
+
+      <div class="achievement-content">
+        <p>
+          Araina continues to grow in music through vocal training and graded performances
+          that strengthen her confidence in rhythm, vocal expression, musical accuracy,
+          and overall vocal and performance skills.
+        </p>
+
+        <div class="certified-label">Certified in</div>
+
+        <div class="badge">
+          Trinity Grade 1 Vocals (Rock & Pop)
+        </div>
+      </div>
+    </div>
+
+    <div class="achievement-card cream-soft">
+      <div class="achievement-top">
+        <div class="achievement-icon">
+          <svg class="spotlight-icon" viewBox="0 0 64 64" aria-hidden="true">
+            <path d="M20 10h22c3 0 5 2 5 5v11c0 3-2 5-5 5H20c-3 0-5-2-5-5V15c0-3 2-5 5-5z"/>
+            <path d="M26 31h10l6 23H20l6-23z"/>
+            <path d="M43 20l15-8v18l-15-8z"/>
+          </svg>
+        </div>
+
+        <div class="achievement-content">
+          <h2>Speech & Drama</h2>
+        </div>
+      </div>
+
+      <div class="achievement-content">
+        <p>
+          Araina strengthens her speech and communication skills through assessed performances
+          in expressive reading, monologues, and poetry recitation, building vocal expression,
+          spoken delivery, and stage presence.
+        </p>
+
+        <div class="certified-label">Certified in</div>
+
+        <div class="badge">
+          Trinity Grade 1 Speech & Drama
+        </div>
+      </div>
+    </div>
+
+    <div class="achievement-card visual-soft">
+      <div class="achievement-top">
+        <div class="achievement-icon">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+        </div>
+
+        <div class="achievement-content">
+          <h2>Visual Arts</h2>
+        </div>
+      </div>
+
+      <div class="achievement-content">
+        <p>
+          Araina’s art journey, from national-level achievements to international recognitions,
+          showcases her creativity, dedication, and growing passion for artistic expression.
+        </p>
+
+        <div class="badge">
+          DOMS Art League 2025 – 2nd Position
+        </div>
+
+        <div class="badge">
+          Nationally Selected – International FAI Young Artists Contest 2025
+        </div>
+
+        <div class="badge">
+          Creative Brilliance 2025 – Diamond Artist
+        </div>
+
+        <div class="badge">
+          Kala Gyan Art Certification – Purna Level
+        </div>
+      </div>
+    </div>
+
+    <div class="achievement-card sports-soft">
+      <div class="achievement-top">
+        <div class="achievement-icon">
+          <i class="fa-solid fa-person-skating"></i>
+        </div>
+
+        <div class="achievement-content">
+          <h2>Sports</h2>
+        </div>
+      </div>
+
+      <div class="achievement-content">
+        <p>
+          Araina’s growing interest in sports includes skateboarding, swimming, skating, and table tennis.
+          Through regular practice and participation in competitions, she develops focus, discipline,
+          confidence, and an active team spirit.
+        </p>
+
+        <div class="badge">
+          Participated in School Skating Competitions
+        </div>
+
+        <div class="badge">
+          Participated in Gautam Buddha Nagar Open Roller Sports Championship 2025
+        </div>
+      </div>
+    </div>
 
   </div>
 
-  <!-- ===== FOOTER ===== -->
-  <div class="footer-art">
-    <div class="footer-line"></div>
-    <h3>Araina Narula</h3>
-    <p>Creating joyful moments with heart</p>
-    <p>© <span id="year"></span> Araina Narula</p>
-  </div>
+</div>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+<div class="footer-art">
+  <div class="footer-line"></div>
+  <h3>Araina Narula</h3>
+  <p>Creating joyful moments with heart</p>
+  <p>© <span id="year"></span> Araina Narula</p>
+</div>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
