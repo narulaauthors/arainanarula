@@ -240,6 +240,28 @@ body{
 .achievement-card.cream-soft .certified-label{
   color:#c97973;
 }
+  .achievement-card.visual-soft{
+  background:linear-gradient(180deg, #fffaf4 0%, #fdf1e8 100%);
+  border:1px solid #ecd5c8;
+}
+
+.art-spark-icon{
+  position:relative;
+  background:linear-gradient(180deg, #fff0e2 0%, #f6d4c4 100%);
+  color:#a85f7a;
+}
+
+.art-spark-icon .brush-main{
+  font-size:25px;
+}
+
+.art-spark-icon .brush-sparkle{
+  position:absolute;
+  top:12px;
+  right:12px;
+  font-size:10px;
+  color:#c07a3a;
+}
 
 /* FOOTER */
 .footer-art{
@@ -410,9 +432,10 @@ body{
 
     <div class="achievement-card visual-soft">
   <div class="achievement-top">
-    <div class="achievement-icon">
-      <i class="fa-solid fa-paintbrush"></i>
-    </div>
+   <div class="achievement-icon art-spark-icon">
+  <i class="fa-solid fa-paintbrush brush-main"></i>
+  <i class="fa-solid fa-sparkles brush-sparkle"></i>
+</div>
 
     <div class="achievement-content">
       <h2>Visual Arts</h2>
