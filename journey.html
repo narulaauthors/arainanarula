@@ -1,155 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Journey - Araina</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+<title>Araina Narula – Journey</title>
 
-  <style>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
 
-    body {
-      margin: 0;
-      font-family: 'Nunito', sans-serif;
+<style>
+*{ box-sizing:border-box; }
 
-      /* Same soft peach gradient */
-      background: linear-gradient(to bottom, #fdf6ef, #f9ece3);
-    }
+body{
+  margin:0;
+  font-family:'Nunito', sans-serif;
+  color:#7a5a6a;
+  background:linear-gradient(to bottom, #fffaf7, #fdf1ec);
+}
 
-    /* ===== NAVBAR ===== */
-    .top-header {
-      background: rgba(255,255,255,0.95);
-      border-bottom: 1px solid rgba(0,0,0,0.05);
-    }
+/* HEADER */
+.top-header{
+  background:rgba(255,255,255,0.95);
+  border-bottom:1px solid rgba(0,0,0,0.05);
+}
 
-    .top-nav {
-      max-width: 1180px;
-      margin: auto;
-      padding: 16px 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+.top-nav{
+  max-width:1180px;
+  margin:auto;
+  padding:16px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
 
-    .top-logo {
-      font-family: 'Dancing Script', cursive;
-      font-size: 28px;
-      color: #c76f79;
-    }
+.top-logo{
+  font-family:'Dancing Script', cursive;
+  font-size:28px;
+  color:#c76f79;
+}
 
-    .top-links a {
-      margin-left: 28px;
-      text-decoration: none;
-      color: #333;
-      font-weight: 600;
-      font-size: 16px;
-    }
+.top-links a{
+  margin-left:28px;
+  text-decoration:none;
+  color:#333;
+  font-weight:600;
+  font-size:16px;
+}
 
-    .top-links a.active {
-      color: #c76f79;
-    }
+.top-links a:hover,
+.top-links a.active{
+  color:#c76f79;
+}
 
-    .top-links a:hover {
-      color: #c76f79;
-    }
+/* MAIN */
+.container{
+  max-width:1000px;
+  margin:auto;
+  padding:70px 20px 20px;
+}
 
-    /* ===== CONTENT ===== */
-    .container {
-      max-width: 900px;
-      margin: 60px auto;
-      text-align: center;
-      padding: 0 20px;
-    }
+.page-intro{
+  text-align:center;
+  max-width:860px;
+  margin:0 auto 52px;
+}
 
-    .container h1 {
-      font-weight: 700;
-      font-size: 42px;
-      color: #c76f79;
-      margin-bottom: 30px;
-      letter-spacing: 0.5px;
-    }
+.page-intro h1{
+  font-size:38px;
+  color:#c76f79;
+  margin:0 0 16px;
+  font-weight:800;
+}
 
-    .content-text {
-      font-size: 18px;
-      color: #6f5b5b;
-      line-height: 1.8;
-      margin-bottom: 20px;
-    }
+.page-intro p{
+  font-size:16.5px;
+  line-height:1.8;
+  color:#7a5a6a;
+  margin:0;
+}
 
-    /* ===== FOOTER ===== */
-    .footer-art {
-      text-align: center;
-      padding: 40px 20px;
-    }
+/* JOURNEY CARD */
+.journey-card{
+  background:linear-gradient(180deg, #fffdfb 0%, #fff5ef 100%);
+  border:1px solid #ead8ce;
+  border-radius:24px;
+  padding:34px 32px 36px;
+  margin:42px 0;
+  box-shadow:0 10px 28px rgba(160,120,130,0.08);
+}
 
-    .footer-line {
-      width: 60%;
-      height: 1px;
-      background: #e5cfc3;
-      margin: 0 auto 15px;
-    }
+.journey-card.card-two{
+  background:linear-gradient(180deg, #fffdfa 0%, #fdf4ef 100%);
+}
 
-    .footer-art h3 {
-      font-family: 'Dancing Script', cursive;
-      color: #c76f79;
-      margin: 10px 0;
-    }
+.journey-card.card-three{
+  background:linear-gradient(180deg, #fffaf7 0%, #fdf1ea 100%);
+}
 
-    .footer-art p {
-      color: #777;
-      font-size: 14px;
-      margin: 5px 0;
-    }
+.journey-text{
+  text-align:center;
+  max-width:820px;
+  margin:0 auto 26px;
+  font-size:17px;
+  line-height:1.8;
+  color:#7a5a6a;
+}
 
-  </style>
+.collage-box{
+  width:100%;
+  border-radius:20px;
+  overflow:hidden;
+  background:#fffaf7;
+  border:1px solid #ead8ce;
+  padding:12px;
+}
+
+.collage-box img{
+  width:100%;
+  display:block;
+  border-radius:16px;
+}
+
+/* FOOTER */
+.footer-art{
+  text-align:center;
+  padding:42px 20px 34px;
+}
+
+.footer-line{
+  width:60%;
+  height:1px;
+  background:#e5cfc3;
+  margin:0 auto 15px;
+}
+
+.footer-art h3{
+  font-family:'Dancing Script', cursive;
+  color:#c76f79;
+  margin:10px 0;
+  font-size:26px;
+}
+
+.footer-art p{
+  color:#777;
+  font-size:14px;
+  margin:5px 0;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .top-nav{
+    flex-direction:column;
+    gap:16px;
+  }
+
+  .top-links{
+    text-align:center;
+  }
+
+  .top-links a{
+    margin:0 10px;
+    display:inline-block;
+    margin-bottom:8px;
+  }
+
+  .container{
+    padding:48px 18px 20px;
+  }
+
+  .page-intro h1{
+    font-size:34px;
+  }
+
+  .journey-card{
+    padding:26px 18px 28px;
+  }
+
+  .journey-text{
+    font-size:16px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- ===== NAVBAR ===== -->
-  <div class="top-header">
-    <div class="top-nav">
-      <div class="top-logo">Araina Narula</div>
-      <div class="top-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="author.html">Author</a>
-        <a href="art.html">Art</a>
-        <a href="performing.html">Performing Arts</a>
-        <a href="achievements.html">Achievements</a>
-        <a href="journey.html" class="active">Journey</a>
-      </div>
+<div class="top-header">
+  <div class="top-nav">
+    <div class="top-logo">Araina Narula</div>
+
+    <div class="top-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="author.html">Author</a>
+      <a href="art.html">Art</a>
+      <a href="performing.html">Performing Arts</a>
+      <a href="achievements.html">Achievements</a>
+      <a href="journey.html" class="active">Journey</a>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="page-intro">
+    <h1>Journey</h1>
+    <p>
+      Every year brings new stories, new discoveries, and new adventures.
+      These little moments capture Araina's journey of learning, creating,
+      imagining, and growing.
+    </p>
+  </div>
+
+  <div class="journey-card">
+    <div class="journey-text">
+      Learning, imagining, creating, and growing a little more every day.
+    </div>
+
+    <div class="collage-box">
+      <img src="journeyimages/araina-growing-collage.jpg" alt="Araina growing journey collage">
     </div>
   </div>
 
-  <!-- ===== CONTENT ===== -->
-  <div class="container">
+  <div class="journey-card card-two">
+    <div class="journey-text">
+      Araina loves making unique crafts and artwork with her imagination and originality.
+      Her curiosity and artistic spirit continue to inspire her creative journey today.
+    </div>
 
-    <h1>Journey</h1>
-
-    <p class="content-text">
-      Araina’s journey is filled with curiosity, creativity, and a constant desire to learn and grow with every new experience.
-    </p>
-
-    <p class="content-text">
-      From small beginnings to meaningful milestones, each step reflects her passion for exploring, creating, and expressing herself.
-    </p>
-
+    <div class="collage-box">
+      <img src="journeyimages/araina-joyful-creator.jpg" alt="Araina joyful creator collage">
+    </div>
   </div>
 
-  <!-- ===== FOOTER ===== -->
-  <div class="footer-art">
-    <div class="footer-line"></div>
-    <h3>Araina Narula</h3>
-    <p>Creating joyful moments with heart</p>
-    <p>© <span id="year"></span> Araina Narula</p>
+  <div class="journey-card card-three">
+    <div class="journey-text">
+      Araina loved imagining little worlds through pretend play, dress-up games,
+      doodles, and colorful creations from a very young age. Curiosity, storytelling,
+      and creativity naturally became a part of her everyday adventures.
+    </div>
+
+    <div class="collage-box">
+      <img src="journeyimages/araina-little-dreamer.jpg" alt="Araina little dreamer collage">
+    </div>
   </div>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+</div>
+
+<div class="footer-art">
+  <div class="footer-line"></div>
+  <h3>Araina Narula</h3>
+  <p class="footer-tagline">Stories, colors, creativity, and dreams.</p>
+  <p class="footer-copy">© 2026 Araina Narula. All rights reserved.</p>
+</div>
 
 </body>
 </html>
