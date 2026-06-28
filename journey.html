@@ -54,9 +54,9 @@ body{
 
 /* MAIN */
 .container{
-  max-width:1000px;
-  margin:auto;
-  padding:70px 20px 20px;
+    max-width:1120px;
+    margin:0 auto;
+    padding:50px 24px;
 }
 
 .page-intro{
@@ -81,29 +81,52 @@ body{
 
 /* JOURNEY CARD */
 .journey-card{
-  background:linear-gradient(180deg, #fffdfb 0%, #fff5ef 100%);
-  border:1px solid #ead8ce;
-  border-radius:24px;
-  padding:34px 32px 36px;
-  margin:42px 0;
-  box-shadow:0 10px 28px rgba(160,120,130,0.08);
+    margin-bottom:48px;
+    padding:30px 30px 34px;
+    border-radius:28px;
+    border:1px solid rgba(220,185,170,0.45);
+    box-shadow:0 8px 24px rgba(185,145,135,0.08);
+    position:relative;
 }
 
-.journey-card.card-two{
-  background:linear-gradient(180deg, #fffdfa 0%, #fdf4ef 100%);
+.journey-card:nth-child(1){
+    background:#fff8f5;
 }
 
-.journey-card.card-three{
-  background:linear-gradient(180deg, #fffaf7 0%, #fdf1ea 100%);
+.journey-card:nth-child(2){
+    background:#fffaf7;
+}
+
+.journey-card:nth-child(3){
+    background:#fff5ef;
 }
 
 .journey-text{
-  text-align:center;
-  max-width:820px;
-  margin:0 auto 26px;
-  font-size:17px;
-  line-height:1.8;
-  color:#7a5a6a;
+    background:#fffdfa;
+    padding:20px 24px;
+    border-radius:18px;
+    text-align:center;
+    font-size:18px;
+    line-height:1.9;
+    color:#7a5a6a;
+    margin-bottom:20px;
+}
+
+.journey-card::after{
+    content:"✿";
+    position:absolute;
+    top:18px;
+    right:24px;
+    font-size:20px;
+    color:#e4a394;
+    opacity:0.65;
+}
+
+.journey-collage{
+    width:100%;
+    display:block;
+    border-radius:22px;
+    box-shadow:0 8px 24px rgba(185,145,135,0.10);
 }
 
 .collage-box{
@@ -212,38 +235,33 @@ body{
     </p>
   </div>
 
-  <div class="journey-card">
-    <div class="journey-text">
-      Learning, imagining, creating, and growing a little more every day.
-    </div>
+  <main class="container">
 
-    <div class="collage-box">
-      <img src="journeyimages/araina-growing-collage.png" alt="Araina growing journey collage">
-    </div>
-  </div>
+    <section class="journey-card">
+        <div class="journey-text">
+            Learning, imagining, creating, and growing a little more every day.
+        </div>
 
-  <div class="journey-card card-two">
-    <div class="journey-text">
-      Araina loves making unique crafts and artwork with her imagination and originality.
-      Her curiosity and artistic spirit continue to inspire her creative journey today.
-    </div>
+        <img src="journeyimages/araina-growing-collage.png" alt="Araina growing through creativity" class="journey-collage">
+    </section>
 
-    <div class="collage-box">
-      <img src="journeyimages/araina-joyful-creator.png" alt="Araina joyful creator collage">
-    </div>
-  </div>
+    <section class="journey-card">
+        <div class="journey-text">
+            Araina loves making unique crafts and artwork with her imagination and originality. Her curiosity and artistic spirit continue to inspire her creative journey today.
+        </div>
 
-  <div class="journey-card card-three">
-    <div class="journey-text">
-      Araina loved imagining little worlds through pretend play, dress-up games,
-      doodles, and colorful creations from a very young age. Curiosity, storytelling,
-      and creativity naturally became a part of her everyday adventures.
-    </div>
+        <img src="journeyimages/araina-joyful-creator.png" alt="Araina joyful creator collage" class="journey-collage">
+    </section>
 
-    <div class="collage-box">
-      <img src="journeyimages/araina-little-dreamer.jpg" alt="Araina little dreamer collage">
-    </div>
-  </div>
+    <section class="journey-card">
+        <div class="journey-text">
+            Araina loved imagining little worlds through pretend play, dress-up games, doodles, and colorful creations from a very young age. Curiosity, storytelling, and creativity naturally became a part of her everyday adventures.
+        </div>
+
+        <img src="journeyimages/araina-little-dreamer.jpg" alt="Araina little dreamer collage" class="journey-collage">
+    </section>
+
+</main>
 
 </div>
 
