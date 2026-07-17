@@ -461,14 +461,82 @@ font-size:48px;
 font-size:38px;
 
 }
-
+.hero-buttons{
+    position:absolute;
+    right:115px;
+    top:53%;
+    transform:translateY(-50%);
+    width:360px;
+    text-align:center;
+    z-index:20;
+}
 .hero-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-width:240px;
+    width:320px;
+    height:74px;
 
+    margin:18px auto;
+
+    border-radius:999px;
+
+    color:#fff;
+    font-size:18px;
+    font-weight:700;
+
+    text-decoration:none;
+
+    border:2px solid rgba(255,255,255,.28);
+
+    box-shadow:
+        inset 0 2px 8px rgba(255,255,255,.12),
+        0 10px 28px rgba(0,0,0,.35);
+
+    transition:.25s;
+}
+
+.hero-btn:hover{
+    transform:translateY(-3px) scale(1.02);
 }
   
+.hero-btn.india{
 
+background:
+linear-gradient(180deg,#8d2f9f 0%,#6f197c 100%);
+}
+    .hero-btn.global{
+
+background:
+linear-gradient(180deg,#2f6eff 0%,#224fd4 100%);
+}
+    .hero-btn.sample{
+
+background:
+linear-gradient(180deg,#4d1aa8 0%,#31106f 100%);
+}
+    .hero-note{
+
+margin-top:22px;
+
+font-size:17px;
+
+line-height:1.75;
+
+color:#f1f1f1;
+
+text-align:center;
+
+text-shadow:0 2px 8px rgba(0,0,0,.5);
+
+}
+
+.hero-note strong{
+
+font-weight:700;
+
+}
 
 
 }
@@ -539,17 +607,17 @@ HERO
 
             
 
-            <a href="#" class="hero-btn">
-                Buy on Amazon India
-            </a>
+            <a href="#" class="hero-btn india">
+Buy on Amazon India
+</a>
 
-            <a href="#" class="hero-btn">
-                Buy on Amazon Global
-            </a>
+<a href="#" class="hero-btn global">
+Buy on Amazon Global
+</a>
 
-            <a href="#" class="hero-btn secondary">
-                Read a Sample
-            </a>
+<a href="#" class="hero-btn sample">
+Read a Sample
+</a>
 
             <div class="hero-note">
 
