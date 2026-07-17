@@ -4,66 +4,52 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>Ishimiko | Araina Narula</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link
+href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
+rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+<link
+href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap"
+rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link
+href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
+rel="stylesheet">
 
 <style>
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 html{
-scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-
-font-family:'Nunito',sans-serif;
-
-background:#fffefa;
-
-color:#444;
-
-line-height:1.7;
-
-overflow-x:hidden;
-
+    font-family:'Nunito',sans-serif;
+    background:#fffefa;
+    color:#444;
+    line-height:1.7;
+    overflow-x:hidden;
 }
 
 a{
-
-text-decoration:none;
-
-transition:.3s;
-
+    text-decoration:none;
+    transition:.3s;
 }
 
 img{
-
-max-width:100%;
-
-display:block;
-
-}
-
-.container{
-
-max-width:1180px;
-
-margin:auto;
-
-padding:0 24px;
-
+    max-width:100%;
+    display:block;
 }
 
 /* ===========================
@@ -71,279 +57,193 @@ NAVIGATION
 =========================== */
 
 .top-header{
-
-background:rgba(255,255,255,.95);
-
-backdrop-filter:blur(12px);
-
-border-bottom:1px solid rgba(0,0,0,.06);
-
-position:sticky;
-
-top:0;
-
-z-index:1000;
-
+    background:rgba(255,255,255,.95);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(0,0,0,.06);
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
 .top-nav{
-
-max-width:1180px;
-
-margin:auto;
-
-padding:16px 24px;
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
+    max-width:1180px;
+    margin:auto;
+    padding:16px 24px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
 .top-logo{
-
-font-family:'Dancing Script',cursive;
-
-font-size:30px;
-
-color:#c76f79;
-
+    font-family:'Dancing Script',cursive;
+    font-size:30px;
+    color:#c76f79;
 }
 
 .top-links{
-
-display:flex;
-
-align-items:center;
-
-gap:28px;
-
+    display:flex;
+    align-items:center;
+    gap:28px;
 }
 
 .top-links a{
-
-font-family:'Nunito',sans-serif;
-
-font-size:16px;
-
-font-weight:700;
-
-color:#333;
-
+    font-family:'Nunito',sans-serif;
+    font-size:16px;
+    font-weight:700;
+    color:#333;
 }
 
 .top-links a:hover{
-
-color:#c76f79;
-
+    color:#c76f79;
 }
 
 .top-links a.active{
-
-color:#c76f79;
-
+    color:#c76f79;
 }
 
 /* ===========================
-HERO
+HERO — DESKTOP
 =========================== */
 
 .hero{
     position:relative;
     min-height:100vh;
-    background:url("images/ishimiko-hero-finallast.png") center center/cover no-repeat;
+    background:
+    url("images/ishimiko-hero-finallast.png")
+    center center / cover no-repeat;
     overflow:hidden;
 }
 
-/* BUTTON BLOCK */
-
 .hero-buttons{
-
     position:absolute;
-
     right:70px;
-
     top:71%;
-
     transform:translateY(-50%);
-
     width:340px;
-
     text-align:center;
-
     z-index:20;
-
 }
 
-/* BUTTONS */
-
 .hero-btn{
-
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
     width:320px;
-
     height:72px;
-
     margin:22px auto;
-
     border-radius:999px;
-
     color:#fff;
-
     font-size:18px;
-
     font-weight:700;
-
     text-decoration:none;
-
     border:2px solid rgba(255,255,255,.20);
-
     box-shadow:
         inset 0 2px 10px rgba(255,255,255,.15),
         0 10px 30px rgba(0,0,0,.35);
-
     transition:.25s;
-
 }
 
 .hero-btn:hover{
-
     transform:translateY(-3px);
-
 }
 
 .hero-btn.india{
-
-    background:linear-gradient(180deg,#9733b3 0%,#6d177d 100%);
-
+    background:
+    linear-gradient(180deg,#9733b3 0%,#6d177d 100%);
 }
 
 .hero-btn.global{
-
-    background:linear-gradient(180deg,#3d74ff 0%,#204ec9 100%);
-
+    background:
+    linear-gradient(180deg,#3d74ff 0%,#204ec9 100%);
 }
-
-.hero-btn.sample{
-
-    background:linear-gradient(180deg,#5620bf 0%,#34107b 100%);
-
+    .hero-btn.sample{
+    background:
+    linear-gradient(180deg,#25b86a 0%,#15894a 100%);
 }
-
-/* NOTE */
 
 .hero-note{
-
-    margin-top:24px;
-
-    font-size:17px;
-
-    line-height:1.75;
-
+    margin-top:14px;
     color:#ffffff;
-
-    text-align:center;
-
-    text-shadow:0 2px 8px rgba(0,0,0,.45);
-
-}
-
-.hero-note strong{
-
-    color:#ffffff;
-
+    font-size:16px;
+    font-weight:700;
+    line-height:1.6;
+    text-shadow:
+        0 2px 6px rgba(0,0,0,.45);
 }
 
 /* ===========================
-PLACEHOLDER SECTION
+COMING SOON SECTION
 =========================== */
 
-.placeholder{
-
-    padding:90px 20px;
-
-    text-align:center;
-
+.coming-soon{
+    max-width:1100px;
+    margin:90px auto;
+    padding:0 25px;
 }
 
-.placeholder h2{
+.coming-card{
+    background:#fff;
+    border-radius:28px;
+    padding:70px 50px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+    border:1px solid #efe9df;
+}
 
+.coming-card h2{
     font-family:'Cormorant Garamond',serif;
-
-    font-size:42px;
-
-    color:#7d5b9f;
-
+    font-size:52px;
+    color:#5d3c7f;
     margin-bottom:18px;
-
 }
 
-.placeholder p{
-
+.coming-card p{
     max-width:700px;
-
     margin:auto;
-
-    font-size:18px;
-
+    font-size:20px;
     color:#666;
-
 }
 
 /* ===========================
-RESPONSIVE
+FOOTER
 =========================== */
 
-@media(max-width:980px){
-
-.hero{
-
-    min-height:auto;
-
-    padding-bottom:40px;
-
-    background-position:top center;
-
+footer{
+    margin-top:80px;
+    padding:45px 20px;
+    background:#faf7f2;
+    border-top:1px solid #ece6dd;
+    text-align:center;
 }
 
-.hero-buttons{
-
-    position:static;
-
-    transform:none;
-
-    width:100%;
-
-    max-width:360px;
-
-    margin:30px auto 0;
-
-    padding:0 20px;
-
+.footer-title{
+    font-family:'Dancing Script',cursive;
+    font-size:34px;
+    color:#c76f79;
 }
 
-.hero-btn{
-
-    width:100%;
-
+.footer-tagline{
+    margin-top:8px;
+    font-size:15px;
+    color:#777;
 }
 
+.footer-copy{
+    margin-top:10px;
+    font-size:13px;
+    color:#999;
 }
 
-@media (max-width:700px){
+/* ===========================
+MOBILE
+=========================== */
 
-/* NAVIGATION */
+@media (max-width:768px){
 
 .top-nav{
     flex-direction:column;
-    gap:15px;
+    gap:16px;
+    padding:18px;
 }
 
 .top-links{
@@ -352,297 +252,178 @@ RESPONSIVE
     gap:18px;
 }
 
-/* HERO */
-
 .hero{
-
     min-height:auto;
-
-    background-size:100% auto;
-
-    background-repeat:no-repeat;
-
-    background-position:top center;
-
-    padding-top:56%;
-
-    padding-bottom:35px;
-
-    background-color:#070918;
-
+    padding-top:0;
+    padding-bottom:50px;
+    background-position:center top;
+    background-size:contain;
 }
 
-/* BUTTONS COME BELOW THE IMAGE */
+.hero::before{
+    content:"";
+    display:block;
+    width:100%;
+    padding-top:150%;
+}
 
 .hero-buttons{
-
-    position:static;
-
+    position:relative;
+    top:auto;
+    right:auto;
+    left:auto;
     transform:none;
-
     width:100%;
-
-    max-width:360px;
-
-    margin:25px auto 0;
-
-    padding:0 18px;
-
+    margin-top:20px;
+    padding:0 20px;
 }
 
 .hero-btn{
-
     width:100%;
-
-    height:68px;
-
-    margin:16px auto;
-
-    font-size:18px;
-
+    max-width:340px;
+    margin:18px auto;
+    height:64px;
+    font-size:17px;
 }
 
 .hero-note{
-
-    margin-top:24px;
-
+    margin-top:18px;
     text-align:center;
+    color:#555;
+    text-shadow:none;
+    padding:0 20px;
+}
 
-    font-size:16px;
+.coming-soon{
+    margin-top:40px;
+}
 
-    line-height:1.7;
+.coming-card{
+    padding:45px 25px;
+}
 
+.coming-card h2{
+    font-size:38px;
+}
+
+.coming-card p{
+    font-size:18px;
 }
 
 }
-
-/* ===========================
-FOOTER
-=========================== */
-
-.footer-art{
-
-text-align:center;
-
-padding:50px 20px 40px;
-
-}
-
-.footer-line{
-
-width:60%;
-
-height:1px;
-
-background:#e5d7cf;
-
-margin:0 auto 20px;
-
-}
-
-.footer-art h3{
-
-font-family:'Dancing Script',cursive;
-
-font-size:30px;
-
-color:#c76f79;
-
-margin-bottom:10px;
-
-}
-
-.footer-art p{
-
-font-size:14px;
-
-color:#777;
-
-margin:6px 0;
-
-}
-
-
-
-
-
-</style>
+    </style>
 
 </head>
 
 <body>
 
-<!-- ===========================
-NAVIGATION
-=========================== -->
+<header class="top-header">
 
-<div class="top-header">
+    <nav class="top-nav">
 
-<div class="top-nav">
+        <div class="top-logo">
+            Araina Narula
+        </div>
 
-<div class="top-logo">
+        <div class="top-links">
 
-Araina Narula
+            <a href="index.html">Home</a>
 
-</div>
+            <a href="about.html">About</a>
 
-<div class="top-links">
+            <a href="author.html" class="active">Author</a>
 
-<a href="index.html">Home</a>
+            <a href="art.html">Art</a>
 
-<a href="about.html">About</a>
+            <a href="performing.html">Performing</a>
 
-<a href="author.html">Author</a>
+            <a href="achievements.html">Achievements</a>
 
-<a href="art.html">Art</a>
-
-<a href="achievements.html">Achievements</a>
-
-<a href="journey.html">Journey</a>
-
-<a href="ishimiko.html" class="active">Ishimiko</a>
-
-</div>
-
-</div>
-
-</div>
-  <!-- ===========================
-HERO
-=========================== -->
-
-<section class="hero">
-  <!-- REAL BOOK COVER -->
-
-    
-
-    
-
-        <!-- LEFT -->
-
-        
-
-        <!-- CENTRE -->
-
-       
-
-        <!-- RIGHT -->
-
-        <div class="hero-buttons">
-
-            
-
-            <a href="#" class="hero-btn india">
-Buy on Amazon India
-</a>
-
-<a href="#" class="hero-btn global">
-Buy on Amazon Global
-</a>
-
-<a href="#" class="hero-btn sample">
-Read a Sample
-</a>
-
-            <div class="hero-note">
-
-                Available in <strong>hardcover</strong> across India
-                <br>
-                and <strong>paperback</strong> internationally.
-
-            </div>
+            <a href="journey.html">Journey</a>
 
         </div>
 
-  
+    </nav>
+
+</header>
+
+
+<section class="hero">
+
+    <div class="hero-buttons">
+
+        <a href="#"
+           class="hero-btn india">
+           Buy on Amazon India
+        </a>
+
+        <a href="#"
+           class="hero-btn global">
+           Buy on Amazon Global
+        </a>
+
+        <a href="#"
+           class="hero-btn sample">
+           Read a Sample
+        </a>
+
+        <div class="hero-note">
+
+            Available in Hardcover, Paperback,
+            Kindle and Kindle Unlimited.
+
+            <br><br>
+
+            More magical adventures are
+            coming soon...
+
+        </div>
+
+    </div>
 
 </section>
 
-<!-- ===========================
-PLACEHOLDER
-=========================== -->
 
-<section class="placeholder">
+<section class="coming-soon">
 
-    <h2>
-        More Magic is Coming...
-    </h2>
+    <div class="coming-card">
 
-    <p>
+        <h2>
+            More Magic Awaits...
+        </h2>
 
-        This page will soon include the story, characters,
-        artwork, behind-the-scenes journey,
-        merchandise,
-        colouring pages,
-        and everything that brings the world of Ishimiko to life.
+        <p>
 
-    </p>
+            This page is just the beginning.
+
+            Soon you'll be able to discover
+            the world of Ishimiko, explore the
+            characters, enjoy printable
+            activities, peek behind the scenes,
+            and follow the journey of future
+            adventures.
+
+        </p>
+
+    </div>
 
 </section>
+<footer>
 
-<!-- ===========================
-LIGHTBOX
-=========================== -->
-
-<div id="lightbox" class="lightbox" onclick="closeLightbox()">
-
-    <img id="lightbox-img" alt="Preview">
-
-</div>
-
-<script>
-
-function openLightbox(src){
-
-document.getElementById("lightbox").style.display="flex";
-
-document.getElementById("lightbox-img").src=src;
-
-}
-
-function closeLightbox(){
-
-document.getElementById("lightbox").style.display="none";
-
-}
-
-</script>
-
-<!-- ===========================
-FOOTER
-=========================== -->
-
-<div class="footer-art">
-
-    <div class="footer-line"></div>
-
-    <h3>
+    <div class="footer-title">
         Araina Narula
-    </h3>
+    </div>
 
-    <p>
+    <div class="footer-tagline">
+        Stories imagined with heart, shared with the world.
+    </div>
 
-        Creating joyful moments with heart
+    <div class="footer-copy">
+        © 2026 Araina Narula. All Rights Reserved.
+    </div>
 
-    </p>
-
-    <p>
-
-        © <span id="year"></span> Araina Narula
-
-    </p>
-
-</div>
-
-<script>
-
-document.getElementById("year").textContent =
-new Date().getFullYear();
-
-</script>
+</footer>
 
 </body>
 
 </html>
-
-
