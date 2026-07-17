@@ -1,1 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ishimiko | Araina Narula</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:'Nunito',sans-serif;
+
+background:#fffefa;
+
+color:#444;
+
+line-height:1.7;
+
+overflow-x:hidden;
+
+}
+
+a{
+
+text-decoration:none;
+
+transition:.3s;
+
+}
+
+img{
+
+max-width:100%;
+
+display:block;
+
+}
+
+.container{
+
+max-width:1180px;
+
+margin:auto;
+
+padding:0 24px;
+
+}
+
+/* ===========================
+NAVIGATION
+=========================== */
+
+.top-header{
+
+background:rgba(255,255,255,.95);
+
+backdrop-filter:blur(12px);
+
+border-bottom:1px solid rgba(0,0,0,.06);
+
+position:sticky;
+
+top:0;
+
+z-index:1000;
+
+}
+
+.top-nav{
+
+max-width:1180px;
+
+margin:auto;
+
+padding:16px 24px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+.top-logo{
+
+font-family:'Dancing Script',cursive;
+
+font-size:30px;
+
+color:#c76f79;
+
+}
+
+.top-links{
+
+display:flex;
+
+align-items:center;
+
+gap:28px;
+
+}
+
+.top-links a{
+
+font-family:'Nunito',sans-serif;
+
+font-size:16px;
+
+font-weight:700;
+
+color:#333;
+
+}
+
+.top-links a:hover{
+
+color:#c76f79;
+
+}
+
+.top-links a.active{
+
+color:#c76f79;
+
+}
+
+/* ===========================
+HERO
+=========================== */
+
+.hero{
+    position:relative;
+    min-height:100vh;
+    background:url("images/ishimiko-hero-finallast.png") center center/cover no-repeat;
+    overflow:hidden;
+}
+
+/* BUTTON BLOCK */
+
+.hero-buttons{
+
+    position:absolute;
+
+    right:70px;
+
+    top:71%;
+
+    transform:translateY(-50%);
+
+    width:340px;
+
+    text-align:center;
+
+    z-index:20;
+
+}
+
+/* BUTTONS */
+
+.hero-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:320px;
+
+    height:72px;
+
+    margin:22px auto;
+
+    border-radius:999px;
+
+    color:#fff;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    text-decoration:none;
+
+    border:2px solid rgba(255,255,255,.20);
+
+    box-shadow:
+        inset 0 2px 10px rgba(255,255,255,.15),
+        0 10px 30px rgba(0,0,0,.35);
+
+    transition:.25s;
+
+}
+
+.hero-btn:hover{
+
+    transform:translateY(-3px);
+
+}
+
+.hero-btn.india{
+
+    background:linear-gradient(180deg,#9733b3 0%,#6d177d 100%);
+
+}
+
+.hero-btn.global{
+
+    background:linear-gradient(180deg,#3d74ff 0%,#204ec9 100%);
+
+}
+
+.hero-btn.sample{
+
+    background:linear-gradient(180deg,#5620bf 0%,#34107b 100%);
+
+}
+
+/* NOTE */
+
+.hero-note{
+
+    margin-top:24px;
+
+    font-size:17px;
+
+    line-height:1.75;
+
+    color:#ffffff;
+
+    text-align:center;
+
+    text-shadow:0 2px 8px rgba(0,0,0,.45);
+
+}
+
+.hero-note strong{
+
+    color:#ffffff;
+
+}
+
+/* ===========================
+PLACEHOLDER SECTION
+=========================== */
+
+.placeholder{
+
+    padding:90px 20px;
+
+    text-align:center;
+
+}
+
+.placeholder h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:42px;
+
+    color:#7d5b9f;
+
+    margin-bottom:18px;
+
+}
+
+.placeholder p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    font-size:18px;
+
+    color:#666;
+
+}
+
+/* ===========================
+RESPONSIVE
+=========================== */
+
+@media(max-width:980px){
+
+.hero{
+
+    min-height:auto;
+
+    padding-bottom:40px;
+
+    background-position:top center;
+
+}
+
+.hero-buttons{
+
+    position:static;
+
+    transform:none;
+
+    width:100%;
+
+    max-width:360px;
+
+    margin:30px auto 0;
+
+    padding:0 20px;
+
+}
+
+.hero-btn{
+
+    width:100%;
+
+}
+
+}
+
+@media (max-width:700px){
+
+/* NAVIGATION */
+
+.top-nav{
+    flex-direction:column;
+    gap:15px;
+}
+
+.top-links{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:18px;
+}
+
+/* HERO */
+
+.hero{
+
+    min-height:auto;
+
+    background-size:100% auto;
+
+    background-repeat:no-repeat;
+
+    background-position:top center;
+
+    padding-top:56%;
+
+    padding-bottom:35px;
+
+    background-color:#070918;
+
+}
+
+/* BUTTONS COME BELOW THE IMAGE */
+
+.hero-buttons{
+
+    position:static;
+
+    transform:none;
+
+    width:100%;
+
+    max-width:360px;
+
+    margin:25px auto 0;
+
+    padding:0 18px;
+
+}
+
+.hero-btn{
+
+    width:100%;
+
+    height:68px;
+
+    margin:16px auto;
+
+    font-size:18px;
+
+}
+
+.hero-note{
+
+    margin-top:24px;
+
+    text-align:center;
+
+    font-size:16px;
+
+    line-height:1.7;
+
+}
+
+}
+
+/* ===========================
+FOOTER
+=========================== */
+
+.footer-art{
+
+text-align:center;
+
+padding:50px 20px 40px;
+
+}
+
+.footer-line{
+
+width:60%;
+
+height:1px;
+
+background:#e5d7cf;
+
+margin:0 auto 20px;
+
+}
+
+.footer-art h3{
+
+font-family:'Dancing Script',cursive;
+
+font-size:30px;
+
+color:#c76f79;
+
+margin-bottom:10px;
+
+}
+
+.footer-art p{
+
+font-size:14px;
+
+color:#777;
+
+margin:6px 0;
+
+}
+
+
+
+
+
+</style>
+
+</head>
+
+<body>
+
+<!-- ===========================
+NAVIGATION
+=========================== -->
+
+<div class="top-header">
+
+<div class="top-nav">
+
+<div class="top-logo">
+
+Araina Narula
+
+</div>
+
+<div class="top-links">
+
+<a href="index.html">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="author.html">Author</a>
+
+<a href="art.html">Art</a>
+
+<a href="achievements.html">Achievements</a>
+
+<a href="journey.html">Journey</a>
+
+<a href="ishimiko.html" class="active">Ishimiko</a>
+
+</div>
+
+</div>
+
+</div>
+  <!-- ===========================
+HERO
+=========================== -->
+
+<section class="hero">
+  <!-- REAL BOOK COVER -->
+
+    
+
+    
+
+        <!-- LEFT -->
+
+        
+
+        <!-- CENTRE -->
+
+       
+
+        <!-- RIGHT -->
+
+        <div class="hero-buttons">
+
+            
+
+            <a href="#" class="hero-btn india">
+Buy on Amazon India
+</a>
+
+<a href="#" class="hero-btn global">
+Buy on Amazon Global
+</a>
+
+<a href="#" class="hero-btn sample">
+Read a Sample
+</a>
+
+            <div class="hero-note">
+
+                Available in <strong>hardcover</strong> across India
+                <br>
+                and <strong>paperback</strong> internationally.
+
+            </div>
+
+        </div>
+
+  
+
+</section>
+
+<!-- ===========================
+PLACEHOLDER
+=========================== -->
+
+<section class="placeholder">
+
+    <h2>
+        More Magic is Coming...
+    </h2>
+
+    <p>
+
+        This page will soon include the story, characters,
+        artwork, behind-the-scenes journey,
+        merchandise,
+        colouring pages,
+        and everything that brings the world of Ishimiko to life.
+
+    </p>
+
+</section>
+
+<!-- ===========================
+LIGHTBOX
+=========================== -->
+
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+
+    <img id="lightbox-img" alt="Preview">
+
+</div>
+
+<script>
+
+function openLightbox(src){
+
+document.getElementById("lightbox").style.display="flex";
+
+document.getElementById("lightbox-img").src=src;
+
+}
+
+function closeLightbox(){
+
+document.getElementById("lightbox").style.display="none";
+
+}
+
+</script>
+
+<!-- ===========================
+FOOTER
+=========================== -->
+
+<div class="footer-art">
+
+    <div class="footer-line"></div>
+
+    <h3>
+        Araina Narula
+    </h3>
+
+    <p>
+
+        Creating joyful moments with heart
+
+    </p>
+
+    <p>
+
+        © <span id="year"></span> Araina Narula
+
+    </p>
+
+</div>
+
+<script>
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+</script>
+
+</body>
+
+</html>
+
+
 
