@@ -1,241 +1,563 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Araina Author's Journey</title>
-  
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">  
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<title>Ishimiko | Araina Narula</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-body {
-  margin: 0;
-  font-family: 'Nunito', sans-serif;
-background: #fffefa;
-  color: #9c5a73;
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-.container {
-  max-width: 1000px;
-  margin: auto;
-  padding: 20px;
+html{
+scroll-behavior:smooth;
 }
 
-.header h1 {
-  text-align: center;
-  font-family: 'Nunito', sans-serif;
-  font-weight: 800;
+body{
 
-  font-size: 38px;        /* 🔥 reduce from 42 → matches Art */
-  letter-spacing: 0.2px;  /* 🔥 reduce from 0.5 → softer like Art */
+font-family:'Nunito',sans-serif;
 
-  color: #c76f79;
+background:#fffefa;
 
-  margin-top: 20px;
-  margin-bottom: 15px;    /* 🔥 tighter like Art */
-  line-height: 1.25;
-}
-  
-/* ✅ FIXED INTRO */
-.intro {
-  text-align: center;
-  max-width: 820px;
-  margin: 10px auto 40px;
-  line-height: 1.7;
-  font-size: 16.5px;
+color:#444;
+
+line-height:1.7;
+
+overflow-x:hidden;
+
 }
 
-/* Cards */
-.section-card {
-  background: #fdf6ef;
-  border-radius: 20px;
-  margin: 40px 0;
-  padding: 20px;
+a{
+
+text-decoration:none;
+
+transition:.3s;
+
 }
 
-.section-strip {
-  font-family: 'Poppins';
-  color: #b85c7a;
-  font-size: 1.4rem;
-  margin-bottom: 15px;
+img{
+
+max-width:100%;
+
+display:block;
+
 }
 
-.book-top {
-  display: flex;
-  gap: 30px;
+.container{
+
+max-width:1180px;
+
+margin:auto;
+
+padding:0 24px;
+
 }
 
-.book-images img {
-  width: 140px;
-  cursor: pointer;
+/* ===========================
+NAVIGATION
+=========================== */
+
+.top-header{
+
+background:rgba(255,255,255,.95);
+
+backdrop-filter:blur(12px);
+
+border-bottom:1px solid rgba(0,0,0,.06);
+
+position:sticky;
+
+top:0;
+
+z-index:1000;
+
 }
 
-.book-content {
-  flex: 1;
+.top-nav{
+
+max-width:1180px;
+
+margin:auto;
+
+padding:16px 24px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
 }
 
-.book-tagline {
-  font-style: italic;
-  margin-bottom: 10px;
+.top-logo{
+
+font-family:'Dancing Script',cursive;
+
+font-size:30px;
+
+color:#c76f79;
+
 }
 
-.book-desc {
-  margin-bottom: 10px;
+.top-links{
+
+display:flex;
+
+align-items:center;
+
+gap:28px;
+
 }
 
-.book-highlight {
-  font-weight: 600;
-  color: #c94f6d;
-  margin-top: 10px;
+.top-links a{
+
+font-family:'Nunito',sans-serif;
+
+font-size:16px;
+
+font-weight:700;
+
+color:#333;
+
 }
 
-.availability {
-  margin-top: 5px;
+.top-links a:hover{
+
+color:#c76f79;
+
 }
 
-.buttons {
-  margin-top: 10px;
+.top-links a.active{
+
+color:#c76f79;
+
 }
 
-.button {
-  display: inline-block;
-  margin: 5px;
-  padding: 8px 14px;
-  background: #ea8cab;
-  color: white;
-  text-decoration: none;
-  border-radius: 20px;
-  font-size: 14px;
+/* ===========================
+HERO
+=========================== */
+
+.hero{
+
+position:relative;
+
+min-height:88vh;
+
+background:url("images/ishimiko-hero.jpg") center center/cover no-repeat;
+
+display:flex;
+
+align-items:center;
+
+overflow:hidden;
+
+}
+  .hero::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:linear-gradient(
+
+90deg,
+
+rgba(7,12,40,.82) 0%,
+
+rgba(14,23,56,.65) 35%,
+
+rgba(20,30,70,.28) 60%,
+
+rgba(10,15,45,.72) 100%
+
+);
+
 }
 
-.button.secondary {
-  background: #efc7d4;
-  color: #8f5168;
+.hero-inner{
+
+position:relative;
+
+z-index:2;
+
+max-width:1250px;
+
+margin:auto;
+
+padding:90px 55px;
+
+display:grid;
+
+grid-template-columns:1.05fr .9fr .95fr;
+
+gap:50px;
+
+align-items:center;
+
 }
 
-.coming {
-  text-align: center;
+.hero-small{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:24px;
+
+color:#d7dbff;
+
+letter-spacing:1px;
+
+margin-bottom:12px;
+
 }
 
-.coming img {
-  width: 180px;
+.hero h1{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:72px;
+
+line-height:0.95;
+
+font-weight:700;
+
+color:white;
+
+margin-bottom:28px;
+
 }
 
-/* Lightbox */
-.lightbox {
-  display: none;
-  position: fixed;
-  top:0; left:0;
-  width:100%; height:100%;
-  background: rgba(0,0,0,0.8);
-  justify-content:center;
-  align-items:center;
+.hero-text{
+
+max-width:520px;
+
+font-size:20px;
+
+line-height:1.9;
+
+color:#eef2ff;
+
 }
 
-.lightbox img {
-  max-width:90%;
-  max-height:90%;
-}
-.top-header {
-  background: rgba(255,255,255,0.95);
-  border-bottom: 1px solid rgba(0,0,0,0.05);
+.hero-book{
+
+width:100%;
+
+max-width:360px;
+
+margin:auto;
+
+filter:drop-shadow(0 30px 50px rgba(0,0,0,.55));
+
+transition:.35s;
+
 }
 
-.top-nav {
-  max-width: 1180px;
-  margin: auto;
-  padding: 16px 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: left;   /* important fix */
+.hero-book:hover{
+
+transform:translateY(-10px);
+
 }
 
-.top-logo {
-  font-family: 'Dancing Script', cursive;
-  font-size: 28px;
-  color: #c76f79;
+.hero-right{
+
+text-align:center;
+
 }
 
-.top-links a {
-  margin-left: 28px;
-  text-decoration: none;
-  color: #333;
-  font-weight: 600;
-  font-size: 16px;
-  font-family: 'Nunito', sans-serif;   /* 🔥 THIS LINE */
+.hero-right h2{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:48px;
+
+font-weight:600;
+
+color:white;
+
+line-height:1.15;
+
+margin-bottom:35px;
+
 }
 
-.top-links a:hover {
-  color: #c76f79;
+.hero-btn{
+
+display:block;
+
+width:280px;
+
+margin:14px auto;
+
+padding:16px 26px;
+
+border-radius:40px;
+
+background:#48c8ff;
+
+color:white;
+
+font-weight:800;
+
+font-size:16px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.20);
+
 }
 
-.top-links a.active {
-  color: #c76f79;
-}
-  .top-links a {
-  font-family: 'Nunito', sans-serif;
-  font-weight: 600;
-}
-  /* ===== FOOTER CSS ===== */
+.hero-btn:hover{
 
-.footer-art {
-  text-align: center;
-  padding: 40px 20px;
-}
+transform:translateY(-3px);
 
-.footer-art h3 {
-  font-family: 'Dancing Script', cursive;
-  color: #c76f79;
-  margin: 10px 0;
+background:#33bdf7;
+
+}
+  .hero-btn.secondary{
+
+background:rgba(255,255,255,.14);
+
+border:1px solid rgba(255,255,255,.28);
+
+backdrop-filter:blur(8px);
+
 }
 
-.footer-art p {
-  color: #777;
-  font-size: 14px;
-  margin: 5px 0;
+.hero-note{
+
+margin-top:30px;
+
+font-size:15px;
+
+line-height:1.8;
+
+color:#dde7ff;
+
 }
 
-.footer-line {
-  width: 60%;
-  height: 1px;
-  background: #e5cfc3;
-  margin: 0 auto 15px;
+/* ===========================
+PLACEHOLDER SECTION
+=========================== */
+
+.placeholder{
+
+padding:90px 20px;
+
+text-align:center;
+
 }
-@media (max-width:700px){
-  .book-top { flex-direction: column; }
+
+.placeholder h2{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:42px;
+
+color:#7d5b9f;
+
+margin-bottom:18px;
+
 }
+
+.placeholder p{
+
+max-width:700px;
+
+margin:auto;
+
+font-size:18px;
+
+color:#666;
+
+}
+
+/* ===========================
+FOOTER
+=========================== */
+
+.footer-art{
+
+text-align:center;
+
+padding:50px 20px 40px;
+
+}
+
+.footer-line{
+
+width:60%;
+
+height:1px;
+
+background:#e5d7cf;
+
+margin:0 auto 20px;
+
+}
+
+.footer-art h3{
+
+font-family:'Dancing Script',cursive;
+
+font-size:30px;
+
+color:#c76f79;
+
+margin-bottom:10px;
+
+}
+
+.footer-art p{
+
+font-size:14px;
+
+color:#777;
+
+margin:6px 0;
+
+}
+
+/* ===========================
+RESPONSIVE
+=========================== */
+
+@media(max-width:980px){
+
+.hero-inner{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+padding:70px 30px;
+
+}
+
+.hero-text{
+
+margin:0 auto;
+
+}
+
+.hero h1{
+
+font-size:58px;
+
+}
+
+.hero-right{
+
+margin-top:20px;
+
+}
+
+}
+
+@media(max-width:700px){
+
+.top-nav{
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+.top-links{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:18px;
+
+}
+
+.hero h1{
+
+font-size:48px;
+
+}
+
+.hero-right h2{
+
+font-size:38px;
+
+}
+
+.hero-btn{
+
+width:240px;
+
+}
+
+}
+
 </style>
+
 </head>
 
 <body>
-  <!-- ===== NAVBAR START ===== -->
+
+<!-- ===========================
+NAVIGATION
+=========================== -->
+
 <div class="top-header">
-  <div class="top-nav">
-    <div class="top-logo">Araina Narula</div>
-    <div class="top-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="author.html">Author</a> 
-      <a href="art.html">Art</a>
-      <a href="achievements.html">Achievements</a>
-      <a href="journey.html">Journey</a>
-      <a href="ishimiko.html" class="active">Ishimiko</a> <!-- ✅ active here -->
-   </div>
-  </div>
+
+<div class="top-nav">
+
+<div class="top-logo">
+
+Araina Narula
+
 </div>
-<!-- ===== NAVBAR END ===== -->
+
+<div class="top-links">
+
+<a href="index.html">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="author.html">Author</a>
+
+<a href="art.html">Art</a>
+
+<a href="achievements.html">Achievements</a>
+
+<a href="journey.html">Journey</a>
+
+<a href="ishimiko.html" class="active">Ishimiko</a>
+
+</div>
+
+</div>
+
+</div>
+  <!-- ===========================
+HERO
+=========================== -->
 
 <section class="hero">
 
-    <div class="hero-overlay"></div>
-
-    <div class="hero-grid">
+    <div class="hero-inner">
 
         <!-- LEFT -->
 
-        <div class="hero-left">
+        <div>
 
             <div class="hero-small">
                 Welcome to the
@@ -246,21 +568,24 @@ background: #fffefa;
                 Ishimiko
             </h1>
 
-            <p>
+            <div class="hero-text">
+
                 A fantasy graphic novel adventure where magical worlds hold hidden secrets,
                 friendship shines brighter than magic,
                 and every chapter opens another doorway.
-            </p>
+
+            </div>
 
         </div>
 
         <!-- CENTRE -->
 
-        <div class="hero-book">
+        <div>
 
             <img
                 src="images/ishimiko-cover.png"
-                alt="Ishimiko Cover">
+                alt="Ishimiko Cover"
+                class="hero-book">
 
         </div>
 
@@ -276,28 +601,25 @@ background: #fffefa;
 
             </h2>
 
-            <div class="hero-buttons">
+            <a href="#" class="hero-btn">
+                Buy on Amazon India
+            </a>
 
-                <a href="#" class="hero-btn">
-                    Buy on Amazon India
-                </a>
+            <a href="#" class="hero-btn">
+                Buy on Amazon Global
+            </a>
 
-                <a href="#" class="hero-btn">
-                    Buy on Amazon Global
-                </a>
+            <a href="#" class="hero-btn secondary">
+                Read a Sample
+            </a>
 
-                <a href="#" class="hero-btn secondary">
-                    Read a Sample
-                </a>
-
-            </div>
-
-            <p class="availability-text">
+            <div class="hero-note">
 
                 Available in <strong>hardcover</strong> across India
+                <br>
                 and <strong>paperback</strong> internationally.
 
-            </p>
+            </div>
 
         </div>
 
@@ -305,40 +627,91 @@ background: #fffefa;
 
 </section>
 
-<!-- Lightbox -->
+<!-- ===========================
+PLACEHOLDER
+=========================== -->
+
+<section class="placeholder">
+
+    <h2>
+        More Magic is Coming...
+    </h2>
+
+    <p>
+
+        This page will soon include the story, characters,
+        artwork, behind-the-scenes journey,
+        merchandise,
+        colouring pages,
+        and everything that brings the world of Ishimiko to life.
+
+    </p>
+
+</section>
+
+<!-- ===========================
+LIGHTBOX
+=========================== -->
+
 <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-  <img id="lightbox-img">
+
+    <img id="lightbox-img" alt="Preview">
+
 </div>
 
 <script>
+
 function openLightbox(src){
-  document.getElementById('lightbox').style.display='flex';
-  document.getElementById('lightbox-img').src=src;
+
+document.getElementById("lightbox").style.display="flex";
+
+document.getElementById("lightbox-img").src=src;
+
 }
+
 function closeLightbox(){
-  document.getElementById('lightbox').style.display='none';
+
+document.getElementById("lightbox").style.display="none";
+
 }
+
 </script>
-<!-- ===== FOOTER START ===== -->
+
+<!-- ===========================
+FOOTER
+=========================== -->
+
 <div class="footer-art">
-  <div class="footer-inner">
 
     <div class="footer-line"></div>
 
-    <h3>Araina Narula</h3>
+    <h3>
+        Araina Narula
+    </h3>
 
-    <p>Creating joyful moments with heart</p>
+    <p>
 
-    <p>© <span id="year"></span> Araina Narula</p>
+        Creating joyful moments with heart
 
-  </div>
+    </p>
+
+    <p>
+
+        © <span id="year"></span> Araina Narula
+
+    </p>
+
 </div>
 
 <script>
-document.getElementById("year").textContent = new Date().getFullYear();
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
 </script>
-<!-- ===== FOOTER END ===== -->
+
 </body>
+
 </html>
 
 
