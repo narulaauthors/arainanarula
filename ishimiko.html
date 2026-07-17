@@ -169,25 +169,7 @@ padding:40px 0;
 }
   .hero::before{
 
-content:"";
-
-position:absolute;
-
-inset:0;
-
-background:linear-gradient(
-
-90deg,
-
-rgba(7,12,40,.82) 0%,
-
-rgba(14,23,56,.65) 35%,
-
-rgba(20,30,70,.28) 60%,
-
-rgba(10,15,45,.72) 100%
-
-);
+background:linear-gradient(...);
 
 }
 
@@ -518,6 +500,29 @@ font-size:38px;
 width:240px;
 
 }
+  .hero-cover{
+
+position:absolute;
+
+left:50%;
+
+top:54%;
+
+transform:translate(-50%,-50%);
+
+z-index:10;
+
+}
+
+.hero-cover img{
+
+width:350px;
+
+display:block;
+
+filter:drop-shadow(0 30px 60px rgba(0,0,0,.45));
+
+}
 
 }
 
@@ -567,6 +572,15 @@ HERO
 =========================== -->
 
 <section class="hero">
+  <!-- REAL BOOK COVER -->
+
+    <div class="hero-cover">
+
+        <img
+            src="images/ishimiko-cover.png"
+            alt="Ishimiko Cover">
+
+    </div>
 
     <div class="hero-inner">
 
@@ -576,26 +590,13 @@ HERO
 
         <!-- CENTRE -->
 
-        <div>
-
-            <img
-                src="images/ishimiko-cover.png"
-                alt="Ishimiko Cover"
-                class="hero-book">
-
-        </div>
+       
 
         <!-- RIGHT -->
 
         <div class="hero-right">
 
-            <h2>
-
-                Ready to<br>
-                Begin Your<br>
-                Journey?
-
-            </h2>
+            
 
             <a href="#" class="hero-btn">
                 Buy on Amazon India
